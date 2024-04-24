@@ -8,3 +8,4 @@ sudo apt install -y sway-notification-center
 sudo apt install -y qasmixer
 sudo apt install -y brightnessctl
 sudo apt install -y waybar
+sudo apt install -y thunar
