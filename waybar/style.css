@@ -151,7 +151,7 @@ button:hover {
 }
 
 #battery {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   color: #000000;
 }
 
@@ -169,7 +169,7 @@ button:hover {
 }
 
 #battery.critical:not(.charging) {
-  background-color: #f53c3c;
+  /* background-color: #f53c3c; */
   color: #ffffff;
   animation-name: blink;
   animation-duration: 0.5s;
@@ -200,15 +200,16 @@ label:focus {
 }
 
 #network {
-  background-color: #2980b9;
+  /* background-color: #2980b9; */
+  color: #2a5c45;
 }
 
 #network.disconnected {
-  background-color: #f53c3c;
+  color: #f53c3c;
 }
 
 #pulseaudio {
-  background-color: #f1c40f;
+  /* background-color: #f1c40f; */
   color: #000000;
 }
 
@@ -241,7 +242,8 @@ label:focus {
 }
 
 #temperature {
-  background-color: #f0932b;
+  /* background-color: #f0932b; */
+  color: #000000;
 }
 
 #temperature.critical {
@@ -249,7 +251,7 @@ label:focus {
 }
 
 #tray {
-  background-color: #2980b9;
+  /* background-color: #2980b9; */
 }
 
 #tray > .passive {
@@ -288,14 +290,14 @@ label:focus {
 }
 
 #language {
-  background: #00b093;
-  color: #740864;
+  /* background: #00b093; */
+  color: #000000;
   padding: 0 5px;
   min-width: 16px;
 }
 
 #keyboard-state {
-  background: #97e1ad;
+  /* background: #97e1ad; */
   color: #000000;
   padding: 0 0px;
   margin: 5px 5px;
