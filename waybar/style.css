@@ -5,9 +5,9 @@
 }
 
 window#waybar {
-  background-color: rgba(43, 48, 59, 0.9);
+  background-color: #d1d9ec;
   /* border-bottom: 3px solid rgba(100, 114, 125, 0.8); */
-  color: #ffffff;
+  color: #535d6c;
   transition-property: background-color;
   transition-duration: 0.5s;
   /* padding: 5px; */
@@ -52,7 +52,6 @@ button:hover {
 #workspaces button {
   padding: 0 5px;
   background-color: transparent;
-  color: #ffffff;
 }
 
 #workspaces button:hover {
@@ -61,7 +60,8 @@ button:hover {
 
 #workspaces button.focused {
   background-color: #64727d;
-  box-shadow: inset 0 -3px #ffffff;
+  /* box-shadow: inset 0 -3px #ffffff; */
+  color: #ffffff;
 }
 
 #workspaces button.urgent {
@@ -90,6 +90,22 @@ button:hover {
 #scratchpad,
 #mpd {
   padding: 5px;
+}
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
   color: #ffffff;
 }
 
