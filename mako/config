@@ -1,0 +1,14 @@
+max-history=20
+font=UbuntuMono 12
+background-color=#d1d9ec
+text-color=#535d6c
+width=400
+height=300
+padding=10
+margin=10
+border-size=2
+border-color=#d1d9ec
+
+default-timeout=3000
+
+

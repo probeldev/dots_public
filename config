@@ -225,7 +225,7 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 exec blueman-applet
 exec_always nm-applet --indicator
 exec_always qasmixer -t
-exec swaync
+
 
 include /etc/sway/config.d/*
 
