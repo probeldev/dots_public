@@ -21,3 +21,4 @@ sudo apt install -y pulsemixer
 sudo apt install -y wl-clipboard
 
 sh nwg-drawer.sh
+sh libinput-gestures.sh
