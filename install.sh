@@ -8,7 +8,7 @@ cp waybar/config ~/.config/waybar/config
 mkdir ~/.config/mako
 cp mako/config ~/.config/mako/config
 
-sudo apt install -y rofi
+sudo apt install -y git
 sudo apt install -y grim
 sudo apt install -y slurp
 sudo apt install -y blueman
@@ -18,4 +18,6 @@ sudo apt install -y thunar
 sudo apt install -y mako-notifier
 sudo apt install -y swaylock
 sudo apt install -y pulsemixer
-sudo apt install wl-clipboard
+sudo apt install -y wl-clipboard
+
+sh nwg-drawer.sh
