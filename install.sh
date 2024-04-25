@@ -17,3 +17,4 @@ sudo apt install -y brightnessctl
 sudo apt install -y waybar
 sudo apt install -y thunar
 sudo apt install -y mako-notifier
+sudo apt install -y swaylock

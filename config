@@ -1,5 +1,4 @@
 # Default config for sway
-#
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
@@ -206,7 +205,7 @@ bindsym --to-code $mod+r mode "resize"
 
 bindsym --to-code Print exec grim ~/Pictures/screen-"$(date +%s)".png
 bindsym --to-code $mod+Print exec grim -g "$(slurp)" ~/Pictures/screen-"$(date +%s)".png
-
+bindsym --to-code $mod+Ctrl+l exec swaylock -i ~/Pictures/bg.jpg
 #
 # Status Bar:
 #
