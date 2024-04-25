@@ -203,8 +203,8 @@ mode "resize" {
 }
 bindsym --to-code $mod+r mode "resize"
 
-bindsym --to-code Print exec grim ~/Pictures/screen-"$(date +%s)".png
-bindsym --to-code $mod+Print exec grim -g "$(slurp)" ~/Pictures/screen-"$(date +%s)".png
+bindsym --to-code Print exec grim - | wl-copy
+bindsym --to-code $mod+Print exec grim -g "$(slurp)" - | wl-copy
 bindsym --to-code $mod+Ctrl+l exec swaylock -i ~/Pictures/bg.jpg
 #
 # Status Bar:
@@ -223,7 +223,6 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec blueman-applet
 exec_always nm-applet --indicator
-exec_always qasmixer -t
 
 
 include /etc/sway/config.d/*
