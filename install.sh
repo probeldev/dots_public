@@ -19,6 +19,8 @@ sudo apt install -y mako-notifier
 sudo apt install -y swaylock
 sudo apt install -y pulsemixer
 sudo apt install -y wl-clipboard
+sudo apt install -y zathura-pdf-poppler zathura zathura-djvu
 
 sh nwg-drawer.sh
 sh libinput-gestures.sh
+
