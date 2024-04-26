@@ -5,12 +5,13 @@
 }
 
 window#waybar {
-  background-color: #d1d9ec;
+  background-color: #ffffff;
   /* border-bottom: 3px solid rgba(100, 114, 125, 0.8); */
   color: #535d6c;
   transition-property: background-color;
   transition-duration: 0.5s;
   /* padding: 5px; */
+  opacity: 0.97;
 }
 
 window#waybar.hidden {

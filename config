@@ -254,7 +254,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86Search exec bemenu-run
 
-client.focused			#d1d9ec #d1d9ec #535d6c #d1d9ec
-client.unfocused		#535d6c #535d6c #d1d9ec #535d6c
-client.urgent			#d1d9ec #d1d9ec #535d6c #d1d9ec
-client.placeholder		#d1d9ec #d1d9ec #535d6c #d1d9ec
+client.focused			#ffffff #ffffff #222222 #ffffff
+client.unfocused		#222222 #222222 #ffffff #222222
+client.urgent			#ffffff #ffffff #222222 #ffffff
+client.placeholder		#ffffff #ffffff #222222 #ffffff
