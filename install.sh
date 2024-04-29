@@ -9,6 +9,7 @@ mkdir ~/.config/mako
 cp mako/config ~/.config/mako/config
 
 sudo apt install -y git
+sudo apt install -y rofi
 sudo apt install -y grim
 sudo apt install -y slurp
 sudo apt install -y blueman
