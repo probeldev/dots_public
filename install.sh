@@ -8,6 +8,7 @@ cp waybar/config ~/.config/waybar/config
 mkdir ~/.config/mako
 cp mako/config ~/.config/mako/config
 
+sudo apt install -y lightdm
 sudo apt install -y git
 sudo apt install -y rofi
 sudo apt install -y grim
@@ -22,6 +23,7 @@ sudo apt install -y pulsemixer
 sudo apt install -y wl-clipboard
 sudo apt install -y zathura-pdf-poppler zathura zathura-djvu
 sudo apt install -y linux-cpupower
+sudo apt install -y mpv
 
 sh nwg-drawer.sh
 sh libinput-gestures.sh
