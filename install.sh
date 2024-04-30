@@ -5,6 +5,9 @@ mkdir ~/.config/waybar
 cp waybar/style.css ~/.config/waybar/style.css
 cp waybar/config ~/.config/waybar/config
 
+mkdir ~/.config/swayimg
+cd swayimg/config ~/.config/swayimg/config
+
 mkdir ~/.config/mako
 cp mako/config ~/.config/mako/config
 
@@ -24,6 +27,7 @@ sudo apt install -y wl-clipboard
 sudo apt install -y zathura-pdf-poppler zathura zathura-djvu
 sudo apt install -y linux-cpupower
 sudo apt install -y mpv
+sudo apt install -y swayimg
 
 sh nwg-drawer.sh
 #sh libinput-gestures.sh  # todo: remove
