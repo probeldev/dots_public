@@ -26,5 +26,5 @@ sudo apt install -y linux-cpupower
 sudo apt install -y mpv
 
 sh nwg-drawer.sh
-sh libinput-gestures.sh
+#sh libinput-gestures.sh  # todo: remove
 
