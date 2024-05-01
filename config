@@ -224,6 +224,7 @@ exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSO
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec blueman-applet
+exec_always nwg-dock -x -i 40
 exec_always nm-applet --indicator
 exec_always libinput-gestures
 
