@@ -216,7 +216,7 @@ bar {
     swaybar_command waybar 
 }
 
-gaps inner 20
+gaps inner 10
 smart_borders on
 
 
