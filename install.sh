@@ -30,6 +30,5 @@ sudo apt install -y mpv
 sudo apt install -y swayimg
 
 sh nwg-drawer.sh
-sh nwg-docker.sh
 #sh libinput-gestures.sh  # todo: remove
 
