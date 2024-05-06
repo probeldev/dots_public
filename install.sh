@@ -11,6 +11,11 @@ cp swayimg/config ~/.config/swayimg/config
 mkdir ~/.config/mako
 cp mako/config ~/.config/mako/config
 
+mkdir ~/.config/mako
+cp rofi/catppuccin.rasi ~/.config/rofi/catppuccin.rasi
+cp rofi/config.rasi ~/.config/rofi/config.rasi
+
+
 sudo apt install -y lightdm
 sudo apt install -y git
 sudo apt install -y rofi
