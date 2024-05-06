@@ -203,8 +203,8 @@ mode "resize" {
 }
 bindsym --to-code $mod+r mode "resize"
 
-bindsym --to-code Print exec grim - | wl-copy
-bindsym --to-code $mod+Print exec grim -g "$(slurp)" - | wl-copy
+bindsym --to-code Print exec grim - | swappy -f -
+bindsym --to-code $mod+Print exec grim -g "$(slurp)" - | swappy -f -
 bindsym --to-code $mod+Ctrl+l exec swaylock -i ~/Pictures/bg.jpg
 bindsym --to-code $mod+y sticky toggle
 
