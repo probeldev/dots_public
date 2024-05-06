@@ -11,7 +11,7 @@ cp swayimg/config ~/.config/swayimg/config
 mkdir ~/.config/mako
 cp mako/config ~/.config/mako/config
 
-mkdir ~/.config/mako
+mkdir ~/.config/rofi
 cp rofi/catppuccin.rasi ~/.config/rofi/catppuccin.rasi
 cp rofi/config.rasi ~/.config/rofi/config.rasi
 
