@@ -15,6 +15,8 @@ mkdir ~/.config/rofi
 cp rofi/catppuccin.rasi ~/.config/rofi/catppuccin.rasi
 cp rofi/config.rasi ~/.config/rofi/config.rasi
 
+rm -rf ~/.config/ranger
+cp -r ranger ~/.config/ranger
 
 sudo apt install -y lightdm
 sudo apt install -y git
@@ -39,4 +41,3 @@ sudo apt install -y swappy
 
 sh nwg-drawer.sh
 #sh libinput-gestures.sh  # todo: remove
-
