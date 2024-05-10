@@ -170,9 +170,9 @@
 //	    "on-click-right": "alacritty -e ranger"
     },
     "custom/icon_file": {
-	    "format": "{} thunar ",
+	    "format": "{} nemo ",
 	    "tooltip": false,
-	    "on-click": "thunar",
+	    "on-click": "nemo",
 //	    "on-click-right": "alacritty -e ranger"
     },
     "custom/icon_translate": {

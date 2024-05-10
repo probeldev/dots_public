@@ -26,7 +26,7 @@ sudo apt install -y slurp
 sudo apt install -y blueman
 sudo apt install -y brightnessctl
 sudo apt install -y waybar
-sudo apt install -y thunar
+sudo apt install -y nemo
 sudo apt install -y mako-notifier
 sudo apt install -y swaylock
 sudo apt install -y pulsemixer
