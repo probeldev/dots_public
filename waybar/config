@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/icon_menu","sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
     "modules-center": ["custom/icon_file", "custom/icon_translate", "custom/icon_activity"],
-    "modules-right": ["mpd",  "pulseaudio", "network",  "temperature",   "sway/language", "battery", "battery#bat2", "tray","clock"],
+    "modules-right": ["mpd",  "pulseaudio", "network",  "temperature",   "sway/language", "battery", "battery#bat2", "tray","clock", "custom/icon_logout"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -187,5 +187,13 @@
 	    "on-click": "flatpak run net.nokyan.Resources",
 //	    "on-click-right": ""
     },
+    "custom/icon_logout": {
+	    "format": "{} logout",
+	    "tooltip": false,
+	    "on-click": "wlogout",
+//	    "on-click-right": ""
+    },
+
+	
 }
 

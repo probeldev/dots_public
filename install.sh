@@ -37,6 +37,7 @@ sudo apt install -y swayimg
 sudo apt install -y pipewire-alsa
 sudo apt install -y mousepad
 sudo apt install -y swappy
+sudo apt install -y wlogout
 
 sh nwg-drawer.sh
 #sh libinput-gestures.sh  # todo: remove
