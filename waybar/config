@@ -6,8 +6,8 @@
    // "margin-top": 20,
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/icon_menu","sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
-    "modules-center": ["custom/icon_file", "custom/icon_translate", "custom/icon_activity"],
+    "modules-left": ["custom/icon_menu","sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media", "custom/icon_webbrowser","custom/icon_telegram", "custom/icon_skype", "custom/icon_viber", "custom/icon_file", "custom/icon_translate", "custom/icon_activity", ],
+    "modules-center": [],
     "modules-right": ["mpd",  "pulseaudio", "network",  "temperature",   "sway/language", "battery", "battery#bat2", "tray","clock", "custom/icon_logout"],
     // Modules configuration
     // "sway/workspaces": {
@@ -125,7 +125,8 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+       // "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -164,31 +165,55 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/icon_menu": {
-	    "format": "{} Пуск",
+	    "format": "{} 󰹯 ",
 	    "tooltip": false,
 	    "on-click": "nwg-drawer",
 //	    "on-click-right": "alacritty -e ranger"
     },
     "custom/icon_file": {
-	    "format": "{} dolphin ",
+	    "format": "{}  ",
 	    "tooltip": false,
 	    "on-click": "flatpak run org.kde.dolphin",
 //	    "on-click-right": "alacritty -e ranger"
     },
     "custom/icon_translate": {
-	    "format": "{} dialect ",
+	    "format": "{} 󰊿 ",
 	    "tooltip": false,
 	    "on-click": "flatpak run app.drey.Dialect",
 //	    "on-click-right": ""
     },
     "custom/icon_activity": {
-	    "format": "{} resources ",
+	    "format": "{} 󰴁 ",
 	    "tooltip": false,
 	    "on-click": "flatpak run net.nokyan.Resources",
 //	    "on-click-right": ""
     },
+    "custom/icon_webbrowser": {
+	    "format": "{} 󰖟 ",
+	    "tooltip": false,
+	    "on-click": "flatpak run ru.yandex.Browser",
+//	    "on-click-right": ""
+    },
+    "custom/icon_telegram": {
+	    "format": "{}  ",
+	    "tooltip": false,
+	    "on-click": "flatpak run org.telegram.desktop",
+//	    "on-click-right": ""
+    },
+    "custom/icon_skype": {
+	    "format": "{}  ",
+	    "tooltip": false,
+	    "on-click": "flatpak run com.skype.Client",
+//	    "on-click-right": ""
+    },
+    "custom/icon_viber": {
+	    "format": "{}  ",
+	    "tooltip": false,
+	    "on-click": "flatpak run com.viber.Viber",
+//	    "on-click-right": ""
+    },
     "custom/icon_logout": {
-	    "format": "{} logout",
+	    "format": "{}  ",
 	    "tooltip": false,
 	    "on-click": "wlogout",
 //	    "on-click-right": ""
