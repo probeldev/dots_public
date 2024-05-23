@@ -170,9 +170,9 @@
 //	    "on-click-right": "alacritty -e ranger"
     },
     "custom/icon_file": {
-	    "format": "{} nemo ",
+	    "format": "{} dolphin ",
 	    "tooltip": false,
-	    "on-click": "nemo",
+	    "on-click": "flatpak run org.kde.dolphin",
 //	    "on-click-right": "alacritty -e ranger"
     },
     "custom/icon_translate": {
