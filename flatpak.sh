@@ -3,3 +3,10 @@ flatpak install flathub org.kde.krita
 flatpak install flathub org.libreoffice.LibreOffice
 flatpak install flathub org.gnome.gitlab.somas.Apostrophe
 flatpak install flathub org.kde.kwrite
+flatpak install flathub app.drey.Dialect
+flatpak install flathub io.github.flattool.Warehouse
+flatpak install flathub io.github.giantpinkrobots.flatsweep
+flatpak install flathub ru.yandex.Browser
+flatpak install flathub org.telegram.desktop
+flatpak install flathub com.skype.Client
+flatpak install flathub com.viber.Viber
