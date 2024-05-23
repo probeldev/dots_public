@@ -34,7 +34,6 @@ sudo apt install -y linux-cpupower
 sudo apt install -y mpv
 sudo apt install -y swayimg
 sudo apt install -y pipewire-alsa
-sudo apt install -y mousepad
 sudo apt install -y swappy
 sudo apt install -y wlogout
 
