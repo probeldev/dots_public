@@ -36,6 +36,7 @@ sudo apt install -y swayimg
 sudo apt install -y pipewire-alsa
 sudo apt install -y swappy
 sudo apt install -y wlogout
+sudo apt install -y wf-recorder # add hotkey and notification
 
 sh nwg-drawer.sh
 #sh libinput-gestures.sh  # todo: remove
