@@ -185,7 +185,7 @@
     "custom/icon_activity": {
 	    "format": "{} 󰴁 ",
 	    "tooltip": false,
-	    "on-click": "flatpak run net.nokyan.Resources",
+	    "on-click": "flatpak run io.missioncenter.MissionCenter",
 //	    "on-click-right": ""
     },
     "custom/icon_webbrowser": {

@@ -10,3 +10,4 @@ flatpak install flathub ru.yandex.Browser
 flatpak install flathub org.telegram.desktop
 flatpak install flathub com.skype.Client
 flatpak install flathub com.viber.Viber
+flatpak install flathub io.missioncenter.MissionCenter
