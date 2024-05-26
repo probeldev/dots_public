@@ -18,6 +18,9 @@ cp rofi/config.rasi ~/.config/rofi/config.rasi
 rm -rf ~/.config/ranger
 cp -r ranger ~/.config/ranger
 
+rm -rf ~/.config/wlogout
+cp -r wlogout ~/.config/wlogout
+
 sudo apt install -y git
 sudo apt install -y rofi
 sudo apt install -y grim
