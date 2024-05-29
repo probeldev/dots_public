@@ -39,7 +39,8 @@ sudo apt install -y swayimg
 sudo apt install -y pipewire-alsa
 sudo apt install -y swappy
 sudo apt install -y wlogout
-sudo apt install -y wf-recorder # add hotkey and notification
+sudo apt install -y wf-recorder # todo add hotkey and notification
+sudo apt install -y breeze      # todo: разобраться как выбирать иконки в kde приложениях
 
 sh nwg-drawer.sh
 #sh libinput-gestures.sh  # todo: remove
