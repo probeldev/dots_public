@@ -206,7 +206,7 @@ bindsym --to-code $mod+r mode "resize"
 bindsym --to-code Print exec grim - | swappy -f -
 bindsym --to-code $mod+Print exec grim -g "$(slurp)" - | swappy -f -
 bindsym --to-code $mod+Ctrl+l exec swaylock -i ~/Pictures/bg.jpg
-bindsym --to-code $mod+y sticky toggle
+bindsym --to-code $mod+Shift+y sticky toggle
 
 #
 # Status Bar:
@@ -230,8 +230,17 @@ exec_always libinput-gestures
 
 include /etc/sway/config.d/*
 
-output DP-2 pos 0 0
-output eDP-1 pos 0 1080
+output DP-2 {
+pos 0,0
+mode 1920x1080@60Hz
+scale 1
+}
+output eDP-1 {
+pos 0,1080
+mode 1920x1080@60Hz
+scale 1
+}
+# output eDP-1 pos 0 1080
 workspace 2 output DP-2
 
 workspace 1 output eDP-1
@@ -258,3 +267,8 @@ client.focused			#ffffff #ffffff #222222 #ff0000
 client.unfocused		#222222 #222222 #ffffff #222222
 client.urgent			#ffffff #ffffff #222222 #ffffff
 client.placeholder		#ffffff #ffffff #222222 #ffffff
+
+bindsym --to-code $mod+x exec warpd --hint
+bindsym --to-code $mod+c exec warpd --normal
+bindsym --to-code $mod+g exec warpd --grid
+
