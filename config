@@ -267,8 +267,3 @@ client.focused			#ffffff #ffffff #222222 #ff0000
 client.unfocused		#222222 #222222 #ffffff #222222
 client.urgent			#ffffff #ffffff #222222 #ffffff
 client.placeholder		#ffffff #ffffff #222222 #ffffff
-
-bindsym --to-code $mod+x exec warpd --hint
-bindsym --to-code $mod+c exec warpd --normal
-bindsym --to-code $mod+g exec warpd --grid
-
