@@ -9,3 +9,4 @@ rm -rf ranger
 cp -r ~/.config/ranger ranger
 cp ~/.config/wlogout/layout wlogout/layout
 cp ~/.config/wlogout/style.css wlogout/style.css
+cp ~/.zshenv zshenv
