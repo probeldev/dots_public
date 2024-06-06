@@ -267,3 +267,7 @@ client.focused			#ffffff #ffffff #222222 #ff0000
 client.unfocused		#222222 #222222 #ffffff #222222
 client.urgent			#ffffff #ffffff #222222 #ffffff
 client.placeholder		#ffffff #ffffff #222222 #ffffff
+
+for_window [app_id="firefox" title="Картинка в картинке"] floating enable, sticky enable
+
+for_window [app_id="firefox"] border none 
