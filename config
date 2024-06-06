@@ -227,6 +227,8 @@ exec blueman-applet
 exec_always nm-applet --indicator
 exec_always libinput-gestures
 
+exec_always pulsemixer --id source-49 --set-volume 49 # узнать id pulsemixer -l
+
 
 include /etc/sway/config.d/*
 
