@@ -240,7 +240,7 @@ scale 1
 output eDP-1 {
 pos 0,1080
 mode 1920x1080@60Hz
-scale 1.2
+scale 1.25
 }
 # output eDP-1 pos 0 1080
 workspace 2 output DP-2
