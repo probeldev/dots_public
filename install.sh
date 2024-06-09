@@ -43,8 +43,8 @@ sudo apt install -y swappy
 sudo apt install -y wlogout
 sudo apt install -y wf-recorder # todo add hotkey and notification
 sudo apt install -y breeze      # todo: разобраться как выбирать иконки в kde приложениях
-sudo apt install -y pcmanfm
-sudo apt install firefox-esr
+sudo apt install -y nemo
+sudo apt install -y firefox-esr
 
 sh nwg-drawer.sh
 #sh libinput-gestures.sh  # todo: remove
