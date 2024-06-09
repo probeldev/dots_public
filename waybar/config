@@ -173,7 +173,7 @@
     "custom/icon_file": {
 	    "format": "{}  ",
 	    "tooltip": false,
-	    "on-click": "dolphin",
+	    "on-click": "pcmanfm",
 //	    "on-click-right": "alacritty -e ranger"
     },
     "custom/icon_translate": {

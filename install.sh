@@ -43,8 +43,7 @@ sudo apt install -y swappy
 sudo apt install -y wlogout
 sudo apt install -y wf-recorder # todo add hotkey and notification
 sudo apt install -y breeze      # todo: разобраться как выбирать иконки в kde приложениях
-sudo apt install -y dolphin
-sudo apt install -y kde-cli-tools # for dolphin
+sudo apt install -y pcmanfm
 sudo apt install firefox-esr
 
 sh nwg-drawer.sh
