@@ -206,7 +206,6 @@ bindsym --to-code $mod+r mode "resize"
 
 bindsym --to-code Print exec grim - | swappy -f -
 bindsym --to-code $mod+Print exec grim -g "$(slurp)" - | swappy -f -
-bindsym --to-code $mod+Ctrl+l exec swaylock -i ~/Pictures/bg.jpg
 bindsym --to-code $mod+Shift+y sticky toggle
 
 #
@@ -273,4 +272,18 @@ client.placeholder		#ffffff #ffffff #222222 #ffffff
 
 for_window [app_id="firefox" title="Картинка в картинке"] floating enable, sticky enable
 
-for_window [app_id="firefox"] border none 
+for_window [app_id="firefox"] border none
+
+set $laptop eDP-1
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
+
+
+bindsym --to-code $mod+Ctrl+l exec swaylock -i ~/Pictures/bg.jpg
+
+exec_always swayidle -w \
+    timeout 30 'swaylock -i ~/Pictures/bg.jpg' \
+    timeout 314 'swaymsg "output * dpms off"' \
+        resume  'swaymsg "output * dpms on"'  \
+    timeout 626 'systemctl suspend ' \
+    before-sleep 'swaylock -f '

@@ -11,9 +11,8 @@ cp swayimg/config ~/.config/swayimg/config
 mkdir ~/.config/mako
 cp mako/config ~/.config/mako/config
 
-mkdir ~/.config/rofi
-cp rofi/catppuccin.rasi ~/.config/rofi/catppuccin.rasi
-cp rofi/config.rasi ~/.config/rofi/config.rasi
+rm -r ~/.config/rofi
+cp -r rofi ~/.config/rofi
 
 rm -rf ~/.config/ranger
 cp -r ranger ~/.config/ranger
@@ -45,6 +44,7 @@ sudo apt install -y wf-recorder # todo add hotkey and notification
 sudo apt install -y breeze      # todo: разобраться как выбирать иконки в kde приложениях
 sudo apt install -y nemo
 sudo apt install -y firefox-esr
+sudo apt install -y swayidle
 
 sh nwg-drawer.sh
 #sh libinput-gestures.sh  # todo: remove
