@@ -279,11 +279,12 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 
-bindsym --to-code $mod+Ctrl+l exec swaylock -i ~/Pictures/bg.jpg
+bindsym --to-code $mod+Ctrl+l exec swaylock -e -f -i ~/Pictures/bg.jpg
 
 exec_always swayidle -w \
-    timeout 30 'swaylock -i ~/Pictures/bg.jpg' \
+    timeout 30 'swaylock -e -f -i ~/Pictures/bg.jpg' \
     timeout 314 'swaymsg "output * dpms off"' \
         resume  'swaymsg "output * dpms on"'  \
     timeout 626 'systemctl suspend ' \
     before-sleep 'swaylock -f '
+
