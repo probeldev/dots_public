@@ -9,3 +9,5 @@ flatpak install flathub org.telegram.desktop
 flatpak install flathub com.skype.Client
 flatpak install flathub com.viber.Viber
 flatpak install flathub io.missioncenter.MissionCenter
+flatpak install flathub org.dbgate.DbGate
+flatpak install flathub md.obsidian.Obsidian
