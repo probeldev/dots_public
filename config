@@ -286,5 +286,5 @@ exec_always swayidle -w \
     timeout 314 'swaymsg "output * dpms off"' \
         resume  'swaymsg "output * dpms on"'  \
     timeout 626 'systemctl suspend ' \
-    before-sleep 'swaylock -f '
+    before-sleep 'swaylock -e -f -i ~/Pictures/bg.jpg'
 
