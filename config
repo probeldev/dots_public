@@ -288,3 +288,4 @@ exec_always swayidle -w \
     timeout 626 'systemctl suspend ' \
     before-sleep 'swaylock -e -f -i ~/Pictures/bg.jpg'
 
+exec_always redshift -l 53.9:27.56

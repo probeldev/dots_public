@@ -45,6 +45,7 @@ sudo apt install -y breeze      # todo: разобраться как выбир
 sudo apt install -y nemo
 sudo apt install -y firefox-esr
 sudo apt install -y swayidle
+sudo apt install -y redshift
 
 sh nwg-drawer.sh
 #sh libinput-gestures.sh  # todo: remove
