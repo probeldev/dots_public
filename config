@@ -154,7 +154,7 @@ input <identifier> xkb_model "pc101"
     # Switch the current container between different layout styles
     bindsym --to-code $mod+s layout stacking
     bindsym --to-code $mod+w layout tabbed
-    bindsym --to-code $mod+e layout toggle split
+    # bindsym --to-code $mod+e layout toggle split
 
     # Make the current focus fullscreen
     bindsym --to-code $mod+f fullscreen
@@ -207,6 +207,7 @@ bindsym --to-code $mod+r mode "resize"
 bindsym --to-code Print exec grim - | swappy -f -
 bindsym --to-code $mod+Print exec grim -g "$(slurp)" - | swappy -f -
 bindsym --to-code $mod+Shift+y sticky toggle
+bindsym --to-code $mod+e exec nemo
 
 #
 # Status Bar:
