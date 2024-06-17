@@ -286,6 +286,8 @@ client.placeholder		#ffffff #ffffff #222222 #ffffff
 
 for_window [app_id="firefox" title="Картинка в картинке"] floating enable, sticky enable
 
+for_window [app_id="nemo"] floating enable
+
 # for_window [app_id="firefox"] border none
 
 set $laptop eDP-1
