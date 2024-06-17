@@ -216,8 +216,22 @@ bar {
     swaybar_command waybar 
 }
 
+# font pango:monospace 1
+# titlebar_border_thickness 0                                                     
+# titlebar_padding 0
+
 gaps inner 15
 smart_borders off
+# disable windows titlebars, while preserving border
+for_window [class=".*"] border pixel 8
+
+# default border pixel size
+default_border pixel 8
+
+# Activate smart borders when no gaps present
+smart_borders off
+
+hide_edge_borders --i3 smart_no_gaps
 
 
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
@@ -265,14 +279,14 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86Search exec bemenu-run
 
-client.focused			#9da8f2 #9da8f2 #222222 #9da8f2
-client.unfocused		#eeeeee #eeeeee #222222 #eeeeee
+client.focused			#c05fff #c05fff #222222 #c05fff
+client.unfocused		#eaccfc #eaccfc #222222 #eaccfc
 client.urgent			#ffffff #ffffff #222222 #ffffff
 client.placeholder		#ffffff #ffffff #222222 #ffffff
 
 for_window [app_id="firefox" title="Картинка в картинке"] floating enable, sticky enable
 
-for_window [app_id="firefox"] border none
+# for_window [app_id="firefox"] border none
 
 set $laptop eDP-1
 bindswitch --reload --locked lid:on output $laptop disable
@@ -289,3 +303,4 @@ exec_always swayidle -w \
     before-sleep 'swaylock -e -f -i ~/Pictures/bg.jpg'
 
 exec_always redshift -l 53.9:27.56
+
