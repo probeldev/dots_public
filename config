@@ -217,7 +217,7 @@ bar {
 }
 
 gaps inner 15
-smart_borders on
+smart_borders off
 
 
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
@@ -265,8 +265,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86Search exec bemenu-run
 
-client.focused			#ffffff #ffffff #222222 #ff0000
-client.unfocused		#222222 #222222 #ffffff #222222
+client.focused			#9da8f2 #9da8f2 #222222 #9da8f2
+client.unfocused		#eeeeee #eeeeee #222222 #eeeeee
 client.urgent			#ffffff #ffffff #222222 #ffffff
 client.placeholder		#ffffff #ffffff #222222 #ffffff
 
