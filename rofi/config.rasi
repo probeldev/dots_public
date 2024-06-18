@@ -1,5 +1,5 @@
 configuration{
-    modi: "run,drun,window,filebrowser";
+    modi: "drun";
     lines: 5;
     font: "JetBrainsMono Nerd Font 14";
     show-icons: true;
@@ -13,7 +13,7 @@ configuration{
     display-run: "   Run ";
     display-window: "   window";
     display-Network: " 󰤨  Network";
-    sidebar-mode: true;
+    sidebar-mode: false;
 }
 
 @theme "catppuccin"
