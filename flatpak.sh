@@ -17,3 +17,4 @@ flatpak install flathub com.visualstudio.code
 flatpak install flathub org.freedesktop.Sdk.Extension.golang # for vs code
 
 flatpak install flathub io.github.amit9838.mousam
+flatpak install flathub org.gnome.Podcasts
