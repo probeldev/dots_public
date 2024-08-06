@@ -1,5 +1,5 @@
-mkdir ~/.config/sway
-cp config ~/.config/sway/config
+mkdir ~/.config/hypr
+cp hyprland.conf ~/.config/hypr/hyprland.conf
 
 mkdir ~/.config/waybar
 cp waybar/style.css ~/.config/waybar/style.css
@@ -22,6 +22,7 @@ cp -r wlogout ~/.config/wlogout
 
 cp zshenv ~/.zshenv
 
+sudo apt install hyprland
 sudo apt install -y git
 sudo apt install -y rofi
 sudo apt install -y grim

@@ -6,9 +6,9 @@
     // "margin-top": 15,
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/icon_menu","sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media", "custom/icon_webbrowser","custom/icon_telegram", "custom/icon_skype", "custom/icon_viber", "custom/icon_file", "custom/icon_translate", "custom/icon_activity", ],
+    "modules-left": ["custom/icon_menu","sway/workspaces","hyprland/workspaces", "sway/mode", "sway/scratchpad", "custom/media", "custom/icon_webbrowser","custom/icon_telegram", "custom/icon_skype", "custom/icon_viber", "custom/icon_file", "custom/icon_translate", "custom/icon_activity", ],
     "modules-center": [],
-    "modules-right": ["mpd",  "pulseaudio", "network",  "temperature",   "sway/language", "battery", "battery#bat2", "tray","clock", "custom/icon_logout"],
+    "modules-right": ["mpd",  "pulseaudio", "network",  "temperature",   "sway/language", "hyprland/language", "battery", "battery#bat2", "tray","clock", "custom/icon_logout"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
