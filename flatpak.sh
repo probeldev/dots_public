@@ -12,6 +12,7 @@ flatpak install flathub io.missioncenter.MissionCenter
 flatpak install flathub org.dbgate.DbGate
 flatpak install flathub md.obsidian.Obsidian
 flatpak install flathub com.github.tchx84.Flatseal
+flatpak install flathub de.haeckerfelix.Fragments
 
 flatpak install flathub com.visualstudio.code
 flatpak install flathub org.freedesktop.Sdk.Extension.golang # for vs code

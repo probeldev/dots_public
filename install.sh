@@ -22,7 +22,8 @@ cp -r wlogout ~/.config/wlogout
 
 cp zshenv ~/.zshenv
 
-sudo apt install hyprland
+sudo apt install -y hyprland
+sudo apt install -y alacritty
 sudo apt install -y git
 sudo apt install -y rofi
 sudo apt install -y grim
