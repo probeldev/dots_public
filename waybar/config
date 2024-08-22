@@ -167,7 +167,7 @@
     "custom/icon_menu": {
 	    "format": "{} 󰹯 ",
 	    "tooltip": false,
-	    "on-click": "nwg-drawer",
+	    "on-click": "rofi -show drun -monitor eDP-1",
 //	    "on-click-right": "alacritty -e ranger"
     },
     "custom/icon_file": {
