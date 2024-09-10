@@ -37,7 +37,6 @@ sudo apt install -y pulsemixer
 sudo apt install -y wl-clipboard
 sudo apt install -y zathura-pdf-poppler zathura zathura-djvu
 sudo apt install -y linux-cpupower
-sudo apt install -y mpv
 sudo apt install -y swayimg
 sudo apt install -y pipewire-alsa
 sudo apt install -y swappy
