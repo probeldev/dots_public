@@ -5,9 +5,6 @@ mkdir ~/.config/waybar
 cp waybar/style.css ~/.config/waybar/style.css
 cp waybar/config ~/.config/waybar/config
 
-mkdir ~/.config/swayimg
-cp swayimg/config ~/.config/swayimg/config
-
 mkdir ~/.config/mako
 cp mako/config ~/.config/mako/config
 
@@ -37,7 +34,6 @@ sudo apt install -y pulsemixer
 sudo apt install -y wl-clipboard
 sudo apt install -y zathura-pdf-poppler zathura zathura-djvu
 sudo apt install -y linux-cpupower
-sudo apt install -y swayimg
 sudo apt install -y pipewire-alsa
 sudo apt install -y swappy
 sudo apt install -y wlogout

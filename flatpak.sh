@@ -23,4 +23,6 @@ flatpak install flathub org.gnome.Podcasts
 flatpak install flathub org.gnome.Snapshot
 
 flatpak install flathub org.kde.dolphin
-flatpak install flathub org.sigxcpu.Livi
+flatpak install flathub org.kde.haruna
+
+flatpak install flathub org.gnome.Loupe
