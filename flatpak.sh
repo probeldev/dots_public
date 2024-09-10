@@ -21,3 +21,5 @@ flatpak install flathub io.github.amit9838.mousam
 flatpak install flathub org.gnome.Podcasts
 
 flatpak install flathub org.gnome.Snapshot
+
+flatpak install flathub org.kde.dolphin
