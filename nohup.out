@@ -1,0 +1,28 @@
+[2024-09-11 02:58:44.345] [info] Using configuration file /home/sergey/.config/waybar/config
+[2024-09-11 02:58:44.355] [info] Using CSS file /home/sergey/.config/waybar/style.css
+[2024-09-11 02:58:44.431] [warning] module sway/workspaces: Disabling module "sway/workspaces", Socket path is empty
+[2024-09-11 02:58:44.433] [info] Hyprland IPC starting
+[2024-09-11 02:58:44.439] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-09-11 02:58:44.480] [warning] module sway/mode: Disabling module "sway/mode", Socket path is empty
+[2024-09-11 02:58:44.511] [warning] module sway/scratchpad: Disabling module "sway/scratchpad", Socket path is empty
+[2024-09-11 02:58:44.519] [error] media stopped unexpectedly, is it endless?
+[2024-09-11 02:58:44.558] [warning] module sway/language: Disabling module "sway/language", Socket path is empty
+[2024-09-11 02:58:44.605] [warning] No battery named BAT2
+[2024-09-11 02:58:44.683] [warning] module sway/workspaces: Disabling module "sway/workspaces", Socket path is empty
+[2024-09-11 02:58:44.687] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-09-11 02:58:44.714] [warning] module sway/mode: Disabling module "sway/mode", Socket path is empty
+[2024-09-11 02:58:44.737] [warning] module sway/scratchpad: Disabling module "sway/scratchpad", Socket path is empty
+[2024-09-11 02:58:44.744] [error] media stopped unexpectedly, is it endless?
+[2024-09-11 02:58:44.766] [warning] module sway/language: Disabling module "sway/language", Socket path is empty
+[2024-09-11 02:58:44.797] [warning] No battery named BAT2
+[2024-09-11 02:58:45.052] [info] Bar configured (width: 1600, height: 43) for output: eDP-1
+[2024-09-11 02:58:45.053] [info] Bar configured (width: 1920, height: 43) for output: HDMI-A-2
+[2024-09-11 02:58:45.076] [info] Bar configured (width: 1920, height: 43) for output: HDMI-A-2
+
+(resources:2): Gtk-WARNING **: 02:58:51.778: Failed to load icon /run/host/share/icons/hicolor/32x32/apps/firefox-esr.png: Error opening file /run/host/share/icons/hicolor/32x32/apps/firefox-esr.png: No such file or directory
+
+(resources:2): Gtk-WARNING **: 02:58:51.789: Failed to load icon /run/host/share/icons/hicolor/16x16/apps/firefox-esr.png: Error opening file /run/host/share/icons/hicolor/16x16/apps/firefox-esr.png: No such file or directory
+
+(resources:2): Gtk-WARNING **: 02:58:52.295: Failed to load icon /run/host/share/icons/hicolor/32x32/apps/firefox-esr.png: Error opening file /run/host/share/icons/hicolor/32x32/apps/firefox-esr.png: No such file or directory
+
+(resources:2): Gtk-WARNING **: 02:58:52.830: Failed to load icon /run/host/share/icons/hicolor/64x64/apps/firefox-esr.png: Error opening file /run/host/share/icons/hicolor/64x64/apps/firefox-esr.png: No such file or directory

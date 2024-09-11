@@ -8,7 +8,7 @@ flatpak install flathub io.github.giantpinkrobots.flatsweep
 flatpak install flathub org.telegram.desktop
 flatpak install flathub com.skype.Client
 flatpak install flathub com.viber.Viber
-flatpak install flathub io.missioncenter.MissionCenter
+flatpak install flathub net.nokyan.Resources
 flatpak install flathub org.dbgate.DbGate
 flatpak install flathub md.obsidian.Obsidian
 flatpak install flathub com.github.tchx84.Flatseal
