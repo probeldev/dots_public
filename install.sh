@@ -1,5 +1,6 @@
 mkdir ~/.config/hypr
 cp hyprland.conf ~/.config/hypr/hyprland.conf
+cp hyprlock.conf ~/.config/hypr/hyprlock.conf
 
 mkdir ~/.config/waybar
 cp waybar/style.css ~/.config/waybar/style.css
