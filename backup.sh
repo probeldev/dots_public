@@ -1,5 +1,5 @@
 cp ~/.config/hypr/hyprland.conf hyprland.conf
-cp ~/.config/hypr/hyprland.conf hyprlock.conf
+cp ~/.config/hypr/hyprlock.conf hyprlock.conf
 cp ~/.config/waybar/style.css waybar/style.css
 cp ~/.config/waybar/config waybar/config
 cp ~/.config/mako/config mako/config
