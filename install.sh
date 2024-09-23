@@ -44,5 +44,7 @@ sudo apt install -y firefox-esr
 sudo apt install -y swayidle
 sudo apt install -y redshift
 
-sh nwg-drawer.sh
+sudo apt install -y gnome-keyring # связка ключей для всяких скайпов
+
+# sh nwg-drawer.sh
 #sh libinput-gestures.sh  # todo: remove
