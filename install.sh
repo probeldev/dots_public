@@ -34,7 +34,6 @@ sudo apt install -y waybar
 sudo apt install -y mako-notifier
 sudo apt install -y pulsemixer
 sudo apt install -y wl-clipboard
-sudo apt install -y zathura-pdf-poppler zathura zathura-djvu
 sudo apt install -y linux-cpupower
 sudo apt install -y pipewire-alsa
 sudo apt install -y swappy

@@ -26,3 +26,5 @@ flatpak install flathub org.kde.dolphin
 flatpak install flathub org.kde.haruna
 
 flatpak install flathub org.gnome.Loupe
+flatpak install flathub page.kramo.Sly
+flatpak install flathub org.kde.okular
