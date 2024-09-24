@@ -1,6 +1,7 @@
 mkdir ~/.config/hypr
 cp hyprland.conf ~/.config/hypr/hyprland.conf
 cp hyprlock.conf ~/.config/hypr/hyprlock.conf
+cp hyprpaper.conf ~/.config/hypr/hyprpaper.conf
 
 mkdir ~/.config/waybar
 cp waybar/style.css ~/.config/waybar/style.css
@@ -21,6 +22,7 @@ cp -r wlogout ~/.config/wlogout
 cp zshenv ~/.zshenv
 
 sudo apt install -y hyprland
+sudo apt install -y hyprpaper
 sudo apt install -y alacritty
 sudo apt install -y git
 sudo apt install -y rofi
@@ -30,7 +32,6 @@ sudo apt install -y blueman
 sudo apt install -y brightnessctl
 sudo apt install -y waybar
 sudo apt install -y mako-notifier
-sudo apt install -y swaylock
 sudo apt install -y pulsemixer
 sudo apt install -y wl-clipboard
 sudo apt install -y zathura-pdf-poppler zathura zathura-djvu
