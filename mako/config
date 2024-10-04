@@ -1,13 +1,14 @@
 max-history=20
-font=UbuntuMono 12
+font=FiraCode 13
 background-color=#ffffff
 text-color=#222222
-width=400
+width=600
 height=300
 padding=10
 margin=10
 border-size=8
 border-color=#53bf5d
+anchor=top-center
 
 default-timeout=3000
 
