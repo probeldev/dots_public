@@ -12,7 +12,7 @@ flatpak install flathub net.nokyan.Resources
 flatpak install flathub org.dbgate.DbGate
 flatpak install flathub md.obsidian.Obsidian
 flatpak install flathub com.github.tchx84.Flatseal
-flatpak install flathub de.haeckerfelix.Fragments
+flatpak install flathub org.kde.ktorrent
 
 flatpak install flathub com.visualstudio.code
 flatpak install flathub org.freedesktop.Sdk.Extension.golang # for vs code
