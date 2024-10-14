@@ -22,6 +22,8 @@ cp -r wlogout ~/.config/wlogout
 cp zshenv ~/.zshenv
 
 sudo apt install -y hyprland
+sudo apt install -y network-manager-gnome
+sudo apt install -y htop
 sudo apt install -y hyprpaper
 sudo apt install -y alacritty
 sudo apt install -y git
