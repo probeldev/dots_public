@@ -1,30 +1,34 @@
-flatpak install flathub org.kde.krita
-flatpak install flathub org.libreoffice.LibreOffice
-flatpak install flathub org.gnome.gitlab.somas.Apostrophe
-flatpak install flathub org.kde.kwrite
-flatpak install flathub app.drey.Dialect
-flatpak install flathub io.github.flattool.Warehouse
-flatpak install flathub io.github.giantpinkrobots.flatsweep
-flatpak install flathub org.telegram.desktop
-flatpak install flathub com.skype.Client
-flatpak install flathub com.viber.Viber
-flatpak install flathub net.nokyan.Resources
-flatpak install flathub org.dbgate.DbGate
-flatpak install flathub md.obsidian.Obsidian
-flatpak install flathub com.github.tchx84.Flatseal
-flatpak install flathub org.kde.ktorrent
+sudo apt install -y flatpak
+flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-flatpak install flathub com.visualstudio.code
-flatpak install flathub org.freedesktop.Sdk.Extension.golang # for vs code
+flatpak install -y --user flathub org.kde.krita
+flatpak install -y --user flathub org.libreoffice.LibreOffice
+flatpak install -y --user flathub org.gnome.gitlab.somas.Apostrophe
+flatpak install -y --user flathub org.kde.kwrite
+flatpak install -y --user flathub app.drey.Dialect
+flatpak install -y --user flathub io.github.flattool.Warehouse
+flatpak install -y --user flathub io.github.giantpinkrobots.flatsweep
+flatpak install -y --user flathub org.telegram.desktop
+flatpak install -y --user flathub com.skype.Client
+flatpak install -y --user flathub com.viber.Viber
+flatpak install -y --user flathub net.nokyan.Resources
+flatpak install -y --user flathub org.dbgate.DbGate
+flatpak install -y --user flathub md.obsidian.Obsidian
+flatpak install -y --user flathub com.github.tchx84.Flatseal
+flatpak install -y --user flathub org.kde.ktorrent
 
-flatpak install flathub io.github.amit9838.mousam
-flatpak install flathub org.gnome.Podcasts
+#flatpak install -y --user flathub com.visualstudio.code
+#flatpak install -y --user flathub org.freedesktop.Sdk.Extension.golang # for vs code
 
-flatpak install flathub org.gnome.Snapshot
+flatpak install -y --user flathub io.github.amit9838.mousam
+flatpak install -y --user flathub org.gnome.Podcasts
 
-flatpak install flathub org.kde.dolphin
-flatpak install flathub org.kde.haruna
+flatpak install -y --user flathub org.gnome.Snapshot
 
-flatpak install flathub page.kramo.Sly
-flatpak install flathub org.kde.okular
-flatpak install flathub org.kde.gwenview
+flatpak install -y --user flathub org.kde.dolphin
+flatpak install -y --user flathub org.kde.haruna
+
+flatpak install -y --user flathub page.kramo.Sly
+flatpak install -y --user flathub org.kde.okular
+flatpak install -y --user flathub org.kde.gwenview
+
