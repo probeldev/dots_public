@@ -191,7 +191,7 @@
     "custom/icon_webbrowser": {
 	    "format": "{} 󰖟 ",
 	    "tooltip": false,
-	    "on-click": "firefox-esr",
+	    "on-click": "flatpak run io.github.zen_browser.zen",
 //	    "on-click-right": ""
     },
     "custom/icon_telegram": {
