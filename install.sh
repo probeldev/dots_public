@@ -44,6 +44,7 @@ sudo apt install -y breeze      # todo: разобраться как выбир
 sudo apt install -y firefox-esr
 sudo apt install -y swayidle
 sudo apt install -y redshift
+sudo apt install -y swappy
 
 sudo apt install -y gnome-keyring # связка ключей для всяких скайпов
 
