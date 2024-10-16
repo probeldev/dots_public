@@ -26,6 +26,9 @@ flatpak install -y --user flathub org.gnome.Podcasts
 flatpak install -y --user flathub org.gnome.Snapshot
 
 flatpak install -y --user flathub org.kde.dolphin
+gio mime x-directory/normal org.kde.dolphin.desktop # Установка файловым менеджером по умолчанию
+gio mime inode/directory org.kde.dolphin.desktop    # Установка файловым менеджером по умолчанию
+
 flatpak install -y --user flathub org.kde.haruna
 
 flatpak install -y --user flathub page.kramo.Sly
