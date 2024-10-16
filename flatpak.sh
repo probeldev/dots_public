@@ -32,3 +32,6 @@ flatpak install -y --user flathub page.kramo.Sly
 flatpak install -y --user flathub org.kde.okular
 flatpak install -y --user flathub org.kde.gwenview
 
+flatpak install -y --user flathub io.github.zen_browser.zen
+gio mime x-scheme-handler/http io.github.zen_browser.zen.desktop  # Установка браузером по умолчанию
+gio mime x-scheme-handler/https io.github.zen_browser.zen.desktop # Установка браузером по умолчанию
