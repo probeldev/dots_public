@@ -4,7 +4,10 @@ flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/fl
 flatpak install -y --user flathub org.kde.krita
 flatpak install -y --user flathub org.libreoffice.LibreOffice
 flatpak install -y --user flathub org.gnome.gitlab.somas.Apostrophe
+
 flatpak install -y --user flathub org.kde.kwrite
+gio mime text/csv org.kde.kwrite.desktop # Установка редактором по умолчанию для csv
+
 flatpak install -y --user flathub app.drey.Dialect
 flatpak install -y --user flathub io.github.flattool.Warehouse
 flatpak install -y --user flathub io.github.giantpinkrobots.flatsweep
