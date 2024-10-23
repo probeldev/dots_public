@@ -43,3 +43,5 @@ gio mime x-scheme-handler/http io.github.zen_browser.zen.desktop  # Устано
 gio mime x-scheme-handler/https io.github.zen_browser.zen.desktop # Установка браузером по умолчанию
 
 sudo flatpak install -y --system flathub com.github.tenderowl.frog
+
+sudo flatpak install -y --system flathub org.gnome.FileRoller
