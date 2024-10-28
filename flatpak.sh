@@ -45,3 +45,5 @@ gio mime x-scheme-handler/https io.github.zen_browser.zen.desktop # Устано
 sudo flatpak install -y --system flathub com.github.tenderowl.frog
 
 sudo flatpak install -y --system flathub org.gnome.FileRoller
+
+sudo flatpak install -y --system flathub org.gnome.Calendar

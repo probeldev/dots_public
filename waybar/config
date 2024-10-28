@@ -11,8 +11,7 @@
     "modules-right": ["mpd",  "pulseaudio", "network",  "temperature",   "sway/language", "hyprland/language", "battery", "battery#bat2", "tray","clock", "custom/icon_logout"],
     // Modules configuration
     // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
+    //     "disable-scroll": true, "all-outputs": true,
     //     "warp-on-scroll": false,
     //     "format": "{name}: {icon}",
     //     "format-icons": {
@@ -85,7 +84,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        // "format-alt": "{:%Y-%m-%d}"
+	    "on-click": "flatpak run org.gnome.Calendar",
     },
     "cpu": {
         "format": "{usage}% ",
