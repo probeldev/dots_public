@@ -85,6 +85,7 @@
         // "timezone": "America/New_York",
 		"format": "{:%H:%M %d.%m.%y}",
         // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "{:%H:%M %d.%m.%y}",
         // "format-alt": "{:%Y-%m-%d}"
 	    "on-click": "flatpak run org.gnome.Calendar",
     },
