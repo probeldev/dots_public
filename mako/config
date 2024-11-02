@@ -12,4 +12,4 @@ anchor=top-center
 
 default-timeout=3000
 
-
+on-notify=exec makoctl menu wofi -d -p 'Choose Action: '

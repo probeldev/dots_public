@@ -48,5 +48,7 @@ sudo apt install -y swappy
 
 sudo apt install -y gnome-keyring # связка ключей для всяких скайпов
 
+sudo apt install -y wofi
+
 # sh nwg-drawer.sh
 #sh libinput-gestures.sh  # todo: remove
