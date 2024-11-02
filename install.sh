@@ -33,7 +33,7 @@ sudo apt install -y slurp
 sudo apt install -y blueman
 sudo apt install -y brightnessctl
 sudo apt install -y waybar
-sudo apt install -y mako-notifier
+# sudo apt install -y mako-notifier
 sudo apt install -y pulsemixer
 sudo apt install -y wl-clipboard
 sudo apt install -y linux-cpupower
@@ -48,7 +48,8 @@ sudo apt install -y swappy
 
 sudo apt install -y gnome-keyring # связка ключей для всяких скайпов
 
-sudo apt install -y wofi
+# sudo apt install -y wofi
+sudo apt install -y sway-notification-center
 
 # sh nwg-drawer.sh
 #sh libinput-gestures.sh  # todo: remove
