@@ -7,14 +7,12 @@ mkdir ~/.config/waybar
 cp waybar/style.css ~/.config/waybar/style.css
 cp waybar/config ~/.config/waybar/config
 
-mkdir ~/.config/mako
-cp mako/config ~/.config/mako/config
+rm -rf ~/.config/swaync
+mkdir ~/.config/swaync
+cp -r ~/.config/swaync swaync
 
 rm -r ~/.config/rofi
 cp -r rofi ~/.config/rofi
-
-rm -rf ~/.config/ranger
-cp -r ranger ~/.config/ranger
 
 rm -rf ~/.config/wlogout
 cp -r wlogout ~/.config/wlogout
