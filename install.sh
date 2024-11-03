@@ -9,7 +9,7 @@ cp waybar/config ~/.config/waybar/config
 
 rm -rf ~/.config/swaync
 mkdir ~/.config/swaync
-cp -r ~/.config/swaync swaync
+cp -r swaync ~/.config/swaync
 
 rm -r ~/.config/rofi
 cp -r rofi ~/.config/rofi
