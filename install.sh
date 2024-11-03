@@ -8,7 +8,6 @@ cp waybar/style.css ~/.config/waybar/style.css
 cp waybar/config ~/.config/waybar/config
 
 rm -rf ~/.config/swaync
-mkdir ~/.config/swaync
 cp -r swaync ~/.config/swaync
 
 rm -r ~/.config/rofi
