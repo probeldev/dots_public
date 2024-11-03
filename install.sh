@@ -51,5 +51,10 @@ sudo apt install -y gnome-keyring # связка ключей для всяки�
 # sudo apt install -y wofi
 sudo apt install -y sway-notification-center
 
+# Настройка блютуз наушников
+sudo apt install -y pipewire-pulse pipewire-alsa pulseaudio-utils alsa-utils
+sudo apt install -y libspa-0.2-bluetooth
+sudo apt remove -y pulseaudio-module-bluetooth
+
 # sh nwg-drawer.sh
 #sh libinput-gestures.sh  # todo: remove
