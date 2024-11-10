@@ -14,3 +14,6 @@ cp ~/.zshenv zshenv
 
 rm -rf swaync
 cp -r ~/.config/swaync swaync
+
+rm -rf foot
+cp -r ~/.config/foot foot

@@ -16,13 +16,16 @@ cp -r rofi ~/.config/rofi
 rm -rf ~/.config/wlogout
 cp -r wlogout ~/.config/wlogout
 
+rm -rf ~/.config/foot
+cp -r foot ~/.config/foot
+
 cp zshenv ~/.zshenv
 
 sudo apt install -y hyprland
 sudo apt install -y network-manager-gnome
 sudo apt install -y htop
 sudo apt install -y hyprpaper
-sudo apt install -y alacritty
+sudo apt install -y foot
 sudo apt install -y git
 sudo apt install -y rofi
 sudo apt install -y grim
