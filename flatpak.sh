@@ -36,6 +36,7 @@ sudo flatpak install -y --system flathub org.kde.haruna
 
 sudo flatpak install -y --system flathub page.kramo.Sly
 sudo flatpak install -y --system flathub org.kde.okular
+gio mime application/pdf org.kde.okular.desktop # установка по умолчанию для pdf
 sudo flatpak install -y --system flathub org.kde.gwenview
 
 sudo flatpak install -y --system flathub io.github.zen_browser.zen
