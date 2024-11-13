@@ -6,7 +6,8 @@ sudo flatpak install -y --system flathub org.libreoffice.LibreOffice
 sudo flatpak install -y --system flathub org.gnome.gitlab.somas.Apostrophe
 
 sudo flatpak install -y --system flathub org.kde.kwrite
-gio mime text/csv org.kde.kwrite.desktop # Установка редактором по умолчанию для csv
+gio mime text/csv org.kde.kwrite.desktop         # Установка редактором по умолчанию для csv
+gio mime application/json org.kde.kwrite.desktop # Установка редактора по умлчанию для json
 
 sudo flatpak install -y --system flathub app.drey.Dialect
 sudo flatpak install -y --system flathub io.github.flattool.Warehouse
