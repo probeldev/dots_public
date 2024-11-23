@@ -43,6 +43,7 @@ sudo flatpak install -y --system flathub org.kde.gwenview
 sudo flatpak install -y --system flathub io.github.zen_browser.zen
 gio mime x-scheme-handler/http io.github.zen_browser.zen.desktop  # Установка браузером по умолчанию
 gio mime x-scheme-handler/https io.github.zen_browser.zen.desktop # Установка браузером по умолчанию
+gio mime text/html io.github.zen_browser.zen.desktop              # Установка браузером по умолчанию
 
 sudo flatpak install -y --system flathub com.github.tenderowl.frog
 
