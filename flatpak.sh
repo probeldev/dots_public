@@ -25,7 +25,7 @@ sudo flatpak install -y --system flathub org.kde.ktorrent
 #sudo flatpak install -y --system  flathub org.freedesktop.Sdk.Extension.golang # for vs code
 
 sudo flatpak install -y --system flathub io.github.amit9838.mousam
-sudo flatpak install -y --system flathub org.gnome.Podcasts
+sudo flatpak install -y --system flathub flathub org.feichtmeier.Musicpod
 
 sudo flatpak install -y --system flathub org.gnome.Snapshot
 
