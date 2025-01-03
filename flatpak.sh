@@ -50,3 +50,5 @@ sudo flatpak install -y --system flathub com.github.tenderowl.frog
 sudo flatpak install -y --system flathub org.gnome.FileRoller
 
 sudo flatpak install -y --system flathub org.gnome.Calendar
+
+sudo flatpak install -y --system flathub pw.mmk.OpenFreebuds # для наушников хуавей
