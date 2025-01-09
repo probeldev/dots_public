@@ -38,7 +38,7 @@ sudo flatpak install -y --system flathub org.kde.haruna
 sudo flatpak install -y --system flathub page.kramo.Sly
 sudo flatpak install -y --system flathub org.gnome.Papers
 gio mime application/pdf org.gnome.Papers.desktop # установка по умолчанию для pdf
-sudo flatpak install -y --system flathub org.kde.gwenview
+sudo flatpak install -y --system flathub org.gnome.Loupe
 
 sudo flatpak install -y --system flathub io.github.zen_browser.zen
 gio mime x-scheme-handler/http io.github.zen_browser.zen.desktop  # Установка браузером по умолчанию
