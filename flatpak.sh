@@ -36,8 +36,8 @@ gio mime inode/directory org.kde.dolphin.desktop    # Установка фай�
 sudo flatpak install -y --system flathub org.kde.haruna
 
 sudo flatpak install -y --system flathub page.kramo.Sly
-sudo flatpak install -y --system flathub org.kde.okular
-gio mime application/pdf org.kde.okular.desktop # установка по умолчанию для pdf
+sudo flatpak install -y --system flathub org.gnome.Papers
+gio mime application/pdf org.gnome.Papers.desktop # установка по умолчанию для pdf
 sudo flatpak install -y --system flathub org.kde.gwenview
 
 sudo flatpak install -y --system flathub io.github.zen_browser.zen
