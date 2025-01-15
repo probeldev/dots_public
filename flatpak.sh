@@ -52,3 +52,5 @@ sudo flatpak install -y --system flathub org.gnome.FileRoller
 sudo flatpak install -y --system flathub org.gnome.Calendar
 
 sudo flatpak install -y --system flathub pw.mmk.OpenFreebuds # для наушников хуавей
+
+flatpak install flathub org.gnome.gitlab.somas.Apostrophe
