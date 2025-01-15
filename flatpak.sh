@@ -40,10 +40,10 @@ sudo flatpak install -y --system flathub org.gnome.Papers
 gio mime application/pdf org.gnome.Papers.desktop # установка по умолчанию для pdf
 sudo flatpak install -y --system flathub org.gnome.Loupe
 
-sudo flatpak install -y --system flathub io.github.zen_browser.zen
-gio mime x-scheme-handler/http io.github.zen_browser.zen.desktop  # Установка браузером по умолчанию
-gio mime x-scheme-handler/https io.github.zen_browser.zen.desktop # Установка браузером по умолчанию
-gio mime text/html io.github.zen_browser.zen.desktop              # Установка браузером по умолчанию
+sudo flatpak install -y --system flathub app.zen_browser.zen
+gio mime x-scheme-handler/http app.zen_browser.zen.desktop  # Установка браузером по умолчанию
+gio mime x-scheme-handler/https app.zen_browser.zen.desktop # Установка браузером по умолчанию
+gio mime text/html app.zen_browser.zen.desktop              # Установка браузером по умолчанию
 
 sudo flatpak install -y --system flathub com.github.tenderowl.frog
 
