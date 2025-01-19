@@ -1,0 +1,19 @@
+[2025-01-19 13:34:21.257] [info] Using configuration file /home/sergey/.config/waybar/config
+[2025-01-19 13:34:21.264] [info] Using CSS file /home/sergey/.config/waybar/style.css
+[2025-01-19 13:34:21.347] [warning] module sway/workspaces: Disabling module "sway/workspaces", Socket path is empty
+[2025-01-19 13:34:21.347] [info] Hyprland IPC starting
+[2025-01-19 13:34:21.349] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-01-19 13:34:21.418] [warning] module sway/mode: Disabling module "sway/mode", Socket path is empty
+[2025-01-19 13:34:21.489] [warning] module sway/scratchpad: Disabling module "sway/scratchpad", Socket path is empty
+[2025-01-19 13:34:21.495] [error] media stopped unexpectedly, is it endless?
+[2025-01-19 13:34:21.562] [warning] module sway/language: Disabling module "sway/language", Socket path is empty
+[2025-01-19 13:34:21.587] [warning] No battery named BAT2
+[2025-01-19 13:34:21.671] [info] Bar configured (width: 1536, height: 43) for output: eDP-1
+[2025-01-19 13:34:21.671] [error] Item '': No icon name or pixmap given.
+[2025-01-19 13:34:21.702] [error] Item '': No icon name or pixmap given.
+[2025-01-19 13:34:21.702] [error] Item '': No icon name or pixmap given.
+[2025-01-19 13:34:21.703] [error] Item '': No icon name or pixmap given.
+warn: wayland.c:1619: compositor does not implement the XDG toplevel icon protocol
+warn: wayland.c:1619: compositor does not implement the XDG toplevel icon protocol
+warn: wayland.c:1619: compositor does not implement the XDG toplevel icon protocol
+warn: wayland.c:1619: compositor does not implement the XDG toplevel icon protocol

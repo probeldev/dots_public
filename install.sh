@@ -13,9 +13,6 @@ cp -r swaync ~/.config/swaync
 rm -r ~/.config/rofi
 cp -r rofi ~/.config/rofi
 
-rm -rf ~/.config/wlogout
-cp -r wlogout ~/.config/wlogout
-
 rm -rf ~/.config/foot
 cp -r foot ~/.config/foot
 
@@ -38,7 +35,6 @@ sudo apt install -y pulsemixer
 sudo apt install -y wl-clipboard
 sudo apt install -y linux-cpupower
 sudo apt install -y pipewire-alsa
-sudo apt install -y wlogout
 sudo apt install -y wf-recorder # todo add hotkey and notification
 sudo apt install -y breeze      # todo: разобраться как выбирать иконки в kde приложениях
 sudo apt install -y firefox-esr

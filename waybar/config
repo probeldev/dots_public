@@ -214,7 +214,7 @@
     "custom/icon_logout": {
 	    "format": "{}  ",
 	    "tooltip": false,
-	    "on-click": "wlogout",
+	    "on-click": "foot -T fast-launcher fastlauncher --config ~/script/hyprland-cfg/fast-launcher/logout.cfg",
 //	    "on-click-right": ""
     },
 
