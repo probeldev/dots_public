@@ -1,3 +1,5 @@
+sudo setfacl --modify user:sergey:rw /var/run/docker.sock
+
 docker stop lamp
 docker stop mysql
 
