@@ -87,7 +87,7 @@
         // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "tooltip-format": "{:%H:%M %d.%m.%y}",
         // "format-alt": "{:%Y-%m-%d}"
-	    "on-click": "flatpak run org.gnome.Calendar",
+	    "on-click": "flatpak run codes.loers.Karlender",
     },
     "cpu": {
         "format": "{usage}% ",
