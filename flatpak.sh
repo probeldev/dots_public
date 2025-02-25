@@ -56,3 +56,4 @@ sudo flatpak install -y --system flathub pw.mmk.OpenFreebuds # для наушн
 sudo flatpak install -y --system flathub org.gnome.gitlab.somas.Apostrophe
 
 sudo flatpak install -y --system flathub io.github.ebonjaeger.bluejay
+sudo flatpak install -y --system flathub re.sonny.Eloquent
