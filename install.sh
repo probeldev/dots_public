@@ -18,34 +18,33 @@ cp -r foot ~/.config/foot
 
 cp zshenv ~/.zshenv
 
-sudo apt install -y hyprland
-sudo apt install -y network-manager-gnome
-sudo apt install -y htop
-sudo apt install -y hyprpaper
-sudo apt install -y foot
-sudo apt install -y git
-sudo apt install -y rofi
-sudo apt install -y grim
-sudo apt install -y slurp
-sudo apt install -y brightnessctl
-sudo apt install -y waybar
-# sudo apt install -y mako-notifier
-sudo apt install -y pulsemixer
-sudo apt install -y wl-clipboard
-sudo apt install -y linux-cpupower
-sudo apt install -y pipewire-alsa
-sudo apt install -y wf-recorder # todo add hotkey and notification
-sudo apt install -y breeze      # todo: разобраться как выбирать иконки в kde приложениях
-sudo apt install -y firefox-esr
-sudo apt install -y swayidle
-sudo apt install -y redshift
-sudo apt install -y swappy
-sudo apt install -y fonts-firacode
+sudo yum install -y hyprland
+sudo yum install -y network-manager-gnome
+sudo yum install -y htop
+sudo yum install -y hyprpaper
+sudo yum install -y foot
+sudo yum install -y git
+sudo yum install -y rofi
+sudo yum install -y grim
+sudo yum install -y slurp
+sudo yum install -y brightnessctl
+sudo yum install -y waybar
+# sudo yum install -y mako-notifier
+sudo yum install -y pulsemixer
+sudo yum install -y wl-clipboard
+sudo yum install -y linux-cpupower
+sudo yum install -y pipewire-alsa
+sudo yum install -y wf-recorder # todo add hotkey and notification
+sudo yum install -y breeze      # todo: разобраться как выбирать иконки в kde приложениях
+sudo yum install -y firefox-esr
+sudo yum install -y swayidle
+sudo yum install -y redshift
+sudo yum install -y swappy
+sudo dnf install -y fira-code-fonts
+sudo yum install -y gnome-keyring # связка ключей для всяких скайпов
 
-sudo apt install -y gnome-keyring # связка ключей для всяких скайпов
-
-# sudo apt install -y wofi
-sudo apt install -y sway-notification-center
+# sudo yum install -y wofi
+sudo yum install -y sway-notification-center
 
 # sh nwg-drawer.sh
 #sh libinput-gestures.sh  # todo: remove

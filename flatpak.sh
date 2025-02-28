@@ -12,7 +12,7 @@ gio mime application/json org.kde.kwrite.desktop # Установка редак
 sudo flatpak install -y --system flathub app.drey.Dialect
 sudo flatpak install -y --system flathub io.github.flattool.Warehouse
 sudo flatpak install -y --system flathub io.github.giantpinkrobots.flatsweep
-sudo flatpak install -y --system flathub org.telegram.desktop
+# sudo flatpak install -y --system flathub org.telegram.desktop
 sudo flatpak install -y --system flathub com.skype.Client
 sudo flatpak install -y --system flathub com.viber.Viber
 sudo flatpak install -y --system flathub net.nokyan.Resources
