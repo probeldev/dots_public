@@ -38,7 +38,9 @@ sudo flatpak install -y --system flathub org.kde.haruna
 sudo flatpak install -y --system flathub page.kramo.Sly
 sudo flatpak install -y --system flathub org.gnome.Papers
 gio mime application/pdf org.gnome.Papers.desktop # установка по умолчанию для pdf
+
 sudo flatpak install -y --system flathub org.gnome.Loupe
+gio mime image/jpeg org.gnome.Loupe.desktop # установка по умолчанию для jpeg
 
 sudo flatpak install -y --system flathub app.zen_browser.zen
 gio mime x-scheme-handler/http app.zen_browser.zen.desktop  # Установка браузером по умолчанию
@@ -52,8 +54,6 @@ sudo flatpak install -y --system flathub org.gnome.FileRoller
 sudo flatpak install -y --system flathub codes.loers.Karlender
 
 sudo flatpak install -y --system flathub pw.mmk.OpenFreebuds # для наушников хуавей
-
-sudo flatpak install -y --system flathub org.gnome.gitlab.somas.Apostrophe
 
 sudo flatpak install -y --system flathub io.github.ebonjaeger.bluejay
 sudo flatpak install -y --system flathub re.sonny.Eloquent
