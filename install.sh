@@ -49,3 +49,5 @@ sudo apt install -y sway-notification-center
 
 # sh nwg-drawer.sh
 #sh libinput-gestures.sh  # todo: remove
+
+sudo apt-get install lxpolkit
