@@ -52,3 +52,5 @@ sudo apt install -y sway-notification-center
 #sh libinput-gestures.sh  # todo: remove
 
 sudo apt-get install lxpolkit
+
+sudo apt install acpi # для отображения заряда аккумулятора на hyprlock
