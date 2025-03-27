@@ -1,6 +1,7 @@
 mkdir ~/.config/hypr
 cp hyprland.conf ~/.config/hypr/hyprland.conf
 cp hyprlock.conf ~/.config/hypr/hyprlock.conf
+cp hypridle.conf ~/.config/hypr/hypridle.conf
 cp hyprpaper.conf ~/.config/hypr/hyprpaper.conf
 
 mkdir ~/.config/waybar
