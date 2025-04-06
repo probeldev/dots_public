@@ -1,3 +1,6 @@
+cp -r /etc/nixos nixos
+cp -r ~/.config/niri niri
+
 cp ~/.config/hypr/hyprland.conf hyprland.conf
 cp ~/.config/hypr/hyprlock.conf hyprlock.conf
 cp ~/.config/hypr/hypridle.conf hypridle.conf
