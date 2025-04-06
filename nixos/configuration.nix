@@ -149,6 +149,7 @@
 
      swaybg
      swayidle
+     swayosd
      libnotify
      swaynotificationcenter
 
@@ -162,6 +163,7 @@
 
      wf-recorder
      ffmpeg
+     fzf
   #  wget
   ];
 
@@ -190,18 +192,20 @@ programs = {
    zsh = {
       enable = true;
       autosuggestions.enable = true;
-      zsh-autoenv.enable = true;
-      syntaxHighlighting.enable = true;
+      # zsh-autoenv.enable = true;
+      # syntaxHighlighting.enable = true;
       ohMyZsh = {
          enable = true;
-         theme = "robbyrussell";
+         # theme = "robbyrussell";
+         theme = "mortalscumbag";
          plugins = [
-           # "git"
-           # "npm"
-           # "history"
-           # "node"
-           # "rust"
-           # "deno"
+	   "fzf"
+           "git"
+           "npm"
+           "history"
+           "node"
+           "rust"
+           "deno"
          ];
       };
    };
@@ -223,13 +227,6 @@ services.flatpak.enable = true;
         ]);
     };
 
-  services.cron = {
-    enable = true;
-    systemCronJobs = [
-      "*/1 * * * * echo level 0 > /proc/acpi/ibm/fan"
-      "*/1 * * * * cpupower frequency-set -u 1500Mhz"
-    ];
-  };
 
     nix.settings = {
       experimental-features = ["nix-command" "flakes"];

@@ -7,7 +7,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["custom/icon_menu","sway/workspaces","hyprland/workspaces", "niri/workspaces",  "sway/mode", "sway/scratchpad", "custom/media", "custom/icon_webbrowser","custom/icon_telegram", "custom/icon_skype", "custom/icon_viber", "custom/icon_file", "custom/icon_translate", "custom/icon_activity", ],
-    //"modules-center": ["hyprland/window"],
+    //"modules-center": ["wlr/taskbar"],
     "modules-right": ["mpd",  "pulseaudio", "network",  "temperature",   "sway/language", "hyprland/language", "niri/language", "battery", "battery#bat2", "tray","clock", "custom/icon_logout"],
     // Modules configuration
     // "sway/workspaces": {
@@ -221,6 +221,11 @@
 	"hyprland/language": {
 		"format": "{short}",
 	},
-	
+	"niri/language": {
+        "format": "{}",
+        "on-click": "niri msg action switch-layout next",
+        "format-en": "En",
+        "format-ru": "Ru",
+    },
 }
 

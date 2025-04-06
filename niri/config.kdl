@@ -66,9 +66,9 @@ input {
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
 // Find more information on the wiki:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
+// https://github.com/YaLTeR9niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-/-output "eDP-1" {
+output "eDP-1" {
     // Uncomment this line to disable this output.
     // off
 
@@ -78,10 +78,10 @@ input {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@120.030"
+    mode "1920x1080@60"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 2
+    scale 1.25
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -124,7 +124,7 @@ layout {
     // - "always", the focused column will always be centered.
     // - "on-overflow", focusing a column will center it if it doesn't fit
     //   together with the previously focused column.
-    center-focused-column "never"
+    center-focused-column "always"
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
@@ -143,7 +143,7 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 1.0; }
+    default-column-width { proportion 0.9; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
@@ -267,8 +267,9 @@ spawn-at-startup "waybar"
 spawn-at-startup "~/work/opensource/unsplash-wall/main"
 spawn-at-startup "gammastep" "-l" "53.9:27.6"
 spawn-at-startup "wl-clip-persist" "--clipboard" "both"
-spawn-at-startup "bash" "-c" "swayidle -w  timeout 130 'hyprlock'  timeout 314 'swaymsg \"output * dpms off\"'  resume  'swaymsg \"output * dpms on\"'   timeout 626 'systemctl suspend '  before-sleep 'hyprlock'"
+spawn-at-startup "bash" "-c" "swayidle -w  timeout 130 'niri msg action switch-layout 0 && hyprlock'  timeout 314 'swaymsg \"output * dpms off\"'  resume  'swaymsg \"output * dpms on\"'   timeout 626 'systemctl suspend '  before-sleep 'niri msg action switch-layout 0 && hyprlock'"
 spawn-at-startup "flatpak" "run" "pw.mmk.OpenFreebuds"
+spawn-at-startup "swayosd-server"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -308,15 +309,6 @@ window-rule {
     // You can get away with just app-id="wezterm" if you want.
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}
-}
-
-// Open the Firefox picture-in-picture player as floating by default.
-window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
 }
 
 
@@ -380,9 +372,9 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T { spawn "foot"; }
+    Mod+Return { spawn "foot"; }
     Mod+E { spawn "nautilus" "--new-window"; }
-    Mod+D { spawn "bash" "-c" "foot -T fast-launcher fastlauncher --config ~/script/fast-launcher/cfg.json"; }
+    Mod+D { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher --config ~/script/fast-launcher/cfg.json"; }
     Super+Alt+L { spawn "swaylock"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
@@ -391,10 +383,12 @@ binds {
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "swayosd-client" "--output-volume" "raise"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "swayosd-client" "--output-volume" "lower"; }
+    XF86AudioMute        allow-when-locked=true { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn "swayosd-client" "--input-volume" "mute-toggle"; }
+	XF86MonBrightnessDown allow-when-locked=true { spawn "swayosd-client" "--brightness" "lower";}
+	XF86MonBrightnessUp allow-when-locked=true { spawn "swayosd-client" "--brightness" "raise";}
 
     Mod+Shift+Q { close-window; }
 

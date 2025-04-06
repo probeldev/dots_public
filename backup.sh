@@ -1,4 +1,7 @@
+rm -rf nixos 
 cp -r /etc/nixos nixos
+
+rm -rf niri
 cp -r ~/.config/niri niri
 
 cp ~/.config/hypr/hyprland.conf hyprland.conf
