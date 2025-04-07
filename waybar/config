@@ -224,8 +224,8 @@
 	"niri/language": {
         "format": "{}",
         "on-click": "niri msg action switch-layout next",
-        "format-en": "En",
-        "format-ru": "Ru",
+        "format-en": "en",
+        "format-ru": "ru",
     },
 }
 

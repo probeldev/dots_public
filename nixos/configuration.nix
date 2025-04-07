@@ -88,7 +88,7 @@
   users.users.sergey = {
     isNormalUser = true;
     description = "sergey";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -125,6 +125,7 @@
 
      bibata-cursors
      wl-clipboard
+     clipman     
 
      networkmanagerapplet
 
@@ -139,6 +140,7 @@
      totem
      papers
      loupe
+     musicpod
      adwaita-icon-theme
      gsettings-desktop-schemas
      grim
@@ -164,6 +166,8 @@
      wf-recorder
      ffmpeg
      fzf
+
+     docker-compose
   #  wget
   ];
 
@@ -232,6 +236,12 @@ services.flatpak.enable = true;
       experimental-features = ["nix-command" "flakes"];
       auto-optimise-store = true;
     };
+
+services.cron = {
+    enable = true;
+};
+
+virtualisation.docker.enable = true;
 
 
 

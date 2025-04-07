@@ -11,7 +11,7 @@ services:
     ports:
       - "80:80"
   db:
-    image: mysql:latest
+    image: mysql:8.0.37
     restart: always
     container_name: mysql
     environment:

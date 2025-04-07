@@ -22,7 +22,7 @@ input {
     // Omitting settings disables them, or leaves them at their default values.
     touchpad {
         // off
-		//tap
+		tap
 		// tap-button-map "left-right-middle"
 		click-method "clickfinger"
         tap-button-map "left-right-middle"
@@ -143,7 +143,7 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.9; }
+    default-column-width { proportion 0.95; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
@@ -266,10 +266,11 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "~/work/opensource/unsplash-wall/main"
 spawn-at-startup "gammastep" "-l" "53.9:27.6"
-spawn-at-startup "wl-clip-persist" "--clipboard" "both"
+// spawn-at-startup "wl-clip-persist" "--clipboard" "regular"
 spawn-at-startup "bash" "-c" "swayidle -w  timeout 130 'niri msg action switch-layout 0 && hyprlock'  timeout 314 'swaymsg \"output * dpms off\"'  resume  'swaymsg \"output * dpms on\"'   timeout 626 'systemctl suspend '  before-sleep 'niri msg action switch-layout 0 && hyprlock'"
 spawn-at-startup "flatpak" "run" "pw.mmk.OpenFreebuds"
 spawn-at-startup "swayosd-server"
+spawn-at-startup "~/work/opensource/niri-float-sticky/main"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
