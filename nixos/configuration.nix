@@ -105,8 +105,12 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     neovim     
      linuxKernel.packages.linux_zen.cpupower
+
+
+     neovim     
+     vtsls
+     gopls
 
      tdesktop
      fastfetch
@@ -130,7 +134,7 @@
      networkmanagerapplet
 
      emacs-pgtk
-     gopls
+     
      cmake
      emacsPackages.vterm
 
@@ -140,6 +144,10 @@
      totem
      papers
      loupe
+     snapshot
+     gnome-text-editor
+     epiphany
+
      musicpod
      adwaita-icon-theme
      gsettings-desktop-schemas
@@ -150,7 +158,8 @@
      brightnessctl
 
      swaybg
-     swayidle
+     #swayidle
+     hypridle
      swayosd
      libnotify
      swaynotificationcenter
@@ -168,6 +177,8 @@
      fzf
 
      docker-compose
+
+     libreoffice
   #  wget
   ];
 

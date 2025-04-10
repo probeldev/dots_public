@@ -264,12 +264,11 @@ layout {
 // See the binds section below for more spawn examples.
 // spawn-at-startup "alacritty" "-e" "fish"
 spawn-at-startup "waybar"
-spawn-at-startup "~/work/opensource/unsplash-wall/main"
+spawn-at-startup "bash" "-c" "~/work/opensource/unsplash-wall/main >> wall.log 2>&1"
 spawn-at-startup "gammastep" "-l" "53.9:27.6"
-// spawn-at-startup "wl-clip-persist" "--clipboard" "regular"
-spawn-at-startup "bash" "-c" "swayidle -w  timeout 130 'niri msg action switch-layout 0 && hyprlock'  timeout 314 'swaymsg \"output * dpms off\"'  resume  'swaymsg \"output * dpms on\"'   timeout 626 'systemctl suspend '  before-sleep 'niri msg action switch-layout 0 && hyprlock'"
 spawn-at-startup "flatpak" "run" "pw.mmk.OpenFreebuds"
 spawn-at-startup "swayosd-server"
+spawn-at-startup "hypridle"
 spawn-at-startup "~/work/opensource/niri-float-sticky/main"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -376,6 +375,7 @@ binds {
     Mod+Return { spawn "foot"; }
     Mod+E { spawn "nautilus" "--new-window"; }
     Mod+D { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher --config ~/script/fast-launcher/cfg.json"; }
+    Mod+Shift+D { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher"; }
     Super+Alt+L { spawn "swaylock"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
