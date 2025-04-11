@@ -107,9 +107,9 @@ cursor {
     hide-after-inactive-ms 1000
 }
 
-spawn-at-startup "dconf write /org/gnome/desktop/interface/cursor-theme \"'Bibata-Modern-Classic'\""
-spawn-at-startup "dconf write /org/gnome/desktop/interface/cursor-size 28"
-spawn-at-startup "dconf write /org/gnome/desktop/interface/icon-theme \"'Adwaita'\""
+spawn-at-startup "bash" "-c" "dconf write /org/gnome/desktop/interface/cursor-theme \"'Bibata-Modern-Classic'\""
+spawn-at-startup "bash" "-c" "dconf write /org/gnome/desktop/interface/cursor-size 28"
+spawn-at-startup "bash" "-c" "dconf write /org/gnome/desktop/interface/icon-theme \"'Adwaita'\""
 
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
@@ -264,7 +264,7 @@ layout {
 // See the binds section below for more spawn examples.
 // spawn-at-startup "alacritty" "-e" "fish"
 spawn-at-startup "waybar"
-spawn-at-startup "bash" "-c" "~/work/opensource/unsplash-wall/main >> wall.log 2>&1"
+spawn-at-startup "bash" "-c" "unsplash-wall >> wall.log 2>&1"
 spawn-at-startup "gammastep" "-l" "53.9:27.6"
 spawn-at-startup "flatpak" "run" "pw.mmk.OpenFreebuds"
 spawn-at-startup "swayosd-server"
