@@ -31,6 +31,7 @@
 
   zramSwap.enable = true;
 
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -52,6 +53,7 @@
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
+  #services.displayManager.ly.enable = true;
   #services.xserver.desktopManager.gnome.enable = true;
   # programs.hyprland.enable = true;
   programs.niri.enable = true;
@@ -112,13 +114,16 @@
      tree
      superfile
 
+     go
      vtsls
      gopls
+     jq
+
+     sshuttle
 
      tdesktop
 
      fastfetch
-     go
      foot
      alacritty
      waybar
@@ -170,6 +175,7 @@
 
      dialect
 
+     wget
      ripgrep
 
      xorg.xmodmap
@@ -184,7 +190,6 @@
      docker-compose
 
      libreoffice
-  #  wget
   ];
 
 fonts.packages = with pkgs; [
