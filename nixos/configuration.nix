@@ -55,7 +55,7 @@
   services.xserver.displayManager.gdm.enable = true;
   #services.displayManager.ly.enable = true;
   #services.xserver.desktopManager.gnome.enable = true;
-  # programs.hyprland.enable = true;
+  #programs.hyprland.enable = true;
   programs.niri.enable = true;
 
   # Configure keymap in X11
@@ -109,7 +109,6 @@
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      linuxKernel.packages.linux_zen.cpupower
 
-
      neovim     
      tree
      superfile
@@ -156,6 +155,8 @@
      snapshot
      gnome-text-editor
      epiphany
+     fragments
+     gnome-calendar
 
      musicpod
      adwaita-icon-theme
