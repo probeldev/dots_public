@@ -69,7 +69,15 @@
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
+  security = {
+  	rtkit.enable = true;
+	sudo.enable = false;
+	    sudo-rs = {
+	      enable = true;
+	      execWheelOnly = true;
+	      wheelNeedsPassword = true;
+	    };
+  };
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -113,14 +121,19 @@
      tree
      superfile
 
+     dbgate
+
      go
+     nodejs
      vtsls
      gopls
      jq
+     nodePackages.prettier
 
      sshuttle
 
      tdesktop
+     chromium
 
      fastfetch
      foot
@@ -157,6 +170,7 @@
      epiphany
      fragments
      gnome-calendar
+     foliate
 
      musicpod
      adwaita-icon-theme
