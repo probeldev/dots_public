@@ -22,3 +22,6 @@ cp -r ~/.config/swaync swaync
 
 rm -rf foot
 cp -r ~/.config/foot foot
+
+rm -rf ghostty
+cp -r ~/.config/ghostty ghostty

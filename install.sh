@@ -17,6 +17,10 @@ cp -r rofi ~/.config/rofi
 rm -rf ~/.config/foot
 cp -r foot ~/.config/foot
 
+
+rm -rf ~/.config/ghostty 
+cp -r ghostty ~/.config/ghostty 
+
 cp zshenv ~/.zshenv
 
 sudo apt install -y hyprland

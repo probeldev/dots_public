@@ -137,7 +137,7 @@
 
      fastfetch
      foot
-     alacritty
+     ghostty
      waybar
      git
      btop
