@@ -111,6 +111,9 @@ spawn-at-startup "bash" "-c" "dconf write /org/gnome/desktop/interface/cursor-th
 spawn-at-startup "bash" "-c" "dconf write /org/gnome/desktop/interface/cursor-size 28"
 spawn-at-startup "bash" "-c" "dconf write /org/gnome/desktop/interface/icon-theme \"'Adwaita'\""
 
+spawn-at-startup "bash" "-c" "dconf write /org/gnome/desktop/wm/preferences/button-layout \"''\""
+
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
