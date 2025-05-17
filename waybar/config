@@ -6,9 +6,9 @@
 //    "margin-top": 15,
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/icon_menu","sway/workspaces","hyprland/workspaces", "niri/workspaces",  "sway/mode", "sway/scratchpad", "custom/media", "custom/icon_webbrowser","custom/icon_telegram", "custom/icon_skype", "custom/icon_viber", "custom/icon_file", "custom/icon_translate", "custom/icon_activity", ],
-    //"modules-center": ["wlr/taskbar"],
-    "modules-right": ["mpd",  "pulseaudio", "network",  "temperature",   "sway/language", "hyprland/language", "niri/language", "battery", "battery#bat2", "tray","clock", "custom/icon_logout"],
+    "modules-left": ["custom/icon_menu","sway/workspaces","hyprland/workspaces", "niri/workspaces",  "sway/mode", "sway/scratchpad", "custom/media",  ],
+    "modules-center": ["clock",],
+    "modules-right": ["mpd",  "pulseaudio", "sway/language", "hyprland/language", "niri/language", "battery", "battery#bat2", "tray", "custom/icon_logout"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true, "all-outputs": true,
@@ -170,46 +170,6 @@
 	    "format": "{} 󰹯 ",
 	    "tooltip": false,
 	    "on-click": "rofi -show drun -monitor eDP-1",
-    },
-    "custom/icon_file": {
-	    "format": "{}  ",
-	    "tooltip": false,
-	    "on-click": "flatpak run org.kde.dolphin",
-    },
-    "custom/icon_translate": {
-	    "format": "{} 󰊿 ",
-	    "tooltip": false,
-	    "on-click": "flatpak run app.drey.Dialect",
-//	    "on-click-right": ""
-    },
-    "custom/icon_activity": {
-	    "format": "{} 󰴁 ",
-	    "tooltip": false,
-	    "on-click": "flatpak run net.nokyan.Resources",
-//	    "on-click-right": ""
-    },
-    "custom/icon_webbrowser": {
-	    "format": "{} 󰖟 ",
-	    "tooltip": false,
-	    "on-click": "flatpak run io.github.zen_browser.zen",
-    },
-    "custom/icon_telegram": {
-	    "format": "{}  ",
-	    "tooltip": false,
-	    "on-click": "flatpak run org.telegram.desktop",
-//	    "on-click-right": ""
-    },
-    "custom/icon_skype": {
-	    "format": "{}  ",
-	    "tooltip": false,
-	    "on-click": "flatpak run com.skype.Client",
-//	    "on-click-right": ""
-    },
-    "custom/icon_viber": {
-	    "format": "{}  ",
-	    "tooltip": false,
-	    "on-click": "flatpak run com.viber.Viber",
-//	    "on-click-right": ""
     },
     "custom/icon_logout": {
 	    "format": "{}  ",
