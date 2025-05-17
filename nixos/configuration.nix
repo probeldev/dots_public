@@ -202,6 +202,9 @@
      ffmpeg
      fzf
 
+     dnsutils
+     whois
+
      docker-compose
 
      libreoffice

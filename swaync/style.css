@@ -1,5 +1,5 @@
 @define-color cc-bg rgba(255, 255, 255, 0.7);
-@define-color noti-border-color rgba(83, 191, 93, 0.8);
+@define-color noti-border-color rgba(127, 200, 255, 0.8);
 @define-color noti-bg rgba(255, 255, 255, 0.9);
 @define-color noti-bg-opaque rgb(48, 48, 48);
 @define-color noti-bg-darker rgb(38, 38, 38);
@@ -47,7 +47,7 @@
 
 .notification-row .notification-background .notification {
   /* The actual notification */
-  border-radius: 0;
+  border-radius: 12px;
   border: 6px solid @noti-border-color;
   padding: 0;
   transition: background 0.15s ease-in-out;
