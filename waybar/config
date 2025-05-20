@@ -1,30 +1,14 @@
 {
-    // "layer": "top", // Waybar at top layer
-   "position": "top", // Waybar position (top|bottom|left|right)
-   // "height": 30, // Waybar height (to be removed for auto height)
- //    "width": 1300, // Waybar width
-//    "margin-top": 15,
-    "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
-    "modules-left": ["custom/icon_menu","sway/workspaces","hyprland/workspaces", "niri/workspaces",  "sway/mode", "sway/scratchpad", "custom/media",  ],
-    "modules-center": ["clock",],
-    "modules-right": ["mpd",  "pulseaudio", "sway/language", "hyprland/language", "niri/language", "battery", "battery#bat2", "tray", "custom/icon_logout"],
-    // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true, "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "layer": "top",
+    "position": "right",
+    "width": 40,
+    "margin-top": 10,
+    "margin-bottom": 10,
+    "margin-right": 5,
+    "spacing": 4,
+    "modules-left": ["custom/icon_menu", "niri/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
+    "modules-center": ["clock"],
+    "modules-right": ["mpd", "pulseaudio", "niri/language", "battery#bat2", "tray", "custom/icon_logout"],
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -78,16 +62,12 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
-		"format": "{:%H:%M}",
-        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%H\n%M}",
         "tooltip-format": "{:%H:%M %d.%m.%y}",
-        // "format-alt": "{:%Y-%m-%d}"
-	    "on-click": "gnome-calendar",
+        "on-click": "gnome-calendar"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -97,37 +77,37 @@
         "format": "{}% "
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C ",
+        "format": "{temperatureC}°C "
     },
     "backlight": {
-        // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "",
-        "format-plugged": "",
+        "format": "{capacity}%\n{icon}", // Percent on top, icon below
+        "format-charging": "{capacity}%\n",
+        "format-plugged": "{capacity}%\n",
         "format-alt": "{capacity}% {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {
-        "bat": "BAT2"
+        "format": "{capacity}%", // Same format for consistency
+        "format-charging": "{capacity}%\n",
+        "format-plugged": "{capacity}%\n",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat3": {
+        "format": "{icon}", // Same format for consistency
+        "format-charging": "{capacity}%\n",
+        "format-plugged": "{capacity}%\n",
+        "format-icons": ["", "", "", "", ""]
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-       // "format-wifi": "{essid} ({signalStrength}%) ",
         "format-wifi": "",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
@@ -136,13 +116,12 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": "0% {icon} {format_source}",
-        "format-muted": "0%  {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format": "{icon}", // Only icon for output, no percentage
+        "format-bluetooth": "{icon}",
+        "format-bluetooth-muted": "",
+        "format-muted": "",
+        "format-source": "", // No input volume or icon
+        "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -163,29 +142,22 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
     },
     "custom/icon_menu": {
-	    "format": "{} 󰹯 ",
-	    "tooltip": false,
-	    "on-click": "rofi -show drun -monitor eDP-1",
+        "format": "{} 󰹯 ",
+        "tooltip": false,
+        "on-click": "rofi -show drun -monitor eDP-1"
     },
     "custom/icon_logout": {
-	    "format": "{}  ",
-	    "tooltip": false,
-	    "on-click": "foot -T fast-launcher fastlauncher --config ~/script/hyprland-cfg/fast-launcher/logout.cfg",
-//	    "on-click-right": ""
+        "format": "{}  ",
+        "tooltip": false,
+        "on-click": "foot -T fast-launcher fastlauncher --config ~/script/hyprland-cfg/fast-launcher/logout.cfg"
     },
-
-	"hyprland/language": {
-		"format": "{short}",
-	},
-	"niri/language": {
+    "niri/language": {
         "format": "{}",
         "on-click": "niri msg action switch-layout next",
         "format-en": "en",
-        "format-ru": "ru",
-    },
+        "format-ru": "ru"
+    }
 }
-

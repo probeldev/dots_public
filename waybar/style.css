@@ -9,33 +9,30 @@
 
 #waybar {
     background-color: #7fc8ff;
-	color: #ffffff;
-
-    padding: 0 12px; /* Убран padding */
-    border-bottom-left-radius: 12px; /* Закругление увеличено до 12px */
-    border-bottom-right-radius: 12px; /* Закругление увеличено до 12px */
+    color: #ffffff;
+    padding: 10px 12px 10px 12px; /* Добавлен padding сверху и снизу */
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px; /* Добавлено для симметрии в вертикальной ориентации */
+    border-top-right-radius: 12px;
 }
 
 #workspaces {
     padding: 0 5px;
 }
 
-
-
 #workspaces button {
-    background-color: #7fc8ff; /* Фон как у панели */
-    color: #ffffff; /* Белый текст/иконка */
+    background-color: #7fc8ff;
+    color: #ffffff;
     margin: 2px;
     padding: 6px;
     border-radius: 5px;
 }
 
 #workspaces button.focused {
-    background-color: #ffffff; /* Фон как у панели */
-	color: #7fc8ff;
+    background-color: #ffffff;
+    color: #7fc8ff;
 }
-
-
 
 #window {
     padding: 5px;
@@ -48,12 +45,12 @@
 
 #battery {
     padding: 6px;
-    min-width: 65px;
+    min-width: 40px; /* Уменьшено для компактности */
 }
 
 #tray {
     padding: 6px;
-    min-width: 50px;
+    min-width: 40px; /* Уменьшено для компактности */
 }
 
 #pulseaudio {
@@ -66,4 +63,10 @@
 
 #clock {
     padding: 6px;
+	font-size: 20px;
+}
+
+#custom-icon_logout,
+#custom-icon_menu {
+    padding: 6px; /* Добавлен padding для иконки меню */
 }
