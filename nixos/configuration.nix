@@ -171,6 +171,8 @@
      fragments
      gnome-calendar
      foliate
+     mission-center
+     pavucontrol
 
      musicpod
      adwaita-icon-theme

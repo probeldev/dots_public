@@ -152,7 +152,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "foot -e pulsemixer"
+        "on-click": "pavucontrol"
     },
     "custom/media": {
         "format": "{icon} {}",
