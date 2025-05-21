@@ -268,6 +268,7 @@ layout {
 // spawn-at-startup "alacritty" "-e" "fish"
 spawn-at-startup "waybar"
 spawn-at-startup "bash" "-c" "unsplash-wall >> wall.log 2>&1"
+spawn-at-startup "bash" "-c" "niri-screen-time -daemon >> niri-screen-time.log 2>&1"
 spawn-at-startup "gammastep" "-l" "53.9:27.6"
 spawn-at-startup "flatpak" "run" "pw.mmk.OpenFreebuds"
 spawn-at-startup "swayosd-server"
@@ -339,6 +340,8 @@ window-rule {
     match title="^fast-launcher$"
     open-floating true
 }
+
+
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)

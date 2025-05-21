@@ -11,6 +11,12 @@ cp waybar/config ~/.config/waybar/config
 rm -rf ~/.config/swaync
 cp -r swaync ~/.config/swaync
 
+rm -rf ~/.config/niri
+cp -r niri ~/.config/niri
+
+rm -rf ~/.config/niri-screen-time
+cp -r niri-screen-time ~/.config/niri-screen-time
+
 rm -r ~/.config/rofi
 cp -r rofi ~/.config/rofi
 

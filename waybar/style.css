@@ -7,10 +7,10 @@
     padding: 0;
 }
 
+
 #waybar {
     background-color: #7fc8ff;
     color: #ffffff;
-    padding: 10px 12px 10px 12px; /* Добавлен padding сверху и снизу */
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     border-top-left-radius: 12px; /* Добавлено для симметрии в вертикальной ориентации */

@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, fastlauncher, unsplashwall, ... }: 
+{ config, pkgs, fastlauncher, niri-screen-time, unsplashwall, ... }: 
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -129,6 +129,7 @@
      gopls
      jq
      nodePackages.prettier
+     gcc
 
      sshuttle
 
@@ -198,6 +199,7 @@
      xorg.xmodmap
 
      fastlauncher.packages.${system}.default
+     niri-screen-time.packages.${system}.default
      unsplashwall.packages.${system}.default
 
      wf-recorder

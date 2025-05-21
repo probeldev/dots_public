@@ -1,0 +1,22 @@
+[
+  {
+    "app_id": "com.mitchellh.ghostty",
+    "title": "nvim",
+    "alias": "NeoVim"
+  },
+  {
+    "app_id": "zen",
+    "title": "DeepSeek",
+    "alias": "DeepSeek Chat"
+  },
+  {
+    "app_id": "zen",
+    "title": "YouTube",
+    "alias": "YouTube"
+  },
+  {
+    "app_id": "org.telegram.desktop",
+    "title": "ProBelDev Chat",
+    "alias": "ProBelDev Chat"
+  }
+]

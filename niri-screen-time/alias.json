@@ -1,0 +1,22 @@
+[
+  {
+    "name": "com.mitchellh.ghostty",
+    "alias": "Ghostty"
+  },
+  {
+    "name": "org.telegram.desktop",
+    "alias": "Telegram"
+  },
+  {
+    "name": "zen",
+    "alias": "Zen Browser"
+  },
+  {
+    "name": "org.gnome.TextEditor",
+    "alias": "Gnome Text Editor"
+  },
+  {
+    "name": "org.gnome.Nautilus",
+    "alias": "Nautilus"
+  }
+]

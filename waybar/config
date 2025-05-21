@@ -97,8 +97,8 @@
     },
     "battery#bat2": {
         "format": "{capacity}%", // Same format for consistency
-        "format-charging": "{capacity}%\n",
-        "format-plugged": "{capacity}%\n",
+        "format-charging": "",
+        "format-plugged": "",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat3": {
