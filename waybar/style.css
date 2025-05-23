@@ -1,5 +1,5 @@
 * {
-    font-family: "Fira Code", monospace;
+    font-family: "FiraCode Nerd Font Mono", monospace;
     font-size: 16px;
     border: none;
     border-radius: 0;
@@ -68,5 +68,10 @@
 
 #custom-icon_logout,
 #custom-icon_menu {
-    padding: 6px; /* Добавлен padding для иконки меню */
+    padding: 12px 6px; /* Добавлен padding для иконки меню */
+}
+#pulseaudio,
+#custom-icon_logout,
+#custom-icon_menu {
+	font-size: 25px;
 }

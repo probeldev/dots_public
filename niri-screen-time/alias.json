@@ -16,7 +16,17 @@
     "alias": "Gnome Text Editor"
   },
   {
+    "name": "dbgate",
+    "alias": "DBGate"
+  },
+  {
+    "name": "app.drey.Dialect",
+    "alias": "Dialect"
+  },
+  {
     "name": "org.gnome.Nautilus",
     "alias": "Nautilus"
   }
+
+
 ]

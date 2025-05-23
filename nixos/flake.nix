@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     fastlauncher.url = "github:probeldev/fastlauncher";
     niri-screen-time.url = "github:probeldev/niri-screen-time";
     unsplashwall.url = "github:probeldev/unsplash-wall";

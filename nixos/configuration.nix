@@ -215,8 +215,7 @@
   ];
 
 fonts.packages = with pkgs; [
-  (nerdfonts.override { fonts = [ "FiraCode"  ]; })
-  fira-code
+   nerd-fonts.fira-code
 ];
 
 # for global user
