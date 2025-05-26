@@ -5,6 +5,11 @@
     "alias": "NeoVim"
   },
   {
+    "app_id": "com.mitchellh.ghostty",
+    "title": "SuperFile",
+    "alias": "SuperFile"
+  },
+  {
     "app_id": "zen",
     "title": "DeepSeek",
     "alias": "DeepSeek Chat"
