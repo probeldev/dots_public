@@ -21,7 +21,7 @@ file_panel_item_rename = ['ctrl+r', '']
 # file operations
 copy_items = ['ctrl+c', '']
 cut_items = ['ctrl+x', '']
-paste_items = ['ctrl+v', '']
+paste_items = ['ctrl+p', '']
 delete_items = ['ctrl+d', 'delete', '']
 # compress and extract
 extract_file = ['ctrl+e', '']
@@ -36,7 +36,7 @@ toggle_dot_file = ['.', '']
 change_panel_mode = ['v', '']
 open_help_menu = ['?', '']
 open_command_line = [':', '']
-copy_path = ['ctrl+p', '']
+copy_path = ['ctrl+w', '']
 # =================================================================================================
 # Typing hotkeys (can conflict with all hotkeys)
 confirm_typing = ['enter', '']
