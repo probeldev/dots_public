@@ -28,3 +28,6 @@ cp -r ~/.config/foot foot
 
 rm -rf ghostty
 cp -r ~/.config/ghostty ghostty
+
+rm -rf superfile
+cp -r ~/.config/superfile/ superfile

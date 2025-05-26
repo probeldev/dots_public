@@ -27,6 +27,10 @@ cp -r foot ~/.config/foot
 rm -rf ~/.config/ghostty 
 cp -r ghostty ~/.config/ghostty 
 
+
+rm -rf ~/.config/superfile/
+cp -r superfile ~/.config/superfile/ 
+
 cp zshenv ~/.zshenv
 
 sudo apt install -y hyprland

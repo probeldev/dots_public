@@ -175,6 +175,8 @@
      mission-center
      pavucontrol
 
+     wine
+
      musicpod
      adwaita-icon-theme
      gsettings-desktop-schemas
