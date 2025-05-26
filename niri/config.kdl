@@ -266,6 +266,7 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 // spawn-at-startup "alacritty" "-e" "fish"
+
 spawn-at-startup "waybar"
 spawn-at-startup "bash" "-c" "unsplash-wall >> wall.log 2>&1"
 spawn-at-startup "bash" "-c" "niri-screen-time -daemon >> niri-screen-time.log 2>&1"
@@ -383,6 +384,7 @@ binds {
     Mod+E { spawn "bash" "-c" "ghostty -e superfile"; }
     Mod+D { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher --config ~/script/fast-launcher/cfg.json"; }
     Mod+Shift+D { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher"; }
+    Mod+W { spawn "bash" "-c" "fastlauncher-niri-windows > /tmp/fl-windows.json 2>&1 && foot -T fast-launcher fastlauncher --config /tmp/fl-windows.json"; }
     Super+Alt+L { spawn "swaylock"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
@@ -584,7 +586,7 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    Mod+W { toggle-column-tabbed-display; }
+    // Mod+W { toggle-column-tabbed-display; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have
@@ -622,4 +624,11 @@ binds {
 overview {
 	zoom 0.5
 	backdrop-color "#777777"
+}
+
+
+// for xwayland
+spawn-at-startup "xwayland-satellite"
+environment {
+    DISPLAY ":0"
 }

@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, fastlauncher, niri-screen-time, unsplashwall, ... }: 
+{ config, pkgs, fastlauncher, niri-screen-time, unsplashwall, fastlauncher-niri-windows, ... }: 
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -68,7 +68,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security = {
   	rtkit.enable = true;
 	sudo.enable = false;
@@ -175,6 +175,8 @@
      mission-center
      pavucontrol
 
+     xwayland-satellite
+     anydesk
      wine
 
      musicpod
@@ -203,6 +205,8 @@
      fastlauncher.packages.${system}.default
      niri-screen-time.packages.${system}.default
      unsplashwall.packages.${system}.default
+     fastlauncher-niri-windows.packages.${system}.default
+
 
      wf-recorder
      ffmpeg
