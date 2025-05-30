@@ -17,9 +17,6 @@ cp -r niri ~/.config/niri
 rm -rf ~/.config/niri-screen-time
 cp -r niri-screen-time ~/.config/niri-screen-time
 
-rm -r ~/.config/rofi
-cp -r rofi ~/.config/rofi
-
 rm -rf ~/.config/foot
 cp -r foot ~/.config/foot
 
