@@ -16,6 +16,11 @@
   },
   {
     "app_id": "zen",
+    "title": "Яндекс: нашлось",
+    "alias": "Яндекс поиск"
+  },
+  {
+    "app_id": "zen",
     "title": "Grok",
     "alias": "Grok Chat"
   },

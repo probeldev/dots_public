@@ -20,6 +20,10 @@
     "alias": "DBGate"
   },
   {
+    "name": "totem",
+    "alias": "Totem(Сериалы на английском)"
+  },
+  {
     "name": "app.drey.Dialect",
     "alias": "Dialect"
   },

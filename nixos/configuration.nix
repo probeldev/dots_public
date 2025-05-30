@@ -118,15 +118,20 @@
      linuxKernel.packages.linux_zen.cpupower
 
      neovim     
+     helix
      tree
      superfile
+     lazygit
 
      dbgate
 
      go
+     gopls
+     golangci-lint
+     golangci-lint-langserver
+
      nodejs
      vtsls
-     gopls
      jq
      nodePackages.prettier
      gcc
@@ -136,7 +141,7 @@
      tdesktop
      chromium
 
-     fastfetch
+     pfetch
      foot
      ghostty
      waybar
@@ -177,7 +182,6 @@
 
      xwayland-satellite
      anydesk
-     wine
 
      musicpod
      adwaita-icon-theme
