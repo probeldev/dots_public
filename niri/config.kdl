@@ -598,8 +598,8 @@ binds {
     // Mod+Shift+Space { switch-layout "prev"; }
 
     // Print { screenshot; }
-	Print { spawn "bash" "-c" "grim -o eDP-1 - | swappy -f - || grim -o LVDS-1 - | swappy -f -"; }
-	Mod+Print { spawn "bash" "-c" "grim -g \"$(slurp)\" - | swappy -f -"; }
+	Print { screenshot-screen; }
+	Mod+Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
