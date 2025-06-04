@@ -382,8 +382,8 @@ binds {
     Mod+Return { spawn "ghostty"; }
     // Mod+E { spawn "nautilus" "--new-window"; }
     Mod+E { spawn "bash" "-c" "ghostty -e superfile"; }
-    Mod+D { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher --config ~/script/fast-launcher/cfg.json"; }
-    Mod+S { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher --config ~/script/fast-launcher/emoji.json"; }
+    Mod+D { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher --config ~/script/dots_private/fastlauncher/cfg.json"; }
+    Mod+S { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher --config ~/script/dots_private/fastlauncher/emoji.json"; }
     Mod+Shift+D { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher"; }
     Mod+W { spawn "bash" "-c" "fastlauncher-niri-windows > /tmp/fl-windows.json 2>&1 && foot -T fast-launcher fastlauncher --config /tmp/fl-windows.json"; }
     Super+Alt+L { spawn "swaylock"; }
