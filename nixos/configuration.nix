@@ -163,6 +163,8 @@
      git
      btop
 
+     gdu # disk usage
+
      hyprlock
      hyprcursor
      wl-clip-persist
