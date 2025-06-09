@@ -40,7 +40,22 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking = {
+            networkmanager = {
+	        enable = true;
+                enableStrongSwan = true;
+                plugins = [
+                    pkgs.networkmanager-l2tp
+                    pkgs.networkmanager_strongswan
+                ];
+            };
+        };
+  services.strongswan = {
+                enable = true;
+                secrets = [
+                    "ipsec.d/ipsec.nm-l2tp.secrets"
+                ];
+            };
 
   # Set your time zone.
   time.timeZone = "Europe/Minsk";
@@ -297,6 +312,7 @@ services.flatpak.enable = true;
 services.cron = {
     enable = true;
 };
+
 
 virtualisation.docker.enable = true;
 
