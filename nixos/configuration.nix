@@ -145,6 +145,7 @@
      golangci-lint
      golangci-lint-langserver
 
+
      nodejs
      vtsls
      jq
