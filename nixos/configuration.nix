@@ -197,6 +197,7 @@
      foliate
      mission-center
      pavucontrol
+     file-roller
 
      xwayland-satellite
      anydesk
