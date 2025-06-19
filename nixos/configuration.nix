@@ -138,6 +138,11 @@
      superfile
      lazygit
 
+     pantheon.elementary-code
+
+     ad
+     edwood
+
      dbgate
 
      go
@@ -151,6 +156,7 @@
      jq
      nodePackages.prettier
      gcc
+     gnumake
 
      sshuttle
 
