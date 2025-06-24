@@ -6,11 +6,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1750116361,
-        "narHash": "sha256-6KqB+HIQtpd4YATACzXTMDS23maMsbK4s/IdEf0+fPw=",
+        "lastModified": 1750326453,
+        "narHash": "sha256-kPCDBkeWfh3sf/3W/ixYq+PZLeQ5fgGQlMVTTtOGF+o=",
         "owner": "probeldev",
         "repo": "fastlauncher",
-        "rev": "8b4713403d96fb2b97145581f7f2778225143a3e",
+        "rev": "5da40b5e5e868d0622b69b4004e2bd4a69f7153e",
         "type": "github"
       },
       "original": {
@@ -110,6 +110,43 @@
         "type": "github"
       }
     },
+    "flake-utils_5": {
+      "inputs": {
+        "systems": "systems_5"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "goaddtag": {
+      "inputs": {
+        "flake-utils": "flake-utils_3",
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1750771980,
+        "narHash": "sha256-yFPBNEgtasPhjN4Xmmx5DHogN/s8q/G83xgyDREy+D4=",
+        "owner": "probeldev",
+        "repo": "go-add-tag",
+        "rev": "fc0dd872f121da84c9b892ea82cf372d853be55e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "probeldev",
+        "repo": "go-add-tag",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -133,15 +170,15 @@
     },
     "niri-screen-time": {
       "inputs": {
-        "flake-utils": "flake-utils_3",
-        "nixpkgs": "nixpkgs_3"
+        "flake-utils": "flake-utils_4",
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1749051669,
-        "narHash": "sha256-tzx3GgtwvxuvfFZi1JObWcYdmr+44XdZBRZ4/0v8XGI=",
+        "lastModified": 1750509597,
+        "narHash": "sha256-uDbst7k6g3EQUJHreC7b3fhBhUdb1YivQMJ7Lm/qTsU=",
         "owner": "probeldev",
         "repo": "niri-screen-time",
-        "rev": "09993a80fd398be4d9fe5a2c2dc2b35b195e27fc",
+        "rev": "e42ee681b1e313c284a24e85c0bc459394d14812",
         "type": "github"
       },
       "original": {
@@ -168,11 +205,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1750005367,
-        "narHash": "sha256-h/aac1dGLhS3qpaD2aZt25NdKY7b+JT0ZIP2WuGsJMU=",
+        "lastModified": 1750622754,
+        "narHash": "sha256-kMhs+YzV4vPGfuTpD3mwzibWUE6jotw5Al2wczI0Pv8=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "6c64dabd3aa85e0c02ef1cdcb6e1213de64baee3",
+        "rev": "c7ab75210cb8cb16ddd8f290755d9558edde7ee1",
         "type": "github"
       },
       "original": {
@@ -184,27 +221,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1749995256,
-        "narHash": "sha256-LEGfcombb0otUf23oAmYCXR4+lMQKa49XmU0G5HItGI=",
+        "lastModified": 1750622754,
+        "narHash": "sha256-kMhs+YzV4vPGfuTpD3mwzibWUE6jotw5Al2wczI0Pv8=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "daa45f10955cc2207ac9c5f0206774d2f757c162",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-24.11",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_4": {
-      "locked": {
-        "lastModified": 1750005367,
-        "narHash": "sha256-h/aac1dGLhS3qpaD2aZt25NdKY7b+JT0ZIP2WuGsJMU=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "6c64dabd3aa85e0c02ef1cdcb6e1213de64baee3",
+        "rev": "c7ab75210cb8cb16ddd8f290755d9558edde7ee1",
         "type": "github"
       },
       "original": {
@@ -214,7 +235,39 @@
         "type": "github"
       }
     },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1750646418,
+        "narHash": "sha256-4UAN+W0Lp4xnUiHYXUXAPX18t+bn6c4Btry2RqM9JHY=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "1f426f65ac4e6bf808923eb6f8b8c2bfba3d18c5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-24.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1750622754,
+        "narHash": "sha256-kMhs+YzV4vPGfuTpD3mwzibWUE6jotw5Al2wczI0Pv8=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "c7ab75210cb8cb16ddd8f290755d9558edde7ee1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_6": {
       "locked": {
         "lastModified": 1744168086,
         "narHash": "sha256-S9M4HddBCxbbX1CKSyDYgZ8NCVyHcbKnBfoUXeRu2jQ=",
@@ -234,9 +287,10 @@
       "inputs": {
         "fastlauncher": "fastlauncher",
         "fastlauncher-niri-windows": "fastlauncher-niri-windows",
+        "goaddtag": "goaddtag",
         "home-manager": "home-manager",
         "niri-screen-time": "niri-screen-time",
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": "nixpkgs_5",
         "unsplashwall": "unsplashwall"
       }
     },
@@ -300,10 +354,25 @@
         "type": "github"
       }
     },
+    "systems_5": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
     "unsplashwall": {
       "inputs": {
-        "flake-utils": "flake-utils_4",
-        "nixpkgs": "nixpkgs_5"
+        "flake-utils": "flake-utils_5",
+        "nixpkgs": "nixpkgs_6"
       },
       "locked": {
         "lastModified": 1748612598,

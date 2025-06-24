@@ -4,6 +4,7 @@
     fastlauncher.url = "github:probeldev/fastlauncher";
     niri-screen-time.url = "github:probeldev/niri-screen-time";
     unsplashwall.url = "github:probeldev/unsplash-wall";
+    goaddtag.url = "github:probeldev/go-add-tag";
     fastlauncher-niri-windows.url = "github:probeldev/fastlauncher-niri-windows";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
@@ -18,6 +19,7 @@
     fastlauncher,
     niri-screen-time,
     unsplashwall,
+    goaddtag,
     fastlauncher-niri-windows,
     ...
   }: {
@@ -27,7 +29,7 @@
         ./configuration.nix
       ];
       specialArgs = {
-        inherit home-manager fastlauncher niri-screen-time unsplashwall fastlauncher-niri-windows; 
+        inherit home-manager fastlauncher niri-screen-time unsplashwall goaddtag fastlauncher-niri-windows; 
       };
     };
   };

@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, fastlauncher, niri-screen-time, unsplashwall, fastlauncher-niri-windows, ... }: 
+{ config, pkgs, fastlauncher, niri-screen-time, unsplashwall, goaddtag, fastlauncher-niri-windows, ... }: 
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -170,6 +170,8 @@
      git
      btop
 
+      wlr-randr
+
      gdu # disk usage
 
      hyprlock
@@ -229,9 +231,11 @@
 
      xorg.xmodmap
 
+
      fastlauncher.packages.${system}.default
      niri-screen-time.packages.${system}.default
      unsplashwall.packages.${system}.default
+     goaddtag.packages.${system}.default
      fastlauncher-niri-windows.packages.${system}.default
 
 
