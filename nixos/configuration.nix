@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, fastlauncher, niri-screen-time, unsplashwall, goaddtag, fastlauncher-niri-windows, ... }: 
+{ config, pkgs, fastlauncher, niri-screen-time, unsplashwall, goaddtag, gomultilineformatter, fastlauncher-niri-windows, ... }: 
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -236,6 +236,7 @@
      niri-screen-time.packages.${system}.default
      unsplashwall.packages.${system}.default
      goaddtag.packages.${system}.default
+     gomultilineformatter.packages.${system}.default
      fastlauncher-niri-windows.packages.${system}.default
 
 
