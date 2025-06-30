@@ -138,7 +138,6 @@
      superfile
      lazygit
 
-     pantheon.elementary-code
 
      ad
      edwood
@@ -192,6 +191,7 @@
      emacsPackages.vterm
 
      ghostty
+     chafa # terminal image viewer
 
      nautilus 
      totem
