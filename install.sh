@@ -1,8 +1,8 @@
-mkdir ~/.config/hypr
-cp hyprland.conf ~/.config/hypr/hyprland.conf
-cp hyprlock.conf ~/.config/hypr/hyprlock.conf
-cp hypridle.conf ~/.config/hypr/hypridle.conf
-cp hyprpaper.conf ~/.config/hypr/hyprpaper.conf
+mkdir -p ~/.config/hypr
+cp hypr/hyprland.conf ~/.config/hypr/hyprland.conf
+cp hypr/hyprlock.conf ~/.config/hypr/hyprlock.conf
+cp hypr/hypridle.conf ~/.config/hypr/hypridle.conf
+cp hypr/hyprpaper.conf ~/.config/hypr/hyprpaper.conf
 
 mkdir ~/.config/waybar
 cp waybar/style.css ~/.config/waybar/style.css

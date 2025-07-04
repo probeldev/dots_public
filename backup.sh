@@ -7,10 +7,10 @@ cp -r ~/.config/niri niri
 rm -rf niri-screen-time
 cp -r ~/.config/niri-screen-time niri-screen-time
 
-cp ~/.config/hypr/hyprland.conf hyprland.conf
-cp ~/.config/hypr/hyprlock.conf hyprlock.conf
-cp ~/.config/hypr/hypridle.conf hypridle.conf
-cp ~/.config/hypr/hyprpaper.conf hyprpaper.conf
+cp ~/.config/hypr/hyprland.conf hypr/hyprland.conf
+cp ~/.config/hypr/hyprlock.conf hypr/hyprlock.conf
+cp ~/.config/hypr/hypridle.conf hypr/hypridle.conf
+cp ~/.config/hypr/hyprpaper.conf hypr/hyprpaper.conf
 
 cp ~/.config/waybar/style.css waybar/style.css
 cp ~/.config/waybar/config waybar/config
