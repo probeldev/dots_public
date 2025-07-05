@@ -138,6 +138,7 @@
      superfile
      lazygit
 
+     ddcutil
 
      ad
      edwood
