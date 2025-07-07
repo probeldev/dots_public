@@ -11,10 +11,10 @@
 #waybar {
     background-color: #7fc8ff;
     color: #ffffff;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    border-top-left-radius: 12px; /* Добавлено для симметрии в вертикальной ориентации */
-    border-top-right-radius: 12px;
+    /* border-bottom-left-radius: 12px; */
+    /* border-bottom-right-radius: 12px; */
+    /* border-top-left-radius: 12px; */
+    /* border-top-right-radius: 12px; */
 }
 
 #workspaces {

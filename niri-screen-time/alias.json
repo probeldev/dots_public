@@ -34,5 +34,9 @@
   {
     "name": "de.haeckerfelix.Fragments",
     "alias": "Fragments(Torrent client)"
+  },
+  {
+    "name": "steam_app_233860",
+    "alias": "Kenshi"
   }
 ]
