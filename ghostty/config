@@ -1,4 +1,4 @@
-font-family = "FiraCode Nerd Font Mono"
+font-family = "FiraCode Nerd Font Mono Ret"
 theme = "GitHub-Light-Default"
 
 keybind = ctrl+v=paste_from_clipboard
