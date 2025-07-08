@@ -81,7 +81,7 @@ output "eDP-1" {
     mode "1920x1080@60"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 1.3
+    scale 1.25
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -180,7 +180,7 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.98; }
+    default-column-width { proportion 0.985; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
