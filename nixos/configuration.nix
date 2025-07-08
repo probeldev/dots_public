@@ -141,6 +141,8 @@
      superfile
      lazygit
 
+     starship
+
      ddcutil # for lg monitor
      edid-decode
 
@@ -280,23 +282,8 @@ services.blueman.enable = true;
 programs = {
    zsh = {
       enable = true;
-      autosuggestions.enable = true;
       # zsh-autoenv.enable = true;
       # syntaxHighlighting.enable = true;
-      ohMyZsh = {
-         enable = true;
-         # theme = "robbyrussell";
-         theme = "mortalscumbag";
-         plugins = [
-	   "fzf"
-           "git"
-           "npm"
-           "history"
-           "node"
-           "rust"
-           "deno"
-         ];
-      };
    };
 };
 
