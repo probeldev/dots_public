@@ -309,6 +309,7 @@ spawn-at-startup "flatpak" "run" "pw.mmk.OpenFreebuds"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "hypridle"
 spawn-at-startup "~/work/opensource/niri-float-sticky/main"
+spawn-at-startup "bash" "-c" "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -413,9 +414,9 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return { spawn "ghostty"; }
+    Mod+Return { spawn "ghostty" "--gtk-single-instance=true"; }
     // Mod+E { spawn "nautilus" "--new-window"; }
-    Mod+E { spawn "bash" "-c" "ghostty -e superfile"; }
+    Mod+E { spawn "bash" "-c" "ghostty --gtk-single-instance=true -e superfile"; }
     Mod+D { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher --config ~/script/dots_private/fastlauncher/cfg.json"; }
     Mod+S { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher --config ~/script/dots_private/fastlauncher/emoji.json"; }
     Mod+Shift+D { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher"; }

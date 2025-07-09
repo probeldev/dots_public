@@ -171,11 +171,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1750846564,
-        "narHash": "sha256-zAoQ2TOxuiq3ODcQZfojaFtKIa+U7QIDIiDsdn9o9bM=",
+        "lastModified": 1751983082,
+        "narHash": "sha256-trLLe154mFxoz8SVOdHxx8KgyE+ETBbj/4CIIto3JJ0=",
         "owner": "probeldev",
         "repo": "go-multiline-formatter",
-        "rev": "776e6a9adf49da02cb82ef5e1dfa619a250c7c9c",
+        "rev": "acd41b755c0e71fb5c211fc022617d22578fe112",
         "type": "github"
       },
       "original": {
