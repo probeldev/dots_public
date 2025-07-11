@@ -12,11 +12,11 @@ case "$MODE" in
         sudo bash -c "crontab -r 2>/dev/null || true"
         sudo bash -c "(
             echo \"*/1 * * * * echo level 7 > /proc/acpi/ibm/fan\"
-            echo \"*/1 * * * * cpupower frequency-set -u 4500MHz\"
+            echo \"*/1 * * * * cpupower frequency-set -u 4600MHz\"
         ) | crontab -"
         # Применяем настройки сразу
         echo level 7 | sudo tee /proc/acpi/ibm/fan >/dev/null
-        sudo cpupower frequency-set -u 4500MHz
+        sudo cpupower frequency-set -u 4600MHz
         # Запускаем niri от пользователя (без sudo!)
         DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus" \
         niri msg output "$OUTPUT" scale 2
@@ -36,10 +36,26 @@ case "$MODE" in
         DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus" \
         niri msg output "$OUTPUT" scale 2.15
         ;;
+    "desktop")
+        echo "🔄 Switching to DESKTOP MODE (balanced performance, cron enabled)"
+        # Очищаем crontab и добавляем задачи (от root)
+        sudo bash -c "crontab -r 2>/dev/null || true"
+        sudo bash -c "(
+            echo \"*/1 * * * * echo level 2 > /proc/acpi/ibm/fan\"
+            echo \"*/1 * * * * cpupower frequency-set -u 4600MHz\"
+        ) | crontab -"
+        # Применяем настройки сразу
+        echo level 2 | sudo tee /proc/acpi/ibm/fan >/dev/null
+        sudo cpupower frequency-set -u 4600MHz
+        # Запускаем niri от пользователя
+        DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus" \
+        niri msg output "$OUTPUT" scale 2.15
+        ;;
     *)
-        echo "Usage: $0 [game|work]"
-        echo "  game - max performance (fan 7, CPU 4500MHz, scale 2)"
-        echo "  work - quiet mode (fan 0, CPU 1500MHz, scale 2.15)"
+        echo "Usage: $0 [game|work|desktop]"
+        echo "  game   - max performance (fan 7, CPU 4600MHz, scale 2)"
+        echo "  work   - quiet mode (fan 0, CPU 1500MHz, scale 2.15)"
+        echo "  desktop - balanced performance (fan 2, CPU 4600MHz, scale 2.15)"
         exit 1
         ;;
 esac
