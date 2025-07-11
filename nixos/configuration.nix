@@ -176,7 +176,7 @@
      git
      btop
 
-      wlr-randr
+     wlr-randr
 
      gdu # disk usage
 
@@ -257,6 +257,8 @@
      docker-compose
 
      libreoffice
+
+     obs-studio
   ];
 
 fonts.packages = with pkgs; [
