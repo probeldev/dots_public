@@ -141,6 +141,9 @@
      superfile
      lazygit
 
+     pandoc # .md to .pdf
+     texliveFull # .md to .pdf
+
      starship
 
      ddcutil # for lg monitor
