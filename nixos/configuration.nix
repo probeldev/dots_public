@@ -140,6 +140,7 @@
      tree
      superfile
      lazygit
+     hunspellDicts.ru-ru # проверка орфографии на русском языке в neovim
 
      pandoc # .md to .pdf
      texliveFull # .md to .pdf
@@ -205,7 +206,6 @@
 
      nautilus 
      totem
-     papers
      loupe
      snapshot
      gnome-text-editor
@@ -216,6 +216,8 @@
      mission-center
      pavucontrol
      file-roller
+
+     zathura # pdf reader for neards
 
      xwayland-satellite
      anydesk
