@@ -2,7 +2,18 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, fastlauncher, niri-screen-time, unsplashwall, goaddtag, gomultilineformatter, fastlauncher-niri-windows, ... }: 
+{ 
+	config,
+	pkgs,
+	fastlauncher,
+	niri-screen-time,
+	unsplashwall,
+	goaddtag,
+	gomultilineformatter,
+	fastlauncher-niri-windows,
+	niri-float-sticky,
+	... 
+}: 
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -216,8 +227,8 @@
      mission-center
      pavucontrol
      file-roller
+     papers
 
-     zathura # pdf reader for neards
 
      xwayland-satellite
      anydesk
@@ -250,6 +261,7 @@
      goaddtag.packages.${system}.default
      gomultilineformatter.packages.${system}.default
      fastlauncher-niri-windows.packages.${system}.default
+     niri-float-sticky.packages.${system}.default
 
 
      wf-recorder

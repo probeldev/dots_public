@@ -308,7 +308,7 @@ spawn-at-startup "gammastep" "-l" "53.9:27.6"
 spawn-at-startup "flatpak" "run" "pw.mmk.OpenFreebuds"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "hypridle"
-spawn-at-startup "~/work/opensource/niri-float-sticky/main"
+spawn-at-startup "niri-float-sticky"
 spawn-at-startup "bash" "-c" "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.

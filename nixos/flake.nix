@@ -7,6 +7,8 @@
     goaddtag.url = "github:probeldev/go-add-tag";
     gomultilineformatter.url = "github:probeldev/go-multiline-formatter";
     fastlauncher-niri-windows.url = "github:probeldev/fastlauncher-niri-windows";
+    niri-float-sticky.url = "github:probeldev/niri-float-sticky";
+
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,6 +25,7 @@
     goaddtag,
     gomultilineformatter,
     fastlauncher-niri-windows,
+    niri-float-sticky,
     ...
   }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
@@ -31,7 +34,7 @@
         ./configuration.nix
       ];
       specialArgs = {
-        inherit home-manager fastlauncher niri-screen-time unsplashwall goaddtag gomultilineformatter fastlauncher-niri-windows; 
+        inherit home-manager fastlauncher niri-screen-time unsplashwall goaddtag gomultilineformatter fastlauncher-niri-windows niri-float-sticky; 
       };
     };
   };
