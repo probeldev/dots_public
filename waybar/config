@@ -147,7 +147,7 @@
     "custom/icon_menu": {
         "format": "{} 󰹯 ",
         "tooltip": false,
-        "on-click": "rofi -show drun -monitor eDP-1"
+        "on-click": "foot -T fast-launcher fastlauncher"
     },
     "custom/icon_logout": {
         "format": "{}  ",
