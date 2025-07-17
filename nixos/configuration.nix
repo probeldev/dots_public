@@ -236,9 +236,9 @@
      musicpod
      adwaita-icon-theme
      gsettings-desktop-schemas
-     swappy
      gammastep
      brightnessctl
+     gradia
 
      swaybg
      #swayidle
