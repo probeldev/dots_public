@@ -153,6 +153,10 @@
      lazygit
      hunspellDicts.ru-ru # проверка орфографии на русском языке в neovim
 
+
+     imagemagick
+
+
      pandoc # .md to .pdf
      texliveFull # .md to .pdf
 
@@ -273,7 +277,7 @@
 
      docker-compose
 
-     libreoffice
+     wpsoffice
 
      obs-studio
   ];
