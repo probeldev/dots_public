@@ -421,7 +421,6 @@ binds {
     Mod+S { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher --config ~/script/dots_private/fastlauncher/emoji.json"; }
     Mod+Shift+D { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher"; }
     Mod+W { spawn "bash" "-c" "fastlauncher-niri-windows > /tmp/fl-windows.json 2>&1 && foot -T fast-launcher fastlauncher --config /tmp/fl-windows.json"; }
-    Super+Alt+L { spawn "swaylock"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
