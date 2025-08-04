@@ -1,10 +1,13 @@
 
-*OS:* NixOS
-*Wayland compositor:* Niri
-*Panel:* Waybar
-*Terminal:* Ghostty
-*Launcher:* FastLauncher
-**
+**OS:** NixOS
+
+**Wayland compositor:** Niri
+
+**Panel:** Waybar
+
+**Terminal:** Ghostty
+
+**Launcher:** FastLauncher
 
 
 # work mode 
