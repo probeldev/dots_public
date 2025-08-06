@@ -28,3 +28,7 @@ cp -r ~/.config/ghostty ghostty
 
 rm -rf superfile
 cp -r ~/.config/superfile/ superfile
+
+
+rm npmrc
+cp ~/.npmrc npmrc

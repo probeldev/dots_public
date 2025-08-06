@@ -26,3 +26,6 @@ rm -rf ~/.config/superfile/
 cp -r superfile ~/.config/superfile/ 
 
 cp zshenv ~/.zshenv
+
+rm ~/.npmrc 
+cp npmrc ~/.npmrc
