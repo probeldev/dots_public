@@ -15,11 +15,20 @@
 **Launcher:** FastLauncher
 
 
-# work mode 
-   sh switch_mode.sh work
+## scripts
 
-# game mode
+### switch_mode
+work mode:
+```bash
+sh switch_mode.sh work
+```
+
+game mode:
+```bash
    sh switch_mode.sh game
+```
 
-# desktop mode
+desktop mode:
+```bash
    sh switch_mode.sh desktop
+```
