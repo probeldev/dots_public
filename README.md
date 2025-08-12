@@ -15,9 +15,10 @@
 **Launcher:** FastLauncher
 
 
-## scripts
+## Scripts
 
-### switch_mode
+### switch_mode.sh
+
 work mode:
 ```bash
 sh switch_mode.sh work
