@@ -14,6 +14,8 @@
 
 **Launcher:** FastLauncher
 
+FM: Nautilus/Superfile
+
 
 ## Scripts
 
@@ -33,3 +35,9 @@ desktop mode:
 ```bash
 sh switch_mode.sh desktop
 ```
+
+## Screenshots
+
+### ![Niri Screen Time](https://github.com/probeldev/niri-screen-time)
+
+![niri screen time](https://github.com/probeldev/dots_public/blob/main/screenshots/niri-screen-time.png?raw=true)
