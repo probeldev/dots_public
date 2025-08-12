@@ -1,3 +1,8 @@
+# My dots
+
+
+![main windows](https://github.com/probeldev/dots_public/blob/main/screenshots/main.png?raw=true)
+
 
 **OS:** NixOS
 
