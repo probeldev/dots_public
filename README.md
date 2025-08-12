@@ -40,7 +40,7 @@ sh switch_mode.sh desktop
 
 
 ### ![FastLauncher](https://github.com/fastlauncher/fastlauncher)
-![fastlauncher](https://github.com/probeldev/dots_public/blob/main/screenshots/fastlauncher?raw=true)
+![fastlauncher](https://github.com/probeldev/dots_public/blob/main/screenshots/fastlauncher.png?raw=true)
 
 ### ![Niri Screen Time](https://github.com/probeldev/niri-screen-time)
 
