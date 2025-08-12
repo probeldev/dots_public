@@ -26,10 +26,10 @@ sh switch_mode.sh work
 
 game mode:
 ```bash
-   sh switch_mode.sh game
+sh switch_mode.sh game
 ```
 
 desktop mode:
 ```bash
-   sh switch_mode.sh desktop
+sh switch_mode.sh desktop
 ```
