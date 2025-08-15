@@ -137,6 +137,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  nixpkgs.config.android_sdk.accept_license = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -153,6 +154,9 @@
      lazygit
      hunspellDicts.ru-ru # проверка орфографии на русском языке в neovim
 
+     android-tools
+     androidenv.androidPkgs.androidsdk
+     android-studio-full
 
      imagemagick
 
@@ -186,6 +190,7 @@
      sshuttle
 
      tdesktop
+     discord
      chromium
 
      pfetch
@@ -277,8 +282,7 @@
 
      docker-compose
 
-     wpsoffice
-
+     onlyoffice-desktopeditors
      obs-studio
   ];
 
