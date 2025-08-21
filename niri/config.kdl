@@ -310,6 +310,7 @@ spawn-at-startup "swayosd-server"
 spawn-at-startup "hypridle"
 spawn-at-startup "niri-float-sticky"
 spawn-at-startup "bash" "-c" "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
+spawn-at-startup "bash" "-c" "while true; do sh ~/script/dots_public/scripts/brightness.sh; sleep 30; done"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.

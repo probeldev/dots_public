@@ -168,6 +168,7 @@
 
      ddcutil # for lg monitor
      edid-decode
+     bc
 
      ad
      edwood
