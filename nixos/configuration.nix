@@ -224,6 +224,7 @@
      ghostty
      chafa # terminal image viewer
 
+     gpodder
      nautilus 
      totem
      loupe
@@ -242,7 +243,6 @@
      xwayland-satellite
      anydesk
 
-     musicpod
      adwaita-icon-theme
      gsettings-desktop-schemas
      gammastep
