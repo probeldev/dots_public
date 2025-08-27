@@ -225,6 +225,8 @@
      ghostty
      chafa # terminal image viewer
 
+     acpi
+
      gpodder
      nautilus 
      totem
