@@ -4,9 +4,6 @@ cp -r /etc/nixos nixos
 rm -rf niri
 cp -r ~/.config/niri niri
 
-rm -rf niri-screen-time
-cp -r ~/.config/niri-screen-time niri-screen-time
-
 cp ~/.config/hypr/hyprland.conf hypr/hyprland.conf
 cp ~/.config/hypr/hyprlock.conf hypr/hyprlock.conf
 cp ~/.config/hypr/hypridle.conf hypr/hypridle.conf

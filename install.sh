@@ -11,9 +11,6 @@ cp -r swaync ~/.config/swaync
 rm -rf ~/.config/niri
 cp -r niri ~/.config/niri
 
-rm -rf ~/.config/niri-screen-time
-cp -r niri-screen-time ~/.config/niri-screen-time
-
 rm -rf ~/.config/foot
 cp -r foot ~/.config/foot
 
