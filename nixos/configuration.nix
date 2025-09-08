@@ -154,12 +154,18 @@
      lazygit
      hunspellDicts.ru-ru # проверка орфографии на русском языке в neovim
 
+     file
+
+     mermaid-cli
+
      android-tools
      androidenv.androidPkgs.androidsdk
      android-studio-full
 
      imagemagick
 
+
+     tesseract
 
      pandoc # .md to .pdf
      texliveFull # .md to .pdf
