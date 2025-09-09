@@ -30,6 +30,7 @@
   boot.loader.grub.device = "nodev";
   boot.loader.grub.useOSProber = true;
   boot.loader.grub.efiSupport = true;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   nix.gc = {
     automatic = true;
