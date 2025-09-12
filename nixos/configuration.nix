@@ -32,6 +32,12 @@
   boot.loader.grub.efiSupport = true;
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
+
+  services.udev.extraRules = ''
+  # Правило для Vial
+  KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="input", TAG+="uaccess"
+'';  
+
   nix.gc = {
     automatic = true;
     dates = "weekly";
