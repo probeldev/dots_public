@@ -436,7 +436,8 @@ binds {
 	XF86MonBrightnessDown allow-when-locked=true { spawn "swayosd-client" "--brightness" "lower";}
 	XF86MonBrightnessUp allow-when-locked=true { spawn "swayosd-client" "--brightness" "raise";}
 
-    Mod+Shift+Q { close-window; }
+    // Mod+Shift+Q { close-window; }
+    Mod+Shift+Ctrl+Q { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
