@@ -375,7 +375,12 @@ window-rule {
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match title="^fast-launcher$"
+	default-column-width { fixed 500; }
+    default-window-height { fixed 500; }
     open-floating true
+	 shadow {
+        on
+    }
 }
 
 
@@ -418,9 +423,9 @@ binds {
     Mod+Return { spawn "ghostty" "--gtk-single-instance=true"; }
     // Mod+E { spawn "nautilus" "--new-window"; }
     Mod+Shift+E { spawn "bash" "-c" "ghostty --gtk-single-instance=true -e superfile"; }
-    Mod+D { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher --config ~/script/dots_private/fastlauncher/cfg.json"; }
-    Mod+S { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher --config ~/script/dots_private/fastlauncher/emoji.json"; }
-    Mod+Shift+D { spawn "bash" "-c" "niri msg action switch-layout 0 && foot -T fast-launcher fastlauncher"; }
+    Mod+D { spawn "bash" "-c" "niri msg action switch-layout 0 && ghostty --title=\"fast-launcher\" -e fastlauncher --config ~/script/dots_private/fastlauncher/cfg.json"; }
+    Mod+S { spawn "bash" "-c" "niri msg action switch-layout 0 && ghostty --title=\"fast-launcher\" -e fastlauncher fastlauncher --config ~/script/dots_private/fastlauncher/emoji.json"; }
+    Mod+Shift+D { spawn "bash" "-c" "niri msg action switch-layout 0 && ghostty --title=\"fast-launcher\" -e fastlauncher"; }
     // Mod+W { spawn "bash" "-c" "fastlauncher-niri-windows > /tmp/fl-windows.json 2>&1 && foot -T fast-launcher fastlauncher --config /tmp/fl-windows.json"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.

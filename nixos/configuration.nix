@@ -208,7 +208,6 @@
      chromium
 
      pfetch
-     foot
      ghostty
      waybar
      git
