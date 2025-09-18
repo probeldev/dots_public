@@ -424,7 +424,7 @@ binds {
     // Mod+E { spawn "nautilus" "--new-window"; }
     Mod+Shift+E { spawn "bash" "-c" "ghostty --gtk-single-instance=true -e superfile"; }
     Mod+D { spawn "bash" "-c" "niri msg action switch-layout 0 && ghostty --title=\"fast-launcher\" -e fastlauncher --config ~/script/dots_private/fastlauncher/cfg.json"; }
-    Mod+S { spawn "bash" "-c" "niri msg action switch-layout 0 && ghostty --title=\"fast-launcher\" -e fastlauncher fastlauncher --config ~/script/dots_private/fastlauncher/emoji.json"; }
+    Mod+S { spawn "bash" "-c" "niri msg action switch-layout 0 && ghostty --title=\"fast-launcher\" -e fastlauncher --config ~/script/dots_private/fastlauncher/emoji.json"; }
     Mod+Shift+D { spawn "bash" "-c" "niri msg action switch-layout 0 && ghostty --title=\"fast-launcher\" -e fastlauncher"; }
     // Mod+W { spawn "bash" "-c" "fastlauncher-niri-windows > /tmp/fl-windows.json 2>&1 && foot -T fast-launcher fastlauncher --config /tmp/fl-windows.json"; }
 
@@ -443,6 +443,7 @@ binds {
 
     // Mod+Shift+Q { close-window; }
     Mod+Shift+Ctrl+Q { close-window; }
+    Mod+Z { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
