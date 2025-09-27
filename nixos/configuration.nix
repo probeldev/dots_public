@@ -87,7 +87,7 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   #services.displayManager.ly.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  #services.xserver.desktopManager.gnome.enable = true;
   #programs.hyprland.enable = true;
   programs.niri.enable = true;
 
@@ -241,7 +241,7 @@
 
      gpodder
      nautilus 
-     totem
+     showtime
      loupe
      snapshot
      gnome-text-editor
