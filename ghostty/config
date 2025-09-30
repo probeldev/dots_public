@@ -1,5 +1,6 @@
 font-family = "FiraCode Nerd Font Mono Ret"
-theme = "GitHub-Light-Default"
+font-size = 18
+theme = "GitHub Light Default"
 
 keybind = ctrl+v=paste_from_clipboard
 keybind = performable:ctrl+c=copy_to_clipboard

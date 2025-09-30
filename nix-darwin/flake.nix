@@ -21,13 +21,30 @@
       
       nix.enable = false;
       environment.systemPackages = with pkgs; [ 
+	    skhd
 		vim
 		neovim
 		tdesktop
 		dbgate
+		go
+		gopls
+		gotools
+		fzf
+		ripgrep
+
+		
+
+
 		
      	niri-screen-time.packages.${system}.default
-        ];
+		starship
+	];
+
+
+
+		fonts.packages = with pkgs; [
+		   nerd-fonts.fira-code
+		];
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
