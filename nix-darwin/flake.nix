@@ -33,7 +33,11 @@
 		ripgrep
 
 		
+		iterm2
+		alacritty
 
+
+		aerospace
 
 		
      	niri-screen-time.packages.${system}.default
