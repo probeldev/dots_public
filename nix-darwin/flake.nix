@@ -6,6 +6,7 @@
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     niri-screen-time.url = "github:probeldev/niri-screen-time";
+    fastlauncher-niri-windows.url = "github:probeldev/fastlauncher-niri-windows";
   };
 
   outputs = inputs@{
@@ -13,6 +14,7 @@
 	nix-darwin,
 	nixpkgs,
     niri-screen-time,
+    fastlauncher,
 	}:
   let
     configuration = { pkgs, ... }: {
@@ -31,6 +33,7 @@
 		gotools
 		fzf
 		ripgrep
+		btop
 
 		
 		iterm2
@@ -39,8 +42,12 @@
 
 		aerospace
 
+		zed-editor
+
+
 		
-     	niri-screen-time.packages.${system}.default
+		niri-screen-time.packages.${system}.default
+		fastlauncher.packages.${system}.default
 		starship
 	];
 

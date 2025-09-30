@@ -1,0 +1,2 @@
+alt - return : open -n "/Applications/Ghostty.app"
+alt - d : open  -n "/Applications/Ghostty.app" --args -e /Users/sergey/fastlauncher/main -config /Users/sergey/script/dots_private/fastlauncher-mac/cfg.json

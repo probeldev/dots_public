@@ -8,6 +8,7 @@ cp -r superfile ~/.config/superfile/
 
 cp  aerospace/.aerospace.toml ~/.aerospace.toml
 
+cp  skhd/.skhdrc ~/.skhdrc
 
 # отключения анимаций на маке
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
