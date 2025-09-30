@@ -6,7 +6,7 @@
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     niri-screen-time.url = "github:probeldev/niri-screen-time";
-    fastlauncher-niri-windows.url = "github:probeldev/fastlauncher-niri-windows";
+    fastlauncher.url = "github:probeldev/fastlauncher";
   };
 
   outputs = inputs@{
@@ -43,6 +43,8 @@
 		aerospace
 
 		zed-editor
+
+		fastfetch
 
 
 		
