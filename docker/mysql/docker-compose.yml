@@ -1,27 +1,30 @@
-version: '3.7'
+version: '3.8'
 
 services:
   lamp:
-    image: mattrayner/lamp:latest-1804
-    restart: always
+    image: php:8.2-apache
+    platform: linux/arm64
+    restart: unless-stopped
     container_name: lamp
     volumes:
-      - ~/public_html:/app 
+      - ~/public_html:/var/www/html
       - ./apache2:/etc/apache2
     ports:
       - "80:80"
+    depends_on:
+      - db
+
   db:
-    image: mysql:8.0.37
-    restart: always
+    image: mysql:8.0-oracle
+    platform: linux/arm64
+    restart: unless-stopped
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: 12345678
       MYSQL_DATABASE: test
-      MYSQL_USER: sergey 
+      MYSQL_USER: sergey
       MYSQL_PASSWORD: 12345678
     volumes:
       - ~/docker_data/mysql:/var/lib/mysql
     ports:
       - "3306:3306"
-
-
