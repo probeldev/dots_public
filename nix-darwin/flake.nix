@@ -21,7 +21,9 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       
-      nix.enable = false;
+		nix.enable = false;
+		nixpkgs.config.allowUnfree = true;
+
       environment.systemPackages = with pkgs; [ 
 	    skhd
 		vim
@@ -34,10 +36,12 @@
 		fzf
 		ripgrep
 		btop
+		lazygit
 
 		
 		iterm2
 		alacritty
+		kitty
 
 
 		aerospace
@@ -45,6 +49,8 @@
 		zed-editor
 
 		fastfetch
+
+		google-chrome
 
 
 		
