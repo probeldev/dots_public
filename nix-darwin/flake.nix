@@ -42,10 +42,6 @@
 		gotools
      	vtsls
 
-		
-		iterm2
-		alacritty
-		kitty
 		rio
 
 
