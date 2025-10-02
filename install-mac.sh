@@ -1,6 +1,6 @@
 
-rm -rf ~/.config/ghostty 
-cp -r ghostty ~/.config/ghostty 
+rm -rf ~/.config/rio 
+cp -r rio ~/.config/rio  
 
 
 rm -rf ~/.config/superfile/

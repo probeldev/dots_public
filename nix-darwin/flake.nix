@@ -44,6 +44,7 @@
 		iterm2
 		alacritty
 		kitty
+		rio
 
 
 		aerospace

@@ -2,8 +2,8 @@ rm -rf nix-darwin
 cp -r /etc/nix-darwin/ nix-darwin
 
 
-rm -rf ghostty
-cp -r ~/.config/ghostty ghostty
+rm -rf rio 
+cp -r ~/.config/rio rio 
 
 
 rm -rf aerospace
