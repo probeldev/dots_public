@@ -32,13 +32,15 @@
 		neovim
 		tdesktop
 		dbgate
-		go
-		gopls
-		gotools
 		fzf
 		ripgrep
 		btop
 		lazygit
+
+		go
+		gopls
+		gotools
+     	vtsls
 
 		
 		iterm2
