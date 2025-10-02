@@ -27,7 +27,7 @@
 # define x axis padding (default is 0)
 #
 # Example:
-# padding-x = 10
+#padding-x = 10
 
 # Padding-y
 #
@@ -35,7 +35,7 @@
 # (default is [0, 0])
 #
 # Example:
-# padding-y = [30, 10]
+# padding-y = [5, 5]
 
 # Option as Alt
 #
@@ -136,8 +136,8 @@
 # width = 600
 # height = 400
 # mode = "windowed"
-opacity = 0.9
-blur = true 
+#opacity = 0.9
+#blur = true 
 # decorations = "enabled"
 decorations = "Transparent"
 # colorspace = "display-p3"
