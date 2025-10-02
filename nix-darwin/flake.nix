@@ -6,7 +6,8 @@
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     niri-screen-time.url = "github:probeldev/niri-screen-time";
-    fastlauncher.url = "github:probeldev/fastlauncher";
+    fastlauncher.url = "github:fastlauncher/fastlauncher";
+    fastlauncher_next.url = "github:fastlauncher/fastlauncher_next";
   };
 
   outputs = inputs@{
@@ -15,6 +16,7 @@
 	nixpkgs,
     niri-screen-time,
     fastlauncher,
+    fastlauncher_next,
 	}:
   let
     configuration = { pkgs, ... }: {
@@ -56,6 +58,8 @@
 		
 		niri-screen-time.packages.${system}.default
 		fastlauncher.packages.${system}.default
+		fastlauncher_next.packages.${system}.default
+
 		starship
 	];
 
@@ -84,8 +88,8 @@
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#1s-MacBook-Air
-    darwinConfigurations."1s-MacBook-Air" = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#Sergeys-MacBook-Air
+    darwinConfigurations."Sergeys-MacBook-Air" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
   };
