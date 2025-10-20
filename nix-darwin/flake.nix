@@ -27,7 +27,8 @@
 		nixpkgs.config.allowUnfree = true;
 
       environment.systemPackages = with pkgs; [ 
-	    skhd
+		superfile
+
 		vim
 		neovim
 		tdesktop
@@ -41,11 +42,9 @@
 		gopls
 		gotools
      	vtsls
+		prettier
 
 		rio
-
-
-		aerospace
 
 		zed-editor
 
@@ -53,13 +52,19 @@
 
 		google-chrome
 
-
+		ollama
 		
 		niri-screen-time.packages.${system}.default
 		fastlauncher.packages.${system}.default
 		fastlauncher_next.packages.${system}.default
 
 		starship
+
+		# unixporn
+		aerospace
+		skhd
+
+		sshuttle
 	];
 
 
