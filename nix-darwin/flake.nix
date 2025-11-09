@@ -37,6 +37,7 @@
 		ripgrep
 		btop
 		lazygit
+		tree
 
 		go
 		gopls
@@ -63,8 +64,11 @@
 		# unixporn
 		aerospace
 		skhd
+		jankyborders
 
 		sshuttle
+
+		firefox
 	];
 
 

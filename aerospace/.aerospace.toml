@@ -1,7 +1,9 @@
 # Place a copy of this config to ~/.aerospace.toml
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+after-startup-command = [
+  'exec-and-forget /run/current-system/sw/bin/borders active_color=0xff7fc8ff inactive_color=0xffffffff width=10'
+]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -228,5 +230,4 @@ if.app-id="com.mitchellh.ghostty"
 run= [
   "layout tiling",
 ]
-
 
