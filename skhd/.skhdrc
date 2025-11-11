@@ -1,4 +1,4 @@
 alt - return : open -n /Applications/Nix\ Apps/Rio.app
-alt - d :  fastlauncher_next -config /Users/sergey/script/dots_private/fastlauncher-mac/cfg.json
-alt - s :  fastlauncher_next -config /Users/sergey/script/dots_private/fastlauncher-mac/emoji.json
+alt - d :  fastlauncher_next -aerospace -config /Users/sergey/script/dots_private/fastlauncher-mac/cfg.json
+alt - s :  fastlauncher_next -aerospace -config /Users/sergey/script/dots_private/fastlauncher-mac/emoji.json
 

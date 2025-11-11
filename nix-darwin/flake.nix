@@ -31,7 +31,7 @@
 
 		vim
 		neovim
-		tdesktop
+		telegram-desktop
 		dbgate
 		fzf
 		ripgrep
@@ -65,6 +65,7 @@
 		aerospace
 		skhd
 		jankyborders
+		sketchybar
 
 		sshuttle
 
