@@ -1,0 +1,80 @@
+#!/bin/bash
+
+# Sketchybar config for Aerospace
+
+# Set global settings for MacBook notch
+sketchybar --bar height=40 \
+           padding_left=20 \
+           padding_right=20 \
+           blur_radius=0 \
+           position=top \
+           color=0xff7fc8ff \
+           topmost=on
+
+# Default arguments for all items
+sketchybar --default updates=when_shown \
+           drawing=on \
+           icon.color=0xffffffff \
+           label.color=0xffffffff \
+           background.color=0x00000000
+
+# Left items - Spaces
+sketchybar --add item spaces left \
+           --set spaces \
+           label="loading..." \
+           label.font="System:Semibold:16.0" \
+           script="~/.config/sketchybar/plugins/spaces.sh" \
+           updates=on \
+           update_freq=1 \
+           label.padding_left=10 \
+           label.padding_right=10
+
+# Center items - Window title
+sketchybar --add item title left \
+           --set title \
+           script="sketchybar --set title label=\"\$INFO\"" \
+           label.font="System:Semibold:16.0" \
+           label.padding_left=15 \
+           label.padding_right=15 \
+           --subscribe title front_app_switched
+
+# Right items - System info
+sketchybar --add item time right \
+           --set time \
+           update_freq=1 \
+           label.font="System:Semibold:16.0" \
+           label.padding_left=8 \
+           label.padding_right=8 \
+           script='LABEL=$(date +"%H:%M"); sketchybar --set time label="$LABEL"'
+
+sketchybar --add item date right \
+           --set date \
+           update_freq=1 \
+           label.font="System:Semibold:16.0" \
+           label.padding_left=8 \
+           label.padding_right=8 \
+           script='LABEL=$(date +"%a %d %b"); sketchybar --set date label="$LABEL"'
+
+sketchybar --add item battery right \
+           --set battery \
+           update_freq=1 \
+           label.font="System:Semibold:16.0" \
+           label.padding_left=8 \
+           label.padding_right=8 \
+           script="~/.config/sketchybar/plugins/battery.sh"
+
+# Add padding between items
+sketchybar --add item space_sep1 right \
+           --set space_sep1 width=5
+
+sketchybar --add item space_sep2 right \
+           --set space_sep2 width=5
+
+# Add some padding items to center content around notch
+sketchybar --add item left_pad left \
+           --set left_pad width=10
+
+sketchybar --add item right_pad right \
+           --set right_pad width=10
+
+echo "sketchybar config loaded successfully!"

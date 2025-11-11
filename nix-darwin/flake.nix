@@ -66,6 +66,7 @@
 		skhd
 		jankyborders
 		sketchybar
+		fontconfig
 
 		sshuttle
 
