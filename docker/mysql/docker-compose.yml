@@ -2,15 +2,16 @@ version: '3.8'
 
 services:
   lamp:
-    image: php:8.2-apache
-    platform: linux/arm64
+    image: webdevops/php-apache:8.2
+    # platform: linux/arm64
     restart: unless-stopped
     container_name: lamp
     volumes:
-      - ~/public_html:/var/www/html
-      - ./apache2:/etc/apache2
+      - ~/public_html:/app
     ports:
       - "80:80"
+    environment:
+      WEB_DOCUMENT_ROOT: /app
     depends_on:
       - db
 

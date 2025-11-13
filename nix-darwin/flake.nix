@@ -42,6 +42,7 @@
 		go
 		gopls
 		gotools
+		golangci-lint
      	vtsls
 		prettier
 
@@ -65,8 +66,6 @@
 		aerospace
 		skhd
 		jankyborders
-		sketchybar
-		fontconfig
 
 		sshuttle
 

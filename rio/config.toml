@@ -80,7 +80,7 @@
 # Confirm before exiting Rio
 # Default is `true`
 #
-# confirm-before-quit = false
+confirm-before-quit = false
 
 # Cursor
 #
