@@ -195,6 +195,7 @@ automatically-unhide-macos-hidden-apps = false
     # alt-shift-x = 'move-node-to-workspace X'
     # alt-shift-y = 'move-node-to-workspace Y'
     # alt-shift-z = 'move-node-to-workspace Z'
+	alt-z = "close --quit-if-last-window"
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
