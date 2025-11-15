@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   lamp:
-    image: webdevops/php-apache:8.2
+    image: gagalkoding/lamp:latest
     # platform: linux/arm64
     restart: unless-stopped
     container_name: lamp
