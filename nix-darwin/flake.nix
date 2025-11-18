@@ -45,6 +45,7 @@
 		golangci-lint
      	vtsls
 		prettier
+		ffmpeg
 
 		rio
 
@@ -70,6 +71,8 @@
 		sshuttle
 
 		firefox
+
+		lima
 	];
 
 

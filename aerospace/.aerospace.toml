@@ -18,7 +18,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 accordion-padding = 30
 
 # Possible values: tiles|accordion
-default-root-container-layout = 'tiles'
+default-root-container-layout = 'accordion'
 
 # Possible values: horizontal|vertical|auto
 # 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
@@ -122,6 +122,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-7 = 'workspace 7'
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
+    alt-0 = 'workspace 10'
     alt-q = 'workspace 1'
     alt-w = 'workspace 2'
     alt-e = 'workspace 3'
@@ -131,6 +132,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-u = 'workspace 7'
     alt-i = 'workspace 8'
     alt-o = 'workspace 9'
+    alt-p = 'workspace 10'
     # alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
     # alt-b = 'workspace B'
     # alt-c = 'workspace C'
@@ -164,6 +166,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-7 = 'move-node-to-workspace 7'
     alt-shift-8 = 'move-node-to-workspace 8'
     alt-shift-9 = 'move-node-to-workspace 9'
+    alt-shift-0 = 'move-node-to-workspace 10'
     alt-shift-q = 'move-node-to-workspace 1'
     alt-shift-w = 'move-node-to-workspace 2'
     alt-shift-e = 'move-node-to-workspace 3'
@@ -173,6 +176,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-u = 'move-node-to-workspace 7'
     alt-shift-i = 'move-node-to-workspace 8'
     alt-shift-o = 'move-node-to-workspace 9'
+    alt-shift-p = 'move-node-to-workspace 10'
     # alt-shift-a = 'move-node-to-workspace A'
     # alt-shift-b = 'move-node-to-workspace B'
     # alt-shift-c = 'move-node-to-workspace C'
