@@ -4,17 +4,17 @@ docker stop mysql
 docker rm lamp
 docker rm mysql
 
-limactl stop docker
-limactl rm docker
+# limactl stop docker
+# limactl rm docker
 
-limactl start \
-  --name=docker \
-  --cpus=4 \
-  --memory=1 \
-  template://docker
-
-
-export DOCKER_HOST=$(limactl list docker --format 'unix://{{.Dir}}/sock/docker.sock')
+# limactl start \
+#   --name=docker \
+#   --cpus=4 \
+#   --memory=1 \
+#   template://docker
+#
+#
+# export DOCKER_HOST=$(limactl list docker --format 'unix://{{.Dir}}/sock/docker.sock')
 
 
 docker-compose up -d
