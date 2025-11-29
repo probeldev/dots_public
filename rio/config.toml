@@ -225,6 +225,7 @@ decorations = "Transparent"
 # Simple example:
 [fonts]
 family = "FiraCode Nerd Font Mono"
+# family = "Hack Nerd Font Mono"
 size = 18
 
 #

@@ -2,7 +2,7 @@
   description = "Example nix-darwin system flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     niri-screen-time.url = "github:probeldev/niri-screen-time";
@@ -55,7 +55,7 @@
 
 		google-chrome
 
-		ollama
+		# ollama
 		
 		niri-screen-time.packages.${system}.default
 		fastlauncher.packages.${system}.default
