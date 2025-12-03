@@ -73,6 +73,8 @@
 		firefox
 
 		lima
+
+		md2pdf
 	];
 
 
