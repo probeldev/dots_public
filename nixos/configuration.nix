@@ -61,7 +61,6 @@
   networking = {
             networkmanager = {
 	        enable = true;
-                enableStrongSwan = true;
                 plugins = [
                     pkgs.networkmanager-l2tp
                     pkgs.networkmanager_strongswan
@@ -165,9 +164,6 @@
 
      mermaid-cli
 
-     android-tools
-     androidenv.androidPkgs.androidsdk
-     android-studio-full
 
      imagemagick
 
@@ -203,7 +199,7 @@
 
      sshuttle
 
-     tdesktop
+     telegram-desktop
      discord
      chromium
 
@@ -299,6 +295,8 @@
 
      onlyoffice-desktopeditors
      obs-studio
+
+
   ];
 
 fonts.packages = with pkgs; [

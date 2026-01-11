@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     fastlauncher.url = "github:probeldev/fastlauncher";
     niri-screen-time.url = "github:probeldev/niri-screen-time";
     unsplashwall.url = "github:probeldev/unsplash-wall";
@@ -10,7 +10,7 @@
     niri-float-sticky.url = "github:probeldev/niri-float-sticky";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
