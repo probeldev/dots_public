@@ -308,7 +308,7 @@ spawn-at-startup "gammastep" "-l" "53.9:27.6"
 spawn-at-startup "flatpak" "run" "pw.mmk.OpenFreebuds"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "hypridle"
-spawn-at-startup "niri-float-sticky -title=Picture-in-Picture"
+spawn-at-startup "bash" "-c" "niri-float-sticky -title=Picture-in-Picture"
 spawn-at-startup "bash" "-c" "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
 // spawn-at-startup "bash" "-c" "while true; do sh ~/script/dots_public/scripts/brightness.sh; sleep 30; done"
 
