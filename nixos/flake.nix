@@ -3,7 +3,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     fastlauncher.url = "github:probeldev/fastlauncher";
     niri-screen-time.url = "github:probeldev/niri-screen-time";
-    unsplashwall.url = "github:probeldev/unsplash-wall";
     goaddtag.url = "github:probeldev/go-add-tag";
     gomultilineformatter.url = "github:probeldev/go-multiline-formatter";
     fastlauncher-niri-windows.url = "github:probeldev/fastlauncher-niri-windows";
@@ -21,7 +20,6 @@
     home-manager,
     fastlauncher,
     niri-screen-time,
-    unsplashwall,
     goaddtag,
     gomultilineformatter,
     fastlauncher-niri-windows,
@@ -34,7 +32,7 @@
         ./configuration.nix
       ];
       specialArgs = {
-        inherit home-manager fastlauncher niri-screen-time unsplashwall goaddtag gomultilineformatter fastlauncher-niri-windows niri-float-sticky; 
+        inherit home-manager fastlauncher niri-screen-time goaddtag gomultilineformatter fastlauncher-niri-windows niri-float-sticky; 
       };
     };
   };

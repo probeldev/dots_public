@@ -7,7 +7,6 @@
 	pkgs,
 	fastlauncher,
 	niri-screen-time,
-	unsplashwall,
 	goaddtag,
 	gomultilineformatter,
 	fastlauncher-niri-windows,
@@ -84,7 +83,7 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
+  services.displayManager.gdm.enable = true;
   #services.displayManager.ly.enable = true;
   #services.xserver.desktopManager.gnome.enable = true;
   #programs.hyprland.enable = true;
@@ -275,13 +274,12 @@
      xorg.xmodmap
 
 
-     fastlauncher.packages.${system}.default
-     niri-screen-time.packages.${system}.default
-     unsplashwall.packages.${system}.default
-     goaddtag.packages.${system}.default
-     gomultilineformatter.packages.${system}.default
-     fastlauncher-niri-windows.packages.${system}.default
-     niri-float-sticky.packages.${system}.default
+     fastlauncher.packages.${stdenv.hostPlatform.system}.default
+     niri-screen-time.packages.${stdenv.hostPlatform.system}.default
+     goaddtag.packages.${stdenv.hostPlatform.system}.default
+     gomultilineformatter.packages.${stdenv.hostPlatform.system}.default
+     fastlauncher-niri-windows.packages.${stdenv.hostPlatform.system}.default
+     niri-float-sticky.packages.${stdenv.hostPlatform.system}.default
 
 
      wf-recorder
