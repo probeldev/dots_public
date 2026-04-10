@@ -27,7 +27,7 @@
 # define x axis padding (default is 0)
 #
 # Example:
-#padding-x = 10
+# padding-x = 100
 
 # Padding-y
 #
@@ -35,7 +35,7 @@
 # (default is [0, 0])
 #
 # Example:
-# padding-y = [5, 5]
+# padding-y = [50, 50]
 
 # Option as Alt
 #

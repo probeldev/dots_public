@@ -231,8 +231,6 @@ automatically-unhide-macos-hidden-apps = false
 
 
 [[on-window-detected]]
-if.app-id="com.mitchellh.ghostty"
-run= [
-  "layout tiling",
-]
+if.window-title-regex-substring = 'fastlauncher'
+run = 'layout floating'
 

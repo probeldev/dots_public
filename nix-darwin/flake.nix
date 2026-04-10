@@ -2,8 +2,8 @@
   description = "Example nix-darwin system flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
-    nix-darwin.url = "github:nix-darwin/nix-darwin/master";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.11";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     niri-screen-time.url = "github:probeldev/niri-screen-time";
     fastlauncher.url = "github:fastlauncher/fastlauncher";
@@ -34,11 +34,15 @@
 		telegram-desktop
 		dbgate
 		fzf
+		skim # rust alternative fzf
 		ripgrep
 		btop
 		lazygit
 		tree
 
+		whisky
+
+		transmission_4
 		go
 		gopls
 		gotools
@@ -46,6 +50,11 @@
      	vtsls
 		prettier
 		ffmpeg
+		imagemagick
+
+		cargo
+		rust-analyzer
+		rustfmt
 
 		rio
 
@@ -55,7 +64,8 @@
 
 		google-chrome
 
-		# ollama
+		ollama
+		opencode
 		
 		niri-screen-time.packages.${system}.default
 		fastlauncher.packages.${system}.default
@@ -75,6 +85,10 @@
 		lima
 
 		md2pdf
+
+		qwen-code
+
+
 	];
 
 
