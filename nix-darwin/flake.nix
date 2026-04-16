@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.11";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     niri-screen-time.url = "github:probeldev/niri-screen-time";
@@ -12,90 +13,97 @@
 
   outputs = inputs@{
   	self,
-	nix-darwin,
-	nixpkgs,
+		nix-darwin,
+		nixpkgs,
+    nixpkgs-unstable,
     niri-screen-time,
     fastlauncher,
     fastlauncher_next,
 	}:
   let
-    configuration = { pkgs, ... }: {
+    configuration = { pkgs, ... }:
+    let
+      pkgs-unstable = import nixpkgs-unstable {
+        system = pkgs.system;
+        config.allowUnfree = true;
+      };
+    in
+    {
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       
-		nix.enable = false;
-		nixpkgs.config.allowUnfree = true;
+			nix.enable = false;
+			nixpkgs.config.allowUnfree = true;
 
       environment.systemPackages = with pkgs; [ 
-		superfile
+			superfile
 
-		vim
-		neovim
-		telegram-desktop
-		dbgate
-		fzf
-		skim # rust alternative fzf
-		ripgrep
-		btop
-		lazygit
-		tree
+			vim
+			neovim
+			telegram-desktop
+			dbgate
+			fzf
+			skim # rust alternative fzf
+			ripgrep
+			btop
+			lazygit
+			tree
 
-		whisky
+			whisky
 
-		transmission_4
-		go
-		gopls
-		gotools
-		golangci-lint
-     	vtsls
-		prettier
-		ffmpeg
-		imagemagick
+			go
+			gopls
+			gotools
+			golangci-lint
+     		vtsls
+			prettier
+			ffmpeg
+			imagemagick
 
-		cargo
-		rust-analyzer
-		rustfmt
+			cargo
+			rust-analyzer
+			rustfmt
 
-		rio
+			rio
 
-		zed-editor
+			zed-editor
 
-		fastfetch
+			fastfetch
 
-		google-chrome
+			google-chrome
 
-		ollama
-		opencode
-		
-		niri-screen-time.packages.${system}.default
-		fastlauncher.packages.${system}.default
-		fastlauncher_next.packages.${system}.default
+			ollama
+			pkgs-unstable.opencode
+			
+			niri-screen-time.packages.${pkgs.system}.default
+			fastlauncher.packages.${pkgs.system}.default
+			fastlauncher_next.packages.${pkgs.system}.default
 
-		starship
+			starship
 
-		# unixporn
-		aerospace
-		skhd
-		jankyborders
+			# unixporn
+			aerospace
+			skhd
+			jankyborders
 
-		sshuttle
+			sshuttle
 
-		firefox
+			firefox
 
-		lima
+			lima
 
-		md2pdf
+			md2pdf
 
-		qwen-code
-
-
-	];
+			qwen-code
 
 
-
-		fonts.packages = with pkgs; [
-		   nerd-fonts.fira-code
 		];
+
+
+
+			fonts.packages = with pkgs; [
+			   nerd-fonts.fira-code
+			];
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
