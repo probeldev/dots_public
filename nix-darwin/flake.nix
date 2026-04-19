@@ -46,6 +46,8 @@
 			skim # rust alternative fzf
 			ripgrep
 			btop
+            :q
+            :q
 			lazygit
 			tree
 
@@ -94,9 +96,7 @@
 
 			md2pdf
 
-			qwen-code
-
-
+			transmission_4-qt6
 		];
 
 
