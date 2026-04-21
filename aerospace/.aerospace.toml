@@ -235,3 +235,6 @@ automatically-unhide-macos-hidden-apps = false
 if.window-title-regex-substring = 'fastlauncher'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.window-title-regex-substring = 'Katawa Shoujo'
+run = 'layout floating'
