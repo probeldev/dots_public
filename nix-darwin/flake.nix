@@ -2,9 +2,9 @@
   description = "Example nix-darwin system flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.11";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     niri-screen-time.url = "github:probeldev/niri-screen-time";
     fastlauncher.url = "github:fastlauncher/fastlauncher";
@@ -34,6 +34,9 @@
       
 			nix.enable = false;
 			nixpkgs.config.allowUnfree = true;
+			nixpkgs.config.permittedInsecurePackages = [
+                "python3.12-ecdsa-0.19.1"
+              ];
 
       environment.systemPackages = with pkgs; [ 
 			superfile
@@ -46,8 +49,6 @@
 			skim # rust alternative fzf
 			ripgrep
 			btop
-            :q
-            :q
 			lazygit
 			tree
 
@@ -74,7 +75,7 @@
 
 			google-chrome
 
-			ollama
+			pkgs-unstable.ollama
 			pkgs-unstable.opencode
 			
 			niri-screen-time.packages.${pkgs.system}.default
@@ -94,9 +95,11 @@
 
 			lima
 
-			md2pdf
+			## md2pdf
 
 			transmission_4-qt6
+
+			# renpy
 		];
 
 
