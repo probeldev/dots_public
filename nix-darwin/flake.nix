@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs-25-11.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
@@ -13,16 +14,26 @@
 
   outputs = inputs@{
   	self,
-		nix-darwin,
-		nixpkgs,
-    nixpkgs-unstable,
-    niri-screen-time,
-    fastlauncher,
-    fastlauncher_next,
-	}:
+ 		nix-darwin,
+ 		nixpkgs,
+ 		nixpkgs-25-11,
+ 		nixpkgs-unstable,
+ 		niri-screen-time,
+ 		fastlauncher,
+ 		fastlauncher_next,
+ 	}:
   let
     configuration = { pkgs, ... }:
     let
+      pkgs-25-11 = import nixpkgs-25-11 {
+        system = pkgs.system;
+        config = {
+          allowUnfree = true;
+          permittedInsecurePackages = [
+            "python3.12-ecdsa-0.19.1"
+          ];
+        };
+      };
       pkgs-unstable = import nixpkgs-unstable {
         system = pkgs.system;
         config.allowUnfree = true;
@@ -40,6 +51,7 @@
 
       environment.systemPackages = with pkgs; [ 
 			superfile
+			yazi
 
 			vim
 			neovim
@@ -75,8 +87,13 @@
 
 			google-chrome
 
+			pkgs-25-11.renpy
+
 			pkgs-unstable.ollama
 			pkgs-unstable.opencode
+			pkgs-unstable.pi-coding-agent
+
+			zellij
 			
 			niri-screen-time.packages.${pkgs.system}.default
 			fastlauncher.packages.${pkgs.system}.default
@@ -99,7 +116,6 @@
 
 			transmission_4-qt6
 
-			# renpy
 		];
 
 
