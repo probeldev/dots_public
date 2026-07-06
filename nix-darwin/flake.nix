@@ -10,6 +10,7 @@
     niri-screen-time.url = "github:probeldev/niri-screen-time";
     fastlauncher.url = "github:fastlauncher/fastlauncher";
     fastlauncher_next.url = "github:fastlauncher/fastlauncher_next";
+	sqlit.url = "github:Maxteabag/sqlit";
   };
 
   outputs = inputs@{
@@ -21,6 +22,7 @@
  		niri-screen-time,
  		fastlauncher,
  		fastlauncher_next,
+		sqlit,
  	}:
   let
     configuration = { pkgs, ... }:
@@ -64,6 +66,8 @@
 			lazygit
 			tree
 
+			sqlit.packages.${pkgs.system}.default
+
 			whisky
 
 			go
@@ -72,6 +76,10 @@
 			golangci-lint
      		vtsls
 			prettier
+			zig
+
+			orbstack
+
 			ffmpeg
 			imagemagick
 
