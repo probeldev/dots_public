@@ -89,6 +89,8 @@
 
 			rio
 
+			nmap
+
 			zed-editor
 
 			fastfetch
@@ -100,6 +102,8 @@
 			pkgs-unstable.ollama
 			pkgs-unstable.opencode
 			pkgs-unstable.pi-coding-agent
+			pkgs-unstable.rtk
+			python313Packages.mlx-vlm
 
 			zellij
 			
@@ -110,7 +114,8 @@
 			starship
 
 			# unixporn
-			aerospace
+			# aerospace
+			pkgs-unstable.rift-wm
 			skhd
 			jankyborders
 

@@ -2,6 +2,8 @@
 rm -rf ~/.config/rio 
 cp -r rio ~/.config/rio  
 
+rm -rf ~/.config/rift 
+cp -r rift ~/.config/rift  
 
 rm -rf ~/.config/superfile/
 cp -r superfile ~/.config/superfile/ 
