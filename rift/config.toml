@@ -329,27 +329,27 @@ comb1 = "Alt + Shift"
 "comb1 + K" = { move_node = "up" }
 "comb1 + L" = { move_node = "right" }
 
-"Alt + 0" = { switch_to_workspace = 0 }
-"Alt + 1" = { switch_to_workspace = 1 }
-"Alt + 2" = { switch_to_workspace = 2 }
-"Alt + 3" = { switch_to_workspace = 3 }
-"Alt + 4" = { switch_to_workspace = 4 }
-"Alt + 5" = { switch_to_workspace = 5 }
-"Alt + 6" = { switch_to_workspace = 6 }
-"Alt + 7" = { switch_to_workspace = 7 }
-"Alt + 8" = { switch_to_workspace = 8 }
-"Alt + 9" = { switch_to_workspace = 9 }
+"Alt + 1" = { switch_to_workspace = 0 }
+"Alt + 2" = { switch_to_workspace = 1 }
+"Alt + 3" = { switch_to_workspace = 2 }
+"Alt + 4" = { switch_to_workspace = 3 }
+"Alt + 5" = { switch_to_workspace = 4 }
+"Alt + 6" = { switch_to_workspace = 5 }
+"Alt + 7" = { switch_to_workspace = 6 }
+"Alt + 8" = { switch_to_workspace = 7 }
+"Alt + 9" = { switch_to_workspace = 8 }
+"Alt + 0" = { switch_to_workspace = 9 }
 
-"comb1 + 0" = { move_window_to_workspace = 0 }
-"comb1 + 1" = { move_window_to_workspace = 1 }
-"comb1 + 2" = { move_window_to_workspace = 2 }
-"comb1 + 3" = { move_window_to_workspace = 3 }
-"comb1 + 4" = { move_window_to_workspace = 4 }
-"comb1 + 5" = { move_window_to_workspace = 5 }
-"comb1 + 6" = { move_window_to_workspace = 6 }
-"comb1 + 7" = { move_window_to_workspace = 7 }
-"comb1 + 8" = { move_window_to_workspace = 8 }
-"comb1 + 9" = { move_window_to_workspace = 9 }
+"comb1 + 1" = { move_window_to_workspace = 0 }
+"comb1 + 2" = { move_window_to_workspace = 1 }
+"comb1 + 3" = { move_window_to_workspace = 2 }
+"comb1 + 4" = { move_window_to_workspace = 3 }
+"comb1 + 5" = { move_window_to_workspace = 4 }
+"comb1 + 6" = { move_window_to_workspace = 5 }
+"comb1 + 7" = { move_window_to_workspace = 6 }
+"comb1 + 8" = { move_window_to_workspace = 7 }
+"comb1 + 9" = { move_window_to_workspace = 8 }
+"comb1 + 0" = { move_window_to_workspace = 9 }
 
 "Alt + Tab" = "switch_to_last_workspace"
 
