@@ -69,7 +69,7 @@ auto_focus_blacklist = []
 
 run_on_start = [
  "/run/current-system/sw/bin/borders active_color=0xff7fc8ff inactive_color=0xffffffff width=10",
- "/run/current-system/sw/bin/niri-screen-time -daemon"
+ "/run/current-system/sw/bin/niri-screen-time -daemon >> /Users/sergey/niri.log 2>&1"
 ]
 
 # Hot Reloading
@@ -280,7 +280,11 @@ workspace_names = [
 #       ]
 #
 # By default there are no app rules; add or uncomment rules below as needed.
-app_rules = []
+app_rules = [
+  # same exceptions as in ~/.aerospace.toml (on-window-detected -> layout floating)
+  { title_regex = "fastlauncher", floating = true },
+  { title_regex = "Katawa Shoujo", floating = true },
+]
 
 # Modifier combinations that can be reused in key bindings
 # Define common modifier combinations to avoid repetition.
