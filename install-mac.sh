@@ -5,6 +5,10 @@ cp -r rio ~/.config/rio
 rm -rf ~/.config/rift 
 cp -r rift ~/.config/rift  
 
+rm -rf ~/.config/sketchybar 
+cp -r  sketchybar ~/.config/sketchybar
+
+
 rm -rf ~/.config/superfile/
 cp -r superfile ~/.config/superfile/ 
 

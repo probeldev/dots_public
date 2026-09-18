@@ -328,28 +328,11 @@ size = 18
 #
 # Example:
 [colors]
-background = '#ffffff'
-foreground = '#24292f'
-cursor = '#0969da'
-tabs = '#f6f8fa'
-tabs-active = '#ffffff'
-# ANSI palette tuned for a light background (GitHub Light inspired)
-black = '#24292f'
-red = '#cf222e'
-green = '#116329'
-yellow = '#9a6700'
-blue = '#0969da'
-magenta = '#8250df'
-cyan = '#1b7c83'
-white = '#6e7781'
-light-black = '#57606a'
-light-red = '#a40e26'
-light-green = '#1a7f37'
-light-yellow = '#7d4e00'
-light-blue = '#0550ae'
-light-magenta = '#6f42c1'
-light-cyan = '#0e7c86'
-light-white = '#6e7781'
+background = '#ffffff'       
+foreground = '#24292f'       
+cursor = '#0969da'           
+tabs = '#f6f8fa'             
+tabs-active = '#ffffff'     
 
 # background = '#0F0D0E'
 # foreground = '#F9F4DA'

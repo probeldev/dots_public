@@ -1,0 +1,89 @@
+#!/bin/bash
+
+# Sketchybar config — rift + FiraCode Nerd Font, Catppuccin Mocha
+# Документация: https://felixkratz.github.io/SketchyBar/
+
+# launchd-агент запускает конфиг с пустым PATH — подмешиваем nix-профиль
+export PATH="/run/current-system/sw/bin:$PATH"
+# CONFIG_DIR sketchybar выставляет сам, но при ручном запуске — нет
+CONFIG_DIR="${CONFIG_DIR:-$HOME/.config/sketchybar}"
+
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+
+##### Панель #####
+sketchybar --bar position=top \
+           height=38 \
+           corner_radius=0 \
+           blur_radius=30 \
+           color=0xb21e1e2e \
+           shadow=on \
+           sticky=on 
+
+##### Дефолты для айтемов #####
+sketchybar --default updates=when_shown \
+           icon.font="FiraCode Nerd Font:Bold:15.0" \
+           label.font="FiraCode Nerd Font:Bold:13.0" \
+           icon.color=0xffcdd6f4 \
+           label.color=0xffcdd6f4 \
+           icon.padding_left=8 \
+           icon.padding_right=4 \
+           label.padding_left=4 \
+           label.padding_right=8 \
+           background.color=0x40313244 \
+           background.corner_radius=8 \
+           background.height=26
+
+##### Кастомные события rift #####
+sketchybar --add event rift_workspace_changed \
+           --add event rift_windows_changed
+
+##### Воркспейсы rift (слева) #####
+# Активный воркспейс — синяя «пилюля», занятые — яркие, пустые — приглушённые.
+# Состояние обновляется по событиям rift_workspace_changed / rift_windows_changed,
+# которые rift триггерит через rift-cli subscribe (см. run_on_start в конфиге rift).
+RIFT_WS_COUNT=10
+for i in $(seq 0 $((RIFT_WS_COUNT - 1))); do
+  sketchybar --add item "rift_ws.$i" left \
+    --set "rift_ws.$i" \
+      icon="$((i + 1))" \
+      icon.padding_left=10 \
+      icon.padding_right=10 \
+      icon.color=0xff6c7086 \
+      background.drawing=off \
+      label.drawing=off \
+      script="$PLUGIN_DIR/rift_workspace.sh" \
+      click_script="/run/current-system/sw/bin/rift-cli execute workspace switch $i" \
+    --subscribe "rift_ws.$i" rift_workspace_changed rift_windows_changed
+done
+
+##### Разделитель #####
+sketchybar --add item chevron left \
+  --set chevron icon="󰅂" icon.color=0xff6c7086 label.drawing=off
+
+##### Активное приложение #####
+sketchybar --add item front_app left \
+  --set front_app icon.drawing=off \
+    label.color=0xfff9e2af \
+    script="$PLUGIN_DIR/front_app.sh" \
+  --subscribe front_app front_app_switched
+
+##### Правая сторона: часы, громкость, батарея, wifi #####
+sketchybar --add item clock right \
+  --set clock update_freq=10 icon="󰥔" script="$PLUGIN_DIR/clock.sh"
+
+sketchybar --add item volume right \
+  --set volume script="$PLUGIN_DIR/volume.sh" \
+  --subscribe volume volume_change
+
+sketchybar --add item battery right \
+  --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
+  --subscribe battery system_woke power_source_change
+
+sketchybar --add item wifi right \
+  --set wifi update_freq=30 script="$PLUGIN_DIR/wifi.sh"
+
+sketchybar --update
+
+# первичное обновление воркспейсов rift (до первого события от rift)
+sketchybar --trigger rift_workspace_changed
+echo "sketchybar config loaded"

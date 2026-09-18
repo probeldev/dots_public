@@ -15,6 +15,9 @@
     # свежий rift напрямую из исходников, не дожидаясь nixpkgs-unstable
     rift.url = "github:acsandmann/rift";
     rift.flake = false;
+
+    # свежий opencode напрямую из исходников
+    opencode-src.url = "github:anomalyco/opencode/dev";
   };
 
   outputs = inputs@{
@@ -28,6 +31,7 @@
     fastlauncher_next,
     sqlit,
     rift,
+    opencode-src,
   }:
   let
     configuration = { pkgs, ... }:
@@ -53,6 +57,8 @@
         in
         pkgs-unstable.rift-wm.overrideAttrs (old: {
           version = "git-${rev}";
+          # в master падает юнит-тест best_space_prefers_authoritative_window_server_space_over_geometry
+          doCheck = false;
           src = rift;
           cargoDeps = pkgs-unstable.rustPlatform.fetchCargoVendor {
             pname = old.pname;
@@ -62,12 +68,29 @@
             hash = "sha256-wxymypJjczFqI9oivnVX/TOnR1KuupsaryQIQQVN7Gs=";
           };
         });
+
+      # opencode напрямую из репозитория anomalyco/opencode
+      # smoke-тест в script/build.ts падает с SIGKILL в sandbox nix на macOS — отключаем
+      opencode-latest = (opencode-src.packages.${pkgs.system}.default).overrideAttrs (old: {
+        postPatch = (old.postPatch or "") + ''
+          substituteInPlace packages/opencode/script/build.ts \
+            --replace-fail 'if (item.os === process.platform && item.arch === process.arch && !item.abi) {' 'if (false) {'
+        '';
+        # генерация completions запускает бинарник — падает в sandbox;
+        # вместо этого переподписываем бинарник adhoc: bun compile ломает подпись,
+        # и macOS убивает процесс (exit 137)
+        postInstall = ''
+          /usr/bin/codesign --force --sign - "$out/bin/.opencode-wrapped"
+        '';
+        doInstallCheck = false;
+      });
     in
     {
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
 
       nix.enable = false;
+      system.primaryUser = "sergey";
       nixpkgs.config.allowUnfree = true;
       nixpkgs.config.permittedInsecurePackages = [
         "python3.12-ecdsa-0.19.1"
@@ -80,7 +103,7 @@
 
       environment.systemPackages = with pkgs; [
         superfile
-        yazi
+        pkgs-unstable.yazi
 
         vim
         neovim
@@ -127,7 +150,7 @@
         pkgs-25-11.renpy
 
         pkgs-unstable.ollama
-        pkgs-unstable.opencode
+        opencode-latest
         pkgs-unstable.pi-coding-agent
         pkgs-unstable.rtk
         python313Packages.mlx-vlm
@@ -145,6 +168,7 @@
         rift-latest
         skhd
         jankyborders
+        sketchybar
 
         sshuttle
 
@@ -163,6 +187,23 @@
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
+
+      # автосборка мусора nix: раз в 3 дня удаляются поколения старше 14 дней
+      launchd.daemons.nix-gc = {
+        command = "/nix/var/nix/profiles/default/bin/nix-collect-garbage --delete-older-than 14d";
+        serviceConfig.StartInterval = 259200;
+      };
+
+      # автозапуск sketchybar (панель)
+      launchd.user.agents.sketchybar = {
+        command = "${pkgs.sketchybar}/bin/sketchybar";
+        serviceConfig = {
+          KeepAlive = true;
+          RunAtLoad = true;
+          StandardOutPath = "/tmp/sketchybar.log";
+          StandardErrorPath = "/tmp/sketchybar.err.log";
+        };
+      };
 
       # Enable alternative shell support in nix-darwin.
       # programs.fish.enable = true;

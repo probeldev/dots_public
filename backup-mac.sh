@@ -1,5 +1,4 @@
-rm -rf nix-darwin
-cp -r /etc/nix-darwin/ nix-darwin
+rsync -a --delete --exclude result /etc/nix-darwin/ nix-darwin/
 
 
 rm -rf rio 
@@ -7,6 +6,9 @@ cp -r ~/.config/rio rio
 
 rm -rf rift
 cp -r ~/.config/rift rift
+
+rm -rf sketchybar 
+cp -r ~/.config/sketchybar sketchybar
 
 rm -rf aerospace
 mkdir aerospace

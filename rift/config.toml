@@ -69,7 +69,10 @@ auto_focus_blacklist = []
 
 run_on_start = [
  "/run/current-system/sw/bin/borders active_color=0xff7fc8ff inactive_color=0xffffffff width=10",
- "/run/current-system/sw/bin/niri-screen-time -daemon >> /Users/sergey/niri.log 2>&1"
+ "/run/current-system/sw/bin/niri-screen-time -daemon >> /Users/sergey/niri.log 2>&1",
+ # sketchybar: триггерим обновление индикаторов воркспейсов при смене воркспейса и окон
+ "/run/current-system/sw/bin/rift-cli subscribe cli --event workspace_changed --command sh --args -c --args '/run/current-system/sw/bin/sketchybar --trigger rift_workspace_changed'",
+ "/run/current-system/sw/bin/rift-cli subscribe cli --event windows_changed --command sh --args -c --args '/run/current-system/sw/bin/sketchybar --trigger rift_windows_changed'"
 ]
 
 # Hot Reloading
