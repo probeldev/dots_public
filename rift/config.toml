@@ -109,7 +109,7 @@ default_orientation = "perpendicular"
 #   Use the display's UUID as the key (for example, from system profiler or via rift CLI).
 
 [settings.layout.gaps.outer]
-top = 20
+top = 26
 left = 20
 bottom = 20
 right = 20
