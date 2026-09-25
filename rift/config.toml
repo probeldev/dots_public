@@ -118,17 +118,13 @@ right = 20
 horizontal = 20
 vertical = 20
 
-# Example per-display overrides:
-# Replace the quoted key with your display's UUID. Only specify values you want to override.
-# [settings.layout.gaps.per_display."11111111-2222-3333-4444-555555555555".outer]
-# top = 20
-# left = 20
-# bottom = 20
-# right = 20
-#
-# [settings.layout.gaps.per_display."11111111-2222-3333-4444-555555555555".inner]
-# horizontal = 8
-# vertical = 8
+# Per-display overrides: внешний LG UltraFine (без чёлки) — sketchybar 38px + обычный gap 20
+# ВАЖНО: outer-override заменяет группу целиком, неуказанные значения становятся 0.
+[settings.layout.gaps.per_display."D3214C5A-3CBD-4A93-ABCF-1A7CC85326B8".outer]
+top = 58
+left = 20
+bottom = 20
+right = 20
 [settings.ui.menu_bar]
 # enable menu bar workspace indicators
 enabled = true
@@ -285,7 +281,7 @@ workspace_names = [
 # By default there are no app rules; add or uncomment rules below as needed.
 app_rules = [
   # same exceptions as in ~/.aerospace.toml (on-window-detected -> layout floating)
-  { title_regex = "fastlauncher", floating = true },
+  { title_regex = "fastlauncher", floating = true, position = { x = 0.5, y = 0.3 }, size = { w = 700.0, h = 420.0 } },
   { title_regex = "Katawa Shoujo", floating = true },
 ]
 

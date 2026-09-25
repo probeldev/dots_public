@@ -18,6 +18,10 @@
 
     # свежий opencode напрямую из исходников
     opencode-src.url = "github:anomalyco/opencode/dev";
+
+    # свежий rio из master (в nixpkgs 0.4.7/0.5.27 старые, в 0.5.27 тесты падают в сандбоксе)
+    rio-git.url = "github:raphamorim/rio";
+    rio-git.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
 
   outputs = inputs@{
@@ -32,6 +36,7 @@
     sqlit,
     rift,
     opencode-src,
+    rio-git,
   }:
   let
     configuration = { pkgs, ... }:
@@ -65,7 +70,7 @@
             version = "git-${rev}";
             src = rift;
             # TODO: после первой сборки заменить на хеш из ошибки "hash mismatch"
-            hash = "sha256-wxymypJjczFqI9oivnVX/TOnR1KuupsaryQIQQVN7Gs=";
+            hash = "sha256-WId2LP/9i17ybMEPvk6Z/V/eh7xTrQNH8VXigRVLFwU=";
           };
         });
 
@@ -104,6 +109,7 @@
       environment.systemPackages = with pkgs; [
         superfile
         pkgs-unstable.yazi
+        chafa # превью картинок в yazi как ASCII-арт (rio не поддерживает граф. протоколы)
 
         vim
         neovim
@@ -132,12 +138,18 @@
 
         ffmpeg
         imagemagick
+        whisper-cpp # транскрибация для ytcut (нарезка дублей)
 
         cargo
         rust-analyzer
         rustfmt
 
-        rio
+        # rio из master github:raphamorim/rio — надежда на фикс превью картинок в yazi
+        # (в nixpkgs 0.4.7 слишком старый, 0.5.27 из unstable не собирается — тесты падают в сандбоксе)
+        # doCheck=false — тесты rio падают в nix-сандбоксе (spawn /usr/bin/login запрещён)
+        (rio-git.packages.${pkgs.system}.default.overrideAttrs (_: { doCheck = false; }))
+        ghostty-bin # запасной терминал: yazi превью/DnD работают из коробки
+        kitty # терминал для yazi DnD (kitty dnd protocol) + превью
 
         nmap
 

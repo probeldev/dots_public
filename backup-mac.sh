@@ -4,6 +4,9 @@ rsync -a --delete --exclude result /etc/nix-darwin/ nix-darwin/
 rm -rf rio 
 cp -r ~/.config/rio rio 
 
+rm -rf kitty
+cp -r ~/.config/kitty kitty
+
 rm -rf rift
 cp -r ~/.config/rift rift
 
