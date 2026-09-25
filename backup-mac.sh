@@ -7,6 +7,9 @@ cp -r ~/.config/rio rio
 rm -rf kitty
 cp -r ~/.config/kitty kitty
 
+rm -rf yazi-mac
+cp -r ~/.config/yazi yazi-mac
+
 rm -rf rift
 cp -r ~/.config/rift rift
 

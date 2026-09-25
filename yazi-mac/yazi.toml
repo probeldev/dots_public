@@ -1,0 +1,9 @@
+# Quick Look для картинок (macOS)
+[opener]
+quicklook = [
+	{ run = "qlmanage -p %s", orphan = true, desc = "Quick Look", for = "macos" },
+]
+
+[[open.prepend_rules]]
+mime = "image/*"
+use  = [ "quicklook", "open", "edit" ]
