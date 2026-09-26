@@ -1,9 +1,19 @@
-# Quick Look для картинок (macOS)
+# Openers (macOS)
 [opener]
 quicklook = [
 	{ run = "qlmanage -p %s", orphan = true, desc = "Quick Look", for = "macos" },
+]
+quicktime = [
+	{ run = "open -a 'QuickTime Player' %s", orphan = true, desc = "QuickTime Player", for = "macos" },
+]
+vlc = [
+	{ run = "open -a VLC %s", orphan = true, desc = "VLC", for = "macos" },
 ]
 
 [[open.prepend_rules]]
 mime = "image/*"
 use  = [ "quicklook", "open", "edit" ]
+
+[[open.prepend_rules]]
+mime = "video/*"
+use  = [ "quicklook", "quicktime", "vlc", "open" ]
