@@ -70,9 +70,13 @@ auto_focus_blacklist = []
 run_on_start = [
  "/run/current-system/sw/bin/borders active_color=0xff7fc8ff inactive_color=0xffffffff width=10",
  "/run/current-system/sw/bin/niri-screen-time -daemon >> /Users/sergey/niri.log 2>&1",
- # sketchybar: триггерим обновление индикаторов воркспейсов при смене воркспейса и окон
+ # sketchybar: триггерим обновление индикаторов воркспейсов/окон/заголовка.
+ # NB: subscribe cli РЕГИСТРИРУЕТ подписку в rift и завершается — это норма.
+ # Подписки живут внутри rift и слетают при его рестарте — поэтому они здесь.
+ # NB2: rift исполняет строки run_on_start БЕЗ шелла — редиректы ломают argv.
  "/run/current-system/sw/bin/rift-cli subscribe cli --event workspace_changed --command sh --args -c --args '/run/current-system/sw/bin/sketchybar --trigger rift_workspace_changed'",
- "/run/current-system/sw/bin/rift-cli subscribe cli --event windows_changed --command sh --args -c --args '/run/current-system/sw/bin/sketchybar --trigger rift_windows_changed'"
+ "/run/current-system/sw/bin/rift-cli subscribe cli --event windows_changed --command sh --args -c --args '/run/current-system/sw/bin/sketchybar --trigger rift_windows_changed'",
+ "/run/current-system/sw/bin/rift-cli subscribe cli --event window_title_changed --command sh --args -c --args '/run/current-system/sw/bin/sketchybar --trigger rift_window_title_changed'"
 ]
 
 # Hot Reloading
@@ -109,7 +113,7 @@ default_orientation = "perpendicular"
 #   Use the display's UUID as the key (for example, from system profiler or via rift CLI).
 
 [settings.layout.gaps.outer]
-top = 26
+top = 20
 left = 20
 bottom = 20
 right = 20
@@ -118,10 +122,10 @@ right = 20
 horizontal = 20
 vertical = 20
 
-# Per-display overrides: внешний LG UltraFine (без чёлки) — sketchybar 38px + обычный gap 20
+# Per-display overrides: внешний LG UltraFine (без чёлки) — sketchybar 32px + обычный gap 20
 # ВАЖНО: outer-override заменяет группу целиком, неуказанные значения становятся 0.
 [settings.layout.gaps.per_display."D3214C5A-3CBD-4A93-ABCF-1A7CC85326B8".outer]
-top = 58
+top = 52
 left = 20
 bottom = 20
 right = 20
