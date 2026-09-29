@@ -89,6 +89,41 @@
         '';
         doInstallCheck = false;
       });
+
+      # torrentTUI — красивый TUI-торрент-клиент (ratatui + librqbit), в nixpkgs нет — релизный бинарь
+      # мажорные релизы: https://github.com/thijsvos/torrentTUI/releases, sha256 брать из digest ассета
+      torrenttui = pkgs.stdenvNoCC.mkDerivation {
+        pname = "torrenttui";
+        version = "0.17.0";
+        src = pkgs.fetchurl {
+          url = "https://github.com/thijsvos/torrentTUI/releases/download/v0.17.0/torrenttui-macos-aarch64";
+          sha256 = "sha256-w1rV121pNL25jwvJ1YzsoDpLJn/Au6Zg+/J6PiHYnWU=";
+        };
+        dontUnpack = true;
+        installPhase = ''
+          runHook preInstall
+          install -Dm755 $src $out/bin/torrenttui
+          # бинарь не подписан — без adhoc-подписи macOS убивает процесс
+          /usr/bin/codesign --force --sign - $out/bin/torrenttui
+          runHook postInstall
+        '';
+      };
+
+      # superseedr — ещё один терминальный торрент-клиент (Rust + ratatui), в nixpkgs нет — сборка с crates.io
+      # обновлять: версию и checksum брать из https://crates.io/api/v1/crates/superseedr
+      superseedr = pkgs.rustPlatform.buildRustPackage {
+        pname = "superseedr";
+        version = "1.0.15";
+        src = pkgs.fetchCrate {
+          crateName = "superseedr";
+          version = "1.0.15";
+          sha256 = "sha256-vbdBAy3zxKdwdIiTEJel9nfdbVBpaomMxyRZ5W9z1rY=";
+        };
+        # при смене версии: cargoHash = lib.fakeHash -> собрать -> скопировать хеш из ошибки
+        cargoHash = "sha256-WbvJxnb7AZ7UcGyv7i9MxzWQbZKWrjHAOz2IaFZR5D0=";
+        # integration-тесты тянут сеть/файловые гонки — не нужны для установки
+        doCheck = false;
+      };
     in
     {
       # List packages installed in system profile. To search by name, run:
@@ -190,7 +225,8 @@
 
         ## md2pdf
 
-        transmission_4-qt6
+        torrenttui
+        superseedr
       ];
 
       fonts.packages = with pkgs; [
