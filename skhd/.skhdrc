@@ -1,3 +1,4 @@
 alt - return : open -n /Applications/Nix\ Apps/kitty.app
 alt - d :  kitty --title fastlauncher fastlauncher -config /Users/sergey/script/dots_private/fastlauncher-mac/cfg.json
+cmd - space : kitty --title fastlauncher fastlauncher
 alt - s :  kitty --title fastlauncher fastlauncher -config /Users/sergey/script/dots_private/fastlauncher-mac/emoji.json

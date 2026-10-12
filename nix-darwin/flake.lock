@@ -311,6 +311,26 @@
         "type": "github"
       }
     },
+    "omniwm-src": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790395401,
+        "narHash": "sha256-OgimeU6brIlPRLf6qXvlyDI/9gZ33Kx3iPmZnpzAyYI=",
+        "owner": "mst-mkt",
+        "repo": "omniwm.nix",
+        "rev": "83837434a2334e8d7a763b634d7426a9357e1838",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mst-mkt",
+        "repo": "omniwm.nix",
+        "type": "github"
+      }
+    },
     "opencode-src": {
       "inputs": {
         "nixpkgs": "nixpkgs_5"
@@ -333,11 +353,11 @@
     "rift": {
       "flake": false,
       "locked": {
-        "lastModified": 1790358212,
-        "narHash": "sha256-Z70ApklI4KANFOX+0nmJc6Bv2FwTVqieRSLWVm4PISA=",
+        "lastModified": 1791424879,
+        "narHash": "sha256-zxIZa0zJZx59OLZOo4H2Lf9ERNmNqATwJDgwAdrb7PQ=",
         "owner": "acsandmann",
         "repo": "rift",
-        "rev": "3bf1cde1ec196403aed5a7cc8b3c333d6256c94f",
+        "rev": "659eaa56dd72446cb1804af83f5a1c8d7aa0056e",
         "type": "github"
       },
       "original": {
@@ -378,6 +398,7 @@
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-25-11": "nixpkgs-25-11",
         "nixpkgs-unstable": "nixpkgs-unstable",
+        "omniwm-src": "omniwm-src",
         "opencode-src": "opencode-src",
         "rift": "rift",
         "rio-git": "rio-git",

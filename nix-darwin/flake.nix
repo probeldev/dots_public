@@ -22,6 +22,11 @@
     # свежий rio из master (в nixpkgs 0.4.7/0.5.27 старые, в 0.5.27 тесты падают в сандбоксе)
     rio-git.url = "github:raphamorim/rio";
     rio-git.inputs.nixpkgs.follows = "nixpkgs-unstable";
+
+    # OmniWM: тест-драйв тайлового WM (niri-подобный). Пакет ставит подписанный
+    # релизный .app через bsdtar — Developer ID подпись сохраняется.
+    omniwm-src.url = "github:mst-mkt/omniwm.nix";
+    omniwm-src.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
 
   outputs = inputs@{
@@ -37,6 +42,7 @@
     rift,
     opencode-src,
     rio-git,
+    omniwm-src,
   }:
   let
     configuration = { pkgs, ... }:
@@ -70,7 +76,7 @@
             version = "git-${rev}";
             src = rift;
             # TODO: после первой сборки заменить на хеш из ошибки "hash mismatch"
-            hash = "sha256-WId2LP/9i17ybMEPvk6Z/V/eh7xTrQNH8VXigRVLFwU=";
+            hash = "sha256-JHB6yqrOuwZ+UwxSKBp9eh0bX4mkZndxQvHEtCclxPk=";
           };
         });
 
@@ -201,6 +207,7 @@
         pkgs-unstable.pi-coding-agent
         pkgs-unstable.rtk
         python313Packages.mlx-vlm
+        python313 # для скриптов типа cycsync (вытягивание треков с велокомпа Cycplus)
 
         zellij
 
@@ -213,6 +220,7 @@
         # unixporn
         # aerospace
         rift-latest
+        omniwm-src.packages.${pkgs.system}.omniwm
         skhd
         jankyborders
         sketchybar

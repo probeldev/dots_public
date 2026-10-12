@@ -10,6 +10,14 @@ CONFIG_DIR="${CONFIG_DIR:-$HOME/.config/sketchybar}"
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 
+##### Какой WM сейчас жив #####
+# rift и OmniWM не работают одновременно; панель подстраивается под активный.
+if pgrep -x OmniWM >/dev/null 2>&1; then
+  WM="omni"
+else
+  WM="rift"
+fi
+
 ##### Панель #####
 # height=32 — 1 в 1 с меню-баром macOS на этом MacBook (safeAreaInsets.top = 32),
 # чтобы панель ровно входила в чёлку
@@ -35,18 +43,21 @@ sketchybar --default updates=when_shown \
            background.corner_radius=7 \
            background.height=24
 
-##### Кастомные события rift #####
+##### Кастомные события WM #####
 sketchybar --add event rift_workspace_changed \
            --add event rift_windows_changed \
-           --add event rift_window_title_changed
+           --add event rift_window_title_changed \
+           --add event omni_workspace_changed \
+           --add event omni_windows_changed \
+           --add event omni_window_title_changed
 
 ##### Активное приложение + заголовок окна (слева) #####
 sketchybar --add item front_app left \
   --set front_app icon.drawing=off \
     label.color=0xfff9e2af \
     label.padding_left=10 \
-    script="$PLUGIN_DIR/front_app.sh" \
-  --subscribe front_app front_app_switched rift_window_title_changed
+    script="$PLUGIN_DIR/${WM}_front_app.sh" \
+  --subscribe front_app front_app_switched rift_window_title_changed omni_window_title_changed
 
 ##### Правая сторона: часы, громкость, батарея, wifi #####
 sketchybar --add item clock right \
@@ -70,33 +81,48 @@ sketchybar --add item input_source right \
     label.padding_left=8 \
     script="$PLUGIN_DIR/input_source.sh"
 
-##### Воркспейсы rift (справа, перед раскладкой) #####
+##### Воркспейсы WM (справа, перед раскладкой) #####
 # Активный воркспейс — синяя «пилюля», занятые — яркие, пустые — приглушённые.
-# Состояние обновляется по событиям rift_workspace_changed / rift_windows_changed
-# (подписки — в run_on_start конфига rift + страховка в конце этого файла).
+# Состояние обновляется по событиям <wm>_workspace_changed / <wm>_windows_changed:
+# rift — подписки rift-cli (в run_on_start конфига rift + страховка внизу),
+# OmniWM — launchd-агент org.sergey.omniwm-sketchybar-watch (omniwmctl watch).
 # Правая сторона заполняется справа налево, поэтому добавляем 9..0 —
 # на панели читается 1..10 слева направо.
-RIFT_WS_COUNT=10
-for i in $(seq $((RIFT_WS_COUNT - 1)) -1 0); do
-  sketchybar --add item "rift_ws.$i" right \
-    --set "rift_ws.$i" \
+WS_COUNT=10
+if [ "$WM" = "omni" ]; then
+  WS_CLICK_PREFIX="/run/current-system/sw/bin/omniwmctl command switch-workspace"
+else
+  WS_CLICK_PREFIX="/run/current-system/sw/bin/rift-cli execute workspace switch"
+fi
+for i in $(seq $((WS_COUNT - 1)) -1 0); do
+  if [ "$WM" = "omni" ]; then
+    CLICK="$WS_CLICK_PREFIX $((i + 1))"
+  else
+    CLICK="$WS_CLICK_PREFIX $i"
+  fi
+  sketchybar --add item "${WM}_ws.$i" right \
+    --set "${WM}_ws.$i" \
       icon="$((i + 1))" \
       icon.padding_left=8 \
       icon.padding_right=8 \
       icon.color=0xff6c7086 \
       background.drawing=off \
       label.drawing=off \
-      script="$PLUGIN_DIR/rift_workspace.sh" \
-      click_script="/run/current-system/sw/bin/rift-cli execute workspace switch $i" \
-    --subscribe "rift_ws.$i" rift_workspace_changed rift_windows_changed
+      script="$PLUGIN_DIR/${WM}_workspace.sh" \
+      click_script="$CLICK" \
+    --subscribe "${WM}_ws.$i" \
+      rift_workspace_changed rift_windows_changed \
+      omni_workspace_changed omni_windows_changed
 done
 
 sketchybar --update
 
-# первичное обновление воркспейсов rift (до первого события от rift)
+# первичное обновление воркспейсов (до первого события от WM)
 sketchybar --trigger rift_workspace_changed
+sketchybar --trigger omni_workspace_changed
 # первичное заполнение заголовка окна
 sketchybar --trigger rift_window_title_changed
+sketchybar --trigger omni_window_title_changed
 
 ##### Подписки на события rift (страховка) #####
 # Основное место регистрации — run_on_start в конфиге rift (подписки живут
