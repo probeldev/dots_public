@@ -9,6 +9,16 @@ quicktime = [
 vlc = [
 	{ run = "open -a VLC %s", orphan = true, desc = "VLC", for = "macos" },
 ]
+gridcraft = [
+	{ run = "open -a GridCraft %s", orphan = true, desc = "GridCraft", for = "macos" },
+]
+wps = [
+	{ run = "open -a wpsoffice %s", orphan = true, desc = "WPS Office", for = "macos" },
+]
+
+[[open.prepend_rules]]
+url  = "*.{xls,xlsx,xlsm,xlsb}"
+use  = [ "gridcraft", "wps", "open" ]
 
 [[open.prepend_rules]]
 mime = "image/*"
