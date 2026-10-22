@@ -18,4 +18,4 @@ docker rm mysql
 
 
 docker-compose up -d
-docker exec -it lamp /etc/init.d/apache2 restart
+docker exec lamp apache2ctl graceful 2>/dev/null || true

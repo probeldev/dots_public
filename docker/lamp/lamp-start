@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+# Прокси MySQL: сайты ходят на localhost (unix-сокет, как раньше),
+# реально подключаются к отдельному контейнеру `db` (mysql:8.0).
+mkdir -p /run/mysqld
+socat UNIX-LISTEN:/run/mysqld/mysqld.sock,fork,reuseaddr,mode=777 TCP:db:3306 &
+
+exec apache2-foreground

@@ -75,8 +75,7 @@
             pname = old.pname;
             version = "git-${rev}";
             src = rift;
-            # TODO: после первой сборки заменить на хеш из ошибки "hash mismatch"
-            hash = "sha256-JHB6yqrOuwZ+UwxSKBp9eh0bX4mkZndxQvHEtCclxPk=";
+            hash = "sha256-SpIS32wNkMf8e4Gbmy5iRLqUKQ0p84h0hCHBpxHt15g=";
           };
         });
 
@@ -129,6 +128,43 @@
         cargoHash = "sha256-WbvJxnb7AZ7UcGyv7i9MxzWQbZKWrjHAOz2IaFZR5D0=";
         # integration-тесты тянут сеть/файловые гонки — не нужны для установки
         doCheck = false;
+      };
+
+      # Офисный пакет ArtCraft (github:storytold/*): чистый Rust, MIT/Apache-2.0.
+      # В nixpkgs нет — ставим релизные universal dmg.
+      # Обновлять: version + sha256 (hex) из SHA256SUMS.txt в релизе на GitHub.
+      mkCraftApp = { pname, version, sha256 }: pkgs.stdenvNoCC.mkDerivation {
+        inherit pname version;
+        src = pkgs.fetchurl {
+          url = "https://github.com/storytold/${pname}/releases/download/v${version}/${pname}-${version}-macos-universal.dmg";
+          inherit sha256;
+        };
+        nativeBuildInputs = [ pkgs.undmg ];
+        sourceRoot = ".";
+        installPhase = ''
+          runHook preInstall
+          mkdir -p $out/Applications
+          cp -R *.app $out/Applications/
+          runHook postInstall
+        '';
+      };
+
+      wordcraft = mkCraftApp {
+        pname = "wordcraft";
+        version = "0.9.0";
+        sha256 = "500e90d726eeb2aa45af7bb015c2d132172516853f9674bcdec732af6f0bc1b8";
+      };
+
+      gridcraft = mkCraftApp {
+        pname = "gridcraft";
+        version = "0.10.0";
+        sha256 = "4ff99125557848e3997689122e7a82f8c110d09fd6615072c3a26341b70588cf";
+      };
+
+      deckcraft = mkCraftApp {
+        pname = "deckcraft";
+        version = "0.9.0";
+        sha256 = "15957ed499818442a989ec8879d70154266c7c85496171fa150e45ea2c424af9";
       };
     in
     {
@@ -235,6 +271,11 @@
 
         torrenttui
         superseedr
+
+        # офисный пакет ArtCraft (замена WPS Office)
+        wordcraft
+        gridcraft
+        deckcraft
       ];
 
       fonts.packages = with pkgs; [
